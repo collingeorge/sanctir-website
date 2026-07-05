@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Sanctir">
   <title>Sanctir</title>
-  <rect x="0" y="0" width="64" height="64" fill="#FFFFFF"/>
-  <rect x="8" y="8" width="48" height="48" fill="#1A3A5C"/>
-  <rect x="8" y="30" width="48" height="4" fill="#B8860B"/>
+  <rect width="64" height="64" fill="#FFFFFF"/>
+  <path d="M69 0 54 255H93Q107 161 169.5 106.0Q232 51 322 51Q397 51 443.0 85.5Q489 120 489 175Q489 207 474.5 229.0Q460 251 419.5 272.5Q379 294 301 323Q224 353 173.0 389.0Q122 425 97.0 470.0Q72 515 72 568Q72 631 103.5 678.5Q135 726 190.5 753.0Q246 780 319 780Q418 780 504 716L522 766H546L557 550H518Q494 632 443.0 675.5Q392 719 325 719Q264 719 225.0 688.5Q186 658 186 610Q186 582 199.5 561.5Q213 541 250.0 521.5Q287 502 356 476Q449 441 507.0 402.5Q565 364 591.5 319.5Q618 275 618 219Q618 152 580.0 100.0Q542 48 475.0 19.0Q408 -10 320 -10Q261 -10 212.0 6.5Q163 23 113 60L93 0Z" transform="translate(15.838,46.519) scale(0.04810,-0.04810)" fill="#1A3A5C"/>
+  <line x1="19.00" y1="51.00" x2="45.00" y2="51.00" stroke="#B8860B" stroke-width="4" stroke-linecap="butt"/>
 </svg>
