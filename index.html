@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Sanctir — CMMC, Export Control &amp; Sanctions Compliance</title>
+<meta name="description" content="Sanctir is an independent defense compliance practice. CMMC Level 2 readiness, ITAR/EAR classification, and OFAC sanctions program design for defense contractors and technology firms.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sanctir">
+<meta property="og:title" content="Sanctir — Defense Compliance Practice">
+<meta property="og:description" content="CMMC Level 2 readiness, ITAR/EAR classification, and OFAC sanctions program design.">
+<meta property="og:url" content="https://sanctir.com">
+<meta property="og:image" content="https://sanctir.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sanctir — Defense Compliance Practice">
+<meta name="twitter:description" content="CMMC, export controls, sanctions compliance. Independent defense compliance practice.">
+<meta name="twitter:image" content="https://sanctir.com/og-image.png">
+
+<link rel="canonical" href="https://sanctir.com/">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<link rel="preload" href="/fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/LibreBaskerville-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+/* ============================================================
+   Web fonts — self-hosted, no third-party requests
+   ============================================================ */
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('/fonts/LibreBaskerville-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('/fonts/LibreBaskerville-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('/fonts/IBMPlexSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('/fonts/IBMPlexSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('/fonts/IBMPlexMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
+   Sanctir design tokens (web type system v1.1)
+   ============================================================ */
+:root {
+  --navy: #1A3A5C;
+  --navy-hover: #244A6E;
+  --gold: #B8860B;
+  --dark: #222222;
+  --gray: #666666;
+  --bg-light: #F4F4F4;
+  --border: #CCCCCC;
+  --white: #FFFFFF;
+
+  --text-1: var(--dark);
+  --text-2: var(--gray);
+  --text-3: #8a8f9c;
+  --border-soft: #E2E5EB;
+  --bg-tint: #FAFAFB;
+
+  --font-serif: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SF Mono', Consolas, 'Menlo', 'Courier New', monospace;
+
+  --content-width: 65ch;
+  --container-width: 1080px;
+  --lh-body: 1.65;
+  --lh-heading: 1.2;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: var(--lh-body);
+  color: var(--text-1);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--navy); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; transition: color 0.15s ease; }
+a:hover { color: var(--navy-hover); }
+a:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+
+.skip-link {
+  position: absolute; top: -100px; left: 1rem;
+  background: var(--navy); color: var(--white);
+  padding: 0.5rem 1rem; z-index: 200;
+  font-weight: 700; font-size: 0.875rem;
+  text-decoration: none;
+  font-family: var(--font-sans);
+}
+.skip-link:focus { top: 0.5rem; }
+.skip-link:hover { color: var(--white); }
+
+/* Layout */
+.wrap { max-width: var(--container-width); margin: 0 auto; padding: 0 2rem; }
+.divider { border: 0; border-top: 1px solid var(--border); max-width: var(--container-width); margin: 0 auto; }
+main section { padding: 5rem 2rem; }
+
+/* Editorial section label */
+.sl {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.sl::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  max-width: 180px;
+}
+
+/* Headings — Libre Baskerville for hero h1 and section h2 (editorial register).
+   h3 stays sans for differentiation and scanability. */
+section h2 {
+  font-family: var(--font-serif);
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.7rem;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+}
+.sd {
+  color: var(--text-2);
+  max-width: 64ch;
+  margin-bottom: 2.2rem;
+  font-weight: 400;
+  line-height: 1.65;
+  font-size: 0.9375rem;
+}
+
+h1 { font-family: var(--font-serif); color: var(--navy); font-weight: 700; line-height: var(--lh-heading); }
+h3 { font-family: var(--font-sans); color: var(--navy); font-weight: 700; line-height: var(--lh-heading); }
+h4 { font-family: var(--font-sans); color: var(--gold); font-weight: 700; line-height: var(--lh-heading); }
+
+/* ============================================================
+   Wordmark SVG (inline) — sizing
+   ============================================================ */
+.wordmark-svg {
+  display: block;
+  height: 32px;
+  width: auto;
+}
+.nav-brand { line-height: 0; }
+.footer-brand .wordmark-svg { height: 26px; }
+
+/* Nav */
+nav.primary {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 4.25rem;
+}
+.nav-brand { display: inline-flex; align-items: center; }
+.nav-links { display: flex; gap: 1.7rem; align-items: center; }
+.nav-links a:not(.btn) {
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: color 0.15s ease;
+}
+.nav-links a:not(.btn):hover { color: var(--navy-hover); }
+.nav-links a.btn { font-weight: 700; text-decoration: none; font-size: 0.875rem; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.55rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+}
+.btn-primary { background: var(--navy); color: var(--white); }
+.btn-primary:hover { background: var(--navy-hover); color: var(--white); }
+.btn-ghost { background: transparent; color: var(--navy); border-color: var(--border); }
+.btn-ghost:hover { color: var(--white); background: var(--navy); border-color: var(--navy); }
+
+/* Hero */
+.hero {
+  min-height: calc(100vh - 4.25rem);
+  display: flex; align-items: center;
+  padding: 6rem 2rem 4.5rem;
+}
+.hero-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--text-3);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.hero-label::before {
+  content: "";
+  width: 20px; height: 1px;
+  background: var(--gold);
+}
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4.4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.4rem;
+  max-width: 22ch;
+  color: var(--navy);
+  letter-spacing: -0.005em;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+  font-weight: 700;
+}
+.hero-sub {
+  font-size: 1.0625rem;
+  color: var(--text-1);
+  max-width: 60ch;
+  line-height: 1.65;
+  margin-bottom: 1.1rem;
+  font-weight: 400;
+}
+.hero-fit {
+  font-size: 0.875rem;
+  color: var(--text-2);
+  max-width: 60ch;
+  line-height: 1.7;
+  margin-bottom: 2.2rem;
+  font-style: italic;
+  border-left: 2px solid var(--border);
+  padding-left: 1rem;
+}
+.hero-ctas {
+  display: flex; gap: 0.75rem; flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.proof-strip {
+  display: flex; gap: 1.8rem; flex-wrap: wrap;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--border);
+}
+.proof-item {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-3);
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.proof-dot {
+  width: 5px; height: 5px;
+  background: var(--navy);
+  opacity: 0.7;
+}
+
+/* Practice pillars */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.pillar {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 1.6rem;
+  position: relative;
+  transition: border-color 0.15s ease;
+}
+.pillar::before {
+  content: "";
+  position: absolute; top: -1px; left: -1px; right: -1px;
+  height: 2px;
+  background: var(--navy);
+}
+.pillar:hover { border-color: var(--navy); }
+.pillar-domain {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+.pillar h3 {
+  font-size: 1.0625rem;
+  margin-bottom: 0.45rem;
+  font-weight: 700;
+}
+.pillar p {
+  font-size: 0.875rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Risk block */
+.risk-block {
+  background: var(--bg-light);
+  border-left: 3px solid var(--navy);
+  padding: 1.9rem 2.1rem;
+}
+.risk-block h3 {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 0.7rem;
+}
+.risk-block p {
+  font-size: 0.9375rem;
+  color: var(--text-1);
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+  max-width: 78ch;
+}
+.risk-bullets { list-style: none; }
+.risk-bullets li {
+  font-size: 0.875rem;
+  color: var(--text-2);
+  padding: 0.4rem 0 0.4rem 1.4rem;
+  position: relative;
+  line-height: 1.6;
+}
+.risk-bullets li::before {
+  content: "→";
+  position: absolute; left: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+.risk-bullets strong { color: var(--navy); font-weight: 700; }
+.risk-ref { margin-top: 0.9rem; font-size: 0.82rem; }
+
+/* Services grid */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 1.65rem;
+  transition: border-color 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover { border-color: var(--navy); }
+.card::before {
+  content: "";
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--navy);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.15s ease;
+}
+.card:hover::before { transform: scaleX(1); }
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: var(--bg-light);
+  padding: 0.22rem 0.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+.card h3 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+.card > p {
+  font-size: 0.84rem;
+  color: var(--text-2);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+.card-detail {
+  margin-top: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-3);
+  letter-spacing: 0.02em;
+  border-top: 1px solid var(--border-soft);
+  padding-top: 0.55rem;
+  font-weight: 700;
+}
+.card-detail em { font-style: normal; color: var(--text-2); font-weight: 700; }
+
+/* Engagements */
+.eng-item {
+  padding: 1.6rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  margin-bottom: 1rem;
+  transition: border-color 0.15s ease;
+}
+.eng-item:hover { border-color: var(--navy); }
+.eng-item:last-child { margin-bottom: 0; }
+.eng-type {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  font-weight: 700;
+  margin-bottom: 0.55rem;
+}
+.eng-item h3 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.55rem;
+}
+.eng-item p {
+  font-size: 0.875rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  margin-bottom: 0.7rem;
+}
+.eng-del {
+  font-size: 0.8125rem;
+  color: var(--text-3);
+  font-weight: 400;
+  border-top: 1px solid var(--border-soft);
+  padding-top: 0.6rem;
+}
+.eng-del strong { color: var(--text-1); font-weight: 700; }
+
+/* Analysis */
+.analysis-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  position: relative;
+}
+.analysis-card::before {
+  content: "";
+  position: absolute; top: -1px; left: -1px; right: -1px;
+  height: 2px;
+  background: var(--gold);
+}
+.analysis-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+.analysis-sub {
+  font-size: 0.875rem;
+  color: var(--text-2);
+  font-style: italic;
+  margin-bottom: 1.1rem;
+  font-weight: 400;
+}
+.analysis-links { display: flex; gap: 0.75rem; margin-bottom: 1.3rem; flex-wrap: wrap; }
+.finding {
+  font-size: 0.875rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  padding: 0.6rem 0;
+  border-top: 1px solid var(--border-soft);
+}
+.finding:first-of-type { border-top: none; padding-top: 0.3rem; }
+
+.method-block { margin-top: 2.5rem; }
+.method-block h3 {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.method-note {
+  font-size: 0.8125rem;
+  color: var(--text-3);
+  margin-bottom: 1rem;
+}
+.research-list { display: flex; flex-direction: column; }
+.ri {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 1.3rem;
+  padding: 1.05rem 0;
+  border-bottom: 1px solid var(--border-soft);
+  transition: padding-left 0.15s ease;
+}
+.ri:first-child { border-top: 1px solid var(--border-soft); }
+.ri:hover { padding-left: 0.55rem; }
+.ri h4 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+  line-height: 1.35;
+}
+.ri h4 a { color: var(--navy); text-decoration: none; }
+.ri h4 a:hover { color: var(--navy-hover); text-decoration: underline; }
+.ri-meta {
+  font-size: 0.8125rem;
+  color: var(--text-2);
+  line-height: 1.55;
+}
+.ri-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text-3);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  padding-top: 0.1rem;
+}
+
+/* Fail conditions */
+.fail-list { list-style: none; }
+.fail-list li {
+  font-size: 0.9rem;
+  color: var(--text-1);
+  padding: 0.6rem 0 0.6rem 1.7rem;
+  position: relative;
+  border-bottom: 1px solid var(--border-soft);
+  line-height: 1.6;
+}
+.fail-list li:last-child { border-bottom: none; }
+.fail-list li::before {
+  content: "✕";
+  position: absolute; left: 0;
+  color: var(--navy);
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+.fail-close {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-3);
+  font-style: italic;
+  line-height: 1.65;
+  max-width: 70ch;
+}
+
+/* Diagnostic / engagement model */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.diag-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--navy);
+  padding: 1.85rem;
+}
+.diag-card h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin-bottom: 0.45rem;
+}
+.diag-card p {
+  font-size: 0.875rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  margin-bottom: 0.9rem;
+}
+.diag-outputs {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.diag-outputs li {
+  font-size: 0.8125rem;
+  color: var(--text-2);
+  padding: 0.2rem 0;
+  display: flex; align-items: center; gap: 0.45rem;
+}
+.diag-outputs li::before {
+  content: "✓";
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.eng-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+}
+.eng-step {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 1.2rem 0.75rem;
+  text-align: center;
+}
+.eng-step-num {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 0.45rem;
+}
+.eng-step h4 {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.35;
+  margin: 0;
+}
+.model-caption {
+  font-size: 0.8125rem;
+  color: var(--text-3);
+  margin-top: 1rem;
+  line-height: 1.65;
+}
+
+/* About */
+.about-grid {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  gap: 3rem;
+  align-items: start;
+}
+.about-text p {
+  color: var(--text-2);
+  margin-bottom: 0.9rem;
+  font-weight: 400;
+  line-height: 1.75;
+  font-size: 0.9375rem;
+}
+.about-aside {
+  border-left: 1px solid var(--border);
+  padding-left: 1.6rem;
+}
+.about-aside h4 {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-top: 1.3rem;
+  margin-bottom: 0.55rem;
+  font-weight: 700;
+}
+.about-aside h4:first-child { margin-top: 0; }
+.about-aside ul { list-style: none; }
+.about-aside li {
+  font-size: 0.85rem;
+  color: var(--text-1);
+  padding: 0.22rem 0;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Contact */
+.trust-band {
+  display: flex; gap: 1.6rem; flex-wrap: wrap;
+  padding: 1rem 1.5rem;
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+.trust-item {
+  font-size: 0.85rem;
+  color: var(--text-2);
+  font-weight: 400;
+  display: flex; align-items: center; gap: 0.4rem;
+}
+.trust-check { color: var(--navy); font-size: 0.9rem; font-weight: 700; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.cblock {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 1.85rem;
+}
+.cblock > p {
+  color: var(--text-2);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+.cform { display: flex; flex-direction: column; gap: 0.8rem; }
+.cform label {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+.cform input, .cform select, .cform textarea {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  color: var(--text-1);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  width: 100%;
+  border-radius: 0;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.cform input:focus, .cform select:focus, .cform textarea:focus {
+  outline: none;
+  border-color: var(--navy);
+  box-shadow: inset 0 0 0 1px var(--navy);
+}
+.cform textarea { min-height: 100px; resize: vertical; }
+.cform .hp { position: absolute; left: -9999px; height: 1px; width: 1px; }
+.form-submit { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 0.3rem; }
+.form-submit-note {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-3);
+}
+.intake-notice {
+  font-size: 0.78rem;
+  color: var(--text-3);
+  line-height: 1.65;
+  margin-top: 1.1rem;
+  border-top: 1px solid var(--border-soft);
+  padding-top: 0.8rem;
+}
+.intake-notice strong { color: var(--text-1); font-weight: 700; }
+
+.c-aside h4 {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-top: 1.3rem;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+.c-aside h4:first-child { margin-top: 0; }
+.c-aside p {
+  font-size: 0.84rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+.mono-email {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* Footer */
+footer {
+  padding: 2.4rem 2rem;
+  border-top: 1px solid var(--border);
+  background: var(--white);
+}
+.footer-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+}
+.footer-brand a { display: inline-block; margin-bottom: 0.7rem; }
+.footer-brand p {
+  font-size: 0.78rem;
+  color: var(--text-3);
+  line-height: 1.7;
+  max-width: 50ch;
+  margin-bottom: 0;
+}
+.footer-brand p + p { margin-top: 0.6rem; }
+.footer-heading {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+.footer-links { display: flex; flex-direction: column; gap: 0.45rem; }
+.footer-links a {
+  color: var(--text-2);
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+.footer-links a:hover { color: var(--navy); text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pillars { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-aside { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 1.5rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+  .eng-steps { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  main section { padding: 3.2rem 1.5rem; }
+  .hero { padding: 5rem 1.5rem 3rem; min-height: auto; }
+  .hero h1 { font-size: 1.75rem; }
+  .nav-links a:not(.btn) { display: none; }
+  .nav-links { gap: 0.75rem; }
+  .nav-inner { padding: 0 1.25rem; }
+  .ri { grid-template-columns: 1fr; gap: 0.3rem; }
+  .eng-steps { grid-template-columns: 1fr; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn { justify-content: center; }
+  .diag-outputs { grid-template-columns: 1fr; }
+  footer { padding: 2rem 1.25rem; }
+  .wrap { padding: 0 1.25rem; }
+  .wordmark-svg { height: 26px; }
+}
+
+/* Print */
+@media print {
+  nav.primary, .hero-ctas, .cblock, .trust-band, .skip-link, footer { display: none !important; }
+  body { color: #000; background: #fff; font-family: Georgia, 'Times New Roman', serif; }
+  a { color: #000; text-decoration: underline; }
+  a::after { content: " (" attr(href) ")"; font-size: 0.85em; color: #444; }
+  a[href^="#"]::after, a[href^="mailto:"]::after { content: ""; }
+  main section { padding: 0.75rem 0; page-break-inside: avoid; }
+  h1, h2, h3, h4 { page-break-after: avoid; color: #000; }
+  .pillar, .card, .eng-item, .analysis-card, .diag-card { border: 1px solid #999; }
+  .risk-block { background: #fff; border: 1px solid #999; border-left: 4px solid #000; }
+  .hero h1 em { color: #000; font-style: italic; }
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="primary" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand" aria-label="Sanctir, home">
+      <svg class="wordmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 146" role="img" aria-label="Sanctir">
+        <title>Sanctir</title>
+        <g fill="#1A3A5C">
+        <path d="M69 0 54 255H93Q107 161 169.5 106.0Q232 51 322 51Q397 51 443.0 85.5Q489 120 489 175Q489 207 474.5 229.0Q460 251 419.5 272.5Q379 294 301 323Q224 353 173.0 389.0Q122 425 97.0 470.0Q72 515 72 568Q72 631 103.5 678.5Q135 726 190.5 753.0Q246 780 319 780Q418 780 504 716L522 766H546L557 550H518Q494 632 443.0 675.5Q392 719 325 719Q264 719 225.0 688.5Q186 658 186 610Q186 582 199.5 561.5Q213 541 250.0 521.5Q287 502 356 476Q449 441 507.0 402.5Q565 364 591.5 319.5Q618 275 618 219Q618 152 580.0 100.0Q542 48 475.0 19.0Q408 -10 320 -10Q261 -10 212.0 6.5Q163 23 113 60L93 0Z" transform="translate(55.25,103.76) scale(0.08800,-0.08800)" />
+        <path d="M-13 0V40Q35 45 60.0 61.5Q85 78 102 121L365 780H439L678 196Q699 145 714.0 115.5Q729 86 745.0 71.0Q761 56 782.5 50.0Q804 44 838 41V0H460V41Q508 43 529.0 51.0Q550 59 550 83Q550 97 543.0 119.5Q536 142 524 173L501 233H218Q194 179 182.5 143.0Q171 107 171 86Q171 56 193.5 48.0Q216 40 261 40V0ZM241 293H479L364 596H360Z" transform="translate(129.43,103.76) scale(0.08800,-0.08800)" />
+        <path d="M670 -10 227 621H223V191Q223 125 230.5 93.5Q238 62 260.5 52.0Q283 42 327 40V0H30V40Q79 42 103.5 52.0Q128 62 136.5 92.0Q145 122 145 184V586Q145 643 137.5 673.0Q130 703 107.5 715.5Q85 728 40 730V770H319L722 192H726V579Q726 645 718.5 676.5Q711 708 689.0 718.5Q667 729 622 730V770H919V730Q870 729 845.5 718.5Q821 708 812.5 678.0Q804 648 804 586V-10Z" transform="translate(216.46,103.76) scale(0.08800,-0.08800)" />
+        <path d="M688 708 707 770H756L736 517H696Q675 609 614.5 662.0Q554 715 468 715Q390 715 334.5 674.5Q279 634 250.0 558.5Q221 483 221 378Q221 224 285.0 140.0Q349 56 472 56Q571 56 637.0 110.5Q703 165 731 271H775V0H728L714 79Q604 -10 447 -10Q326 -10 236.0 37.0Q146 84 96.5 169.5Q47 255 47 372Q47 463 77.0 537.5Q107 612 161.5 666.5Q216 721 292.0 750.5Q368 780 459 780Q520 780 573.5 763.0Q627 746 688 708Z" transform="translate(315.02,103.76) scale(0.08800,-0.08800)" />
+        <path d="M805 770 815 550H772Q768 616 748.5 652.5Q729 689 693.5 703.5Q658 718 604 718Q553 718 527.0 715.5Q501 713 493.0 706.0Q485 699 485 687V163Q485 120 494.0 93.5Q503 67 532.0 54.5Q561 42 620 40V0H201V40Q261 42 290.0 54.5Q319 67 328.5 93.5Q338 120 338 163V687Q338 699 331.0 706.0Q324 713 302.0 715.5Q280 718 235 718Q199 718 166.0 714.0Q133 710 108.0 694.5Q83 679 68.0 645.0Q53 611 51 550H12L22 770Z" transform="translate(403.29,103.76) scale(0.08800,-0.08800)" />
+        <path d="M36 0V40Q81 42 103.5 52.0Q126 62 133.5 92.0Q141 122 141 184V586Q141 643 134.5 673.0Q128 703 107.5 715.5Q87 728 46 730V770H383V730Q342 728 321.5 715.5Q301 703 294.5 673.0Q288 643 288 586V184Q288 122 295.5 92.0Q303 62 325.5 52.0Q348 42 393 40V0Z" transform="translate(491.90,103.76) scale(0.08800,-0.08800)" />
+        <path d="M695 577Q695 494 647.0 438.0Q599 382 494 363L726 97Q750 69 783.0 54.5Q816 40 850 40V0H613L365 304Q349 324 335.0 335.0Q321 346 309.5 350.5Q298 355 287 355V159Q287 110 297.0 84.0Q307 58 338.0 49.0Q369 40 432 40V0H35V40Q79 40 101.5 49.0Q124 58 132.0 82.5Q140 107 140 154V616Q140 663 133.5 686.5Q127 710 107.0 719.0Q87 728 46 730V770H392Q536 770 615.5 719.0Q695 668 695 577ZM287 697V415H352Q446 415 492.5 452.0Q539 489 539 572Q539 636 500.0 675.0Q461 714 392 714H305Q287 714 287 697Z" transform="translate(545.50,103.76) scale(0.08800,-0.08800)" />
+        </g>
+        <line x1="52.00" y1="117.76" x2="628.30" y2="117.76" stroke="#B8860B" stroke-width="1.25" stroke-linecap="butt" />
+</svg>
+    </a>
+    <div class="nav-links">
+      <a href="#practice">Practice</a>
+      <a href="#services">Services</a>
+      <a href="#engagements">Engagements</a>
+      <a href="#analysis">Analysis</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="btn btn-primary">Assess CMMC Readiness</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="wrap">
+      <div class="hero-label">CMMC · Export Controls · Sanctions Compliance</div>
+      <h1 id="hero-heading">What you need to <em>pass your CMMC assessment</em> and keep your contracts.</h1>
+      <p class="hero-sub">Fixed-scope CMMC Level 2 readiness assessments, ITAR/EAR classification, and OFAC sanctions program design. Delivered against a documented analytical methodology published openly under WP-2026.</p>
+      <p class="hero-fit">For defense contractors, biotech and dual-use technology firms, outside counsel, and investment funds facing cybersecurity, export-control, or sanctions compliance requirements.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Assess CMMC Readiness</a>
+        <a href="#engagements" class="btn btn-ghost">View Representative Engagements</a>
+      </div>
+      <div class="proof-strip">
+        <span class="proof-item"><span class="proof-dot"></span> Tri-pillar regulatory coverage</span>
+        <span class="proof-item"><span class="proof-dot"></span> Published methodology (WP-2026)</span>
+        <span class="proof-item"><span class="proof-dot"></span> Fixed-fee and retainer engagements</span>
+        <span class="proof-item"><span class="proof-dot"></span> Nationwide remote availability</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="practice" aria-labelledby="practice-heading">
+    <div class="wrap">
+      <div class="sl">Practice Areas</div>
+      <h2 id="practice-heading">A tri-pillar defense compliance practice</h2>
+      <p class="sd">Three regulatory regimes intersect in nearly every defense and dual-use engagement: contract-gating cybersecurity requirements, export controls on technical data, and counterparty risk under the sanctions regime. Engagements are scoped against the regime driving the deadline.</p>
+      <div class="pillars">
+        <article class="pillar">
+          <div class="pillar-domain">CMMC / DFARS 252.204-7012</div>
+          <h3>Cybersecurity certification</h3>
+          <p>CMMC Level 2 readiness against NIST SP 800-171 Rev 2. Gap matrices, System Security Plans, POA&amp;M packages, evidence collection, and C3PAO assessment preparation.</p>
+        </article>
+        <article class="pillar">
+          <div class="pillar-domain">ITAR / EAR / 22 CFR 120</div>
+          <h3>Export control classification</h3>
+          <p>USML commodity jurisdiction and ECCN determinations. Deemed-export risk assessments. Technology Control Plans. Voluntary Self-Disclosure preparation.</p>
+        </article>
+        <article class="pillar">
+          <div class="pillar-domain">OFAC / IEEPA / CAATSA</div>
+          <h3>Sanctions program design</h3>
+          <p>OFAC compliance frameworks aligned with the 2019 Framework. Counterparty risk mapping. Screening architecture, testing, and escalation protocols.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section aria-labelledby="risk-heading">
+    <div class="wrap">
+      <div class="risk-block">
+        <h3 id="risk-heading">CMMC Level 2 is now contract-gating</h3>
+        <p>Contractors without demonstrable readiness face elevated risk of bid exclusion in the 2026–2027 acquisition cycle. Phase 1 enforcement is active. C3PAO assessments become mandatory for applicable contracts in November 2026.</p>
+        <ul class="risk-bullets">
+          <li>SPRS score below 88 — <strong>no conditional certification path</strong></li>
+          <li>No System Security Plan — <strong>assessment cannot proceed</strong></li>
+          <li>Missing MFA or centralized logging — <strong>high-probability failure condition</strong></li>
+        </ul>
+        <p class="risk-ref"><a href="#analysis">See published analysis: CMMC Level 2 Readiness Risk in the U.S. Defense Industrial Base →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="services" aria-labelledby="services-heading">
+    <div class="wrap">
+      <div class="sl">Services</div>
+      <h2 id="services-heading">What Sanctir delivers</h2>
+      <p class="sd">Structured readiness, remediation, and advisory engagements. Typical CMMC readiness engagement: 4–6 weeks. Export-control and sanctions engagements scoped against regulatory complexity rather than time.</p>
+      <div class="grid-3">
+        <article class="card">
+          <div class="tag">Flagship · Entry Engagement</div>
+          <h3>CMMC Level 2 Readiness Assessment</h3>
+          <p>Full assessment against NIST SP 800-171 Rev 2. Gap matrix, SSP outline, POA&amp;M, priority remediation roadmap. Integrated with ITAR handling controls where applicable.</p>
+          <div class="card-detail"><em>Fixed fee</em> · 4–6 weeks · Deliverables defined at scoping</div>
+        </article>
+        <article class="card">
+          <div class="tag">Triggered · Follow-On</div>
+          <h3>ITAR/EAR Classification &amp; Compliance</h3>
+          <p>ECCN and USML commodity jurisdiction determinations. Deemed export risk assessments. Technology Control Plans. Voluntary Self-Disclosure preparation.</p>
+          <div class="card-detail"><em>Fixed fee</em> · 2–4 weeks</div>
+        </article>
+        <article class="card">
+          <div class="tag">Triggered · Follow-On</div>
+          <h3>Sanctions Compliance Program Design</h3>
+          <p>OFAC compliance frameworks aligned with the 2019 Framework for Compliance Commitments. Counterparty risk mapping. Screening program architecture and testing.</p>
+          <div class="card-detail"><em>Fixed fee</em> · 4–10 weeks</div>
+        </article>
+        <article class="card">
+          <div class="tag">Advanced</div>
+          <h3>CFIUS Cybersecurity Risk Assessment</h3>
+          <p>Pre-filing cybersecurity risk assessments for transactions subject to CFIUS review. Network architecture analysis, data flow mapping, mitigation agreement compliance.</p>
+          <div class="card-detail"><em>Hourly advisory</em> · 2–6 weeks</div>
+        </article>
+        <article class="card">
+          <div class="tag">Retainer</div>
+          <h3>Virtual CISO</h3>
+          <p>Part-time security leadership. Risk assessment, policy development, incident response planning, board-level reporting, and regulatory engagement. 15–25 hours/month.</p>
+          <div class="card-detail"><em>Monthly retainer</em> · Ongoing</div>
+        </article>
+        <article class="card">
+          <div class="tag">Advanced</div>
+          <h3>Technical Advisory for Counsel</h3>
+          <p>Technical analysis supporting litigation teams on cybersecurity standards of care, export control matters, sanctions compliance disputes, and digital forensics.</p>
+          <div class="card-detail"><em>Hourly advisory</em> · Per engagement</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="engagements" aria-labelledby="eng-heading">
+    <div class="wrap">
+      <div class="sl">Representative Engagements</div>
+      <h2 id="eng-heading">What this looks like in practice</h2>
+      <p class="sd">Anonymized engagement patterns illustrating typical scope, deliverables, and outcomes. No client-identifying information is disclosed.</p>
+
+      <article class="eng-item">
+        <div class="eng-type">CMMC + ITAR Integration</div>
+        <h3>Defense subcontractor preparing for Level 2 certification while handling export-controlled technical data</h3>
+        <p>Small electronics manufacturer (under 200 employees) with active DoD subcontracts required CMMC Level 2 readiness while also handling ITAR-controlled design files shared by the prime contractor. Assessment identified 34 control gaps, three ITAR handling deficiencies, and an undocumented CUI data flow to a cloud environment outside the assessed boundary.</p>
+        <div class="eng-del"><strong>Deliverables:</strong> Gap matrix · SSP · POA&amp;M · CUI boundary diagram · ITAR handling control recommendations · remediation priority roadmap.</div>
+      </article>
+
+      <article class="eng-item">
+        <div class="eng-type">Biotech Export Control Review</div>
+        <h3>Biotech firm with foreign national research staff requiring deemed export analysis</h3>
+        <p>Mid-market biotech company (300+ employees) with R&amp;D staff holding citizenship in countries subject to EAR restrictions. Required deemed-export analysis for controlled technology access, segmentation of controlled processes, and a Technology Control Plan satisfying BIS requirements.</p>
+        <div class="eng-del"><strong>Deliverables:</strong> Deemed-export risk assessment · ECCN classification memos for three product lines · Technology Control Plan · staff briefing materials.</div>
+      </article>
+
+      <article class="eng-item">
+        <div class="eng-type">CFIUS Diligence Support</div>
+        <h3>Transaction counsel requiring cybersecurity risk analysis for foreign acquisition review</h3>
+        <p>Outside counsel retained for a CFIUS filing required technical cybersecurity risk analysis for a cross-border acquisition involving a company with access to controlled unclassified information. Network architecture review, data flow assessment, and a concise risk memo suitable for inclusion in the filing.</p>
+        <div class="eng-del"><strong>Deliverables:</strong> Cybersecurity risk assessment · data flow diagram · mitigation recommendation memo · architecture narrative for counsel.</div>
+      </article>
+
+      <article class="eng-item">
+        <div class="eng-type">Sanctions Compliance Architecture</div>
+        <h3>Technology firm with international counterparty exposure requiring OFAC screening program</h3>
+        <p>Software company expanding into markets with sanctions-adjacent counterparty risk required a compliance framework aligned with OFAC guidance, including screening architecture, escalation protocols, and a control matrix covering nine counterparty risk categories.</p>
+        <div class="eng-del"><strong>Deliverables:</strong> OFAC compliance framework · screening program architecture · escalation decision tree · control matrix · staff training materials.</div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="analysis" aria-labelledby="analysis-heading">
+    <div class="wrap">
+      <div class="sl">Recent Analysis</div>
+      <h2 id="analysis-heading">Published risk assessment and methodology</h2>
+      <p class="sd">Every engagement applies the analytical methodology documented in the WP-2026 research series: dual-axis probability and confidence labeling, explicit statement of limits and unknowns, structured evidence tiers, and prohibition on advocacy language.</p>
+
+      <div class="analysis-card">
+        <h3>CMMC Level 2 Readiness Risk in the U.S. Defense Industrial Base</h3>
+        <div class="analysis-sub">Evidence, drivers, and a 90-day remediation path — March 2026</div>
+        <div class="analysis-links">
+          <a href="https://collinbgeorge.com/WP-2026-CMMC-READINESS-RISK-ASSESSMENT.pdf" class="btn btn-primary" target="_blank" rel="noopener">Read the Full Analysis</a>
+          <a href="https://github.com/collingeorge/WP-2026" class="btn btn-ghost" target="_blank" rel="noopener">Publication Repository</a>
+        </div>
+        <div class="finding">A non-trivial proportion of SMB defense contractors may not achieve CMMC Level 2 readiness without structured external remediation. One industry survey reported the average SPRS score among respondents at -12 against a required threshold of 88.</div>
+        <div class="finding">Documentation deficiency, control implementation gaps, and audit preparation failure are assessed as the primary structural drivers of non-readiness. These patterns appear consistent across the DIB.</div>
+        <div class="finding">Contractors entering late 2026 without an initiated gap assessment face elevated risk of contract ineligibility during the 2026–2027 acquisition cycle.</div>
+      </div>
+
+      <div class="method-block">
+        <h3>Sanctions and statecraft methodology series</h3>
+        <p class="method-note">Corpus: 62 documents across 10 analytical domains. 374-node global enforcement targeting register. Licensed under CC BY 4.0.</p>
+        <div class="research-list">
+          <div class="ri">
+            <div>
+              <h4><a href="https://collinbgeorge.com/WP-2026-SIEGE-01.pdf" target="_blank" rel="noopener">SIEGE-01 — Multi-Channel Financial Denial Framework</a></h4>
+              <div class="ri-meta">Seven-channel simultaneous pressure architecture with network classification and falsifiable indicators.</div>
+            </div>
+            <div class="ri-tag">Core Framework</div>
+          </div>
+          <div class="ri">
+            <div>
+              <h4><a href="https://collinbgeorge.com/WP-2026-AML-01.pdf" target="_blank" rel="noopener">AML-01 — Illicit Finance Node Control Matrix</a></h4>
+              <div class="ri-meta">20 node types, nine illicit finance categories, eight-column control structure. Three-pass statutory audit.</div>
+            </div>
+            <div class="ri-tag">Methodology</div>
+          </div>
+          <div class="ri">
+            <div>
+              <h4><a href="https://collinbgeorge.com/WP-2026-PERSIST-01.pdf" target="_blank" rel="noopener">PERSIST-01 — Litigation-Resilient Statecraft Architecture</a></h4>
+              <div class="ri-meta">Six authority rails, four-tier standards of proof, neutral designation-selection rule.</div>
+            </div>
+            <div class="ri-tag">Strategic Architecture</div>
+          </div>
+          <div class="ri">
+            <div>
+              <h4><a href="https://collinbgeorge.com/WP-2026-SENI-01.pdf" target="_blank" rel="noopener">SENI-01 — Strategic Enforcement Node Index</a></h4>
+              <div class="ri-meta">374-node global sanctions enforcement targeting register with interactive georeferenced map.</div>
+            </div>
+            <div class="ri-tag">374 Nodes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="failures" aria-labelledby="fail-heading">
+    <div class="wrap">
+      <div class="sl">Assessment Risk</div>
+      <h2 id="fail-heading">What fails CMMC assessments</h2>
+      <p class="sd">Based on publicly available C3PAO guidance and practitioner reporting, the following conditions are assessed as likely to produce assessment failure or conditional denial.</p>
+      <ul class="fail-list">
+        <li>No current, tailored System Security Plan (SSP) — assessment cannot proceed without one</li>
+        <li>No multi-factor authentication for remote or privileged access — critical 5-point control deficiency</li>
+        <li>No centralized audit logging or evidence of log review — Audit and Accountability controls cannot be demonstrated</li>
+        <li>Evidence not collected, organized, or retrievable — implemented controls treated as not implemented for scoring</li>
+        <li>CUI boundary not defined or documented — assessment scope cannot be established</li>
+        <li>SPRS score below 88 with no viable POA&amp;M path — no route to conditional certification</li>
+      </ul>
+      <p class="fail-close">Presence of any single condition above is consistent with elevated risk of assessment failure. Presence of multiple conditions simultaneously is consistent with high probability of assessment failure.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="diagnostic" aria-labelledby="diag-heading">
+    <div class="wrap">
+      <div class="sl">Entry Point</div>
+      <h2 id="diag-heading">Initial readiness diagnostic</h2>
+      <div class="grid-2">
+        <div class="diag-card">
+          <h3>Structured 10–15 minute diagnostic</h3>
+          <p>Estimate your current readiness posture and identify primary failure risks before committing to a full engagement. Designed for organizations preparing for near-term CMMC assessment.</p>
+          <ul class="diag-outputs">
+            <li>Estimated SPRS range</li>
+            <li>Key control gaps</li>
+            <li>Assessment readiness risk level</li>
+            <li>Recommended next steps</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Assess CMMC Readiness</a>
+        </div>
+        <div>
+          <div class="sl">Engagement Model</div>
+          <div class="eng-steps">
+            <div class="eng-step">
+              <div class="eng-step-num">01</div>
+              <h4>Gap Assessment</h4>
+            </div>
+            <div class="eng-step">
+              <div class="eng-step-num">02</div>
+              <h4>Control Remediation</h4>
+            </div>
+            <div class="eng-step">
+              <div class="eng-step-num">03</div>
+              <h4>Documentation &amp; Evidence</h4>
+            </div>
+            <div class="eng-step">
+              <div class="eng-step-num">04</div>
+              <h4>Assessment Readiness</h4>
+            </div>
+          </div>
+          <p class="model-caption">Typical engagements: 4–6 weeks. Structured around gap assessment, remediation prioritization, and evidence readiness. Designed for organizations preparing for near-term C3PAO assessment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="about" aria-labelledby="about-heading">
+    <div class="wrap">
+      <div class="sl">About</div>
+      <h2 id="about-heading">About Sanctir</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Sanctir is an independent defense compliance practice operating at the intersection of cybersecurity certification, export controls, and sanctions enforcement. The practice serves defense contractors, dual-use technology firms, biotech companies, outside counsel, and investment funds facing contract-gating compliance requirements and enforcement risk.</p>
+          <p>Engagements are delivered under a documented analytical methodology: dual-axis probability and confidence labeling, structured evidence tiers, explicit statement of limits and unknowns, and prohibition on advocacy language. The methodology is published as the WP-2026 research series under CC BY 4.0, providing prospective clients full visibility into how analysis is constructed before engagement begins.</p>
+          <p>Scope of services is deliberately narrow. Sanctir does not provide managed security services, penetration testing, or staff augmentation. The practice delivers documented assessments, classification determinations, compliance program design, and advisory memoranda — work product that survives audit and supports counsel.</p>
+        </div>
+        <aside class="about-aside" aria-label="Practice standards and regulatory domains">
+          <h4>Methodology</h4>
+          <ul>
+            <li>Structured analytic tradecraft</li>
+            <li>Dual-axis probability / confidence labeling</li>
+            <li>Tiered evidence standards</li>
+            <li>Explicit limits and unknowns</li>
+          </ul>
+          <h4>Frameworks Applied</h4>
+          <ul>
+            <li>NIST SP 800-171 Rev 2</li>
+            <li>2019 OFAC Framework for Compliance Commitments</li>
+            <li>ITAR (22 CFR 120-130)</li>
+            <li>EAR (15 CFR 730-774)</li>
+            <li>CFIUS / FIRRMA</li>
+          </ul>
+          <h4>Regulatory Domains</h4>
+          <ul>
+            <li>CMMC / NIST 800-171</li>
+            <li>ITAR / EAR / BIS Entity List</li>
+            <li>OFAC / Sanctions / AML-BSA</li>
+            <li>CFIUS / FIRRMA</li>
+            <li>IEEPA / CAATSA / ECRA</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="wrap">
+      <div class="sl">Contact</div>
+      <h2 id="contact-heading">Assess your CMMC readiness</h2>
+      <div class="trust-band">
+        <span class="trust-item"><span class="trust-check">✓</span> Fixed-fee scoping</span>
+        <span class="trust-item"><span class="trust-check">✓</span> Two-business-day response</span>
+        <span class="trust-item"><span class="trust-check">✓</span> Secure communication available</span>
+        <span class="trust-item"><span class="trust-check">✓</span> No sensitive materials via web form</span>
+      </div>
+      <div class="contact-grid">
+        <div class="cblock">
+          <p>Use the form below to request a structured readiness diagnostic or scoped engagement discussion. Initial scoping call at no charge. Response within two business days.</p>
+          <form class="cform" action="https://formspree.io/f/mojpwljz" method="POST">
+            <div>
+              <label for="f-name">Name</label>
+              <input type="text" id="f-name" name="name" required autocomplete="name">
+            </div>
+            <div>
+              <label for="f-org">Organization</label>
+              <input type="text" id="f-org" name="organization" autocomplete="organization">
+            </div>
+            <div>
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" required autocomplete="email">
+            </div>
+            <div>
+              <label for="f-need">Engagement type</label>
+              <select id="f-need" name="service_type">
+                <option value="">Select engagement type</option>
+                <option value="cmmc">CMMC Level 2 readiness</option>
+                <option value="itar">ITAR / EAR classification or compliance</option>
+                <option value="sanctions">Sanctions compliance program</option>
+                <option value="cfius">CFIUS cybersecurity risk assessment</option>
+                <option value="vciso">Virtual CISO retainer</option>
+                <option value="litigation">Technical advisory for counsel</option>
+                <option value="other">Other or unsure</option>
+              </select>
+            </div>
+            <div>
+              <label for="f-details">Brief description</label>
+              <textarea id="f-details" name="details" rows="4" placeholder="Timeline, scope, contracting status, or questions"></textarea>
+            </div>
+            <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="_subject" value="Sanctir — engagement inquiry">
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Request Readiness Assessment</button>
+              <span class="form-submit-note">Response within 2 business days</span>
+            </div>
+          </form>
+          <div class="intake-notice">
+            <strong>Important.</strong> Do not submit classified, export-controlled, privileged, or otherwise restricted information through this form. Limit submissions to high-level scoping information. Form submissions are retained only as long as necessary to respond to the inquiry. Submission of this form does not create a consulting engagement, confidentiality obligation, or attorney-client relationship absent a signed engagement agreement.
+          </div>
+        </div>
+        <aside class="c-aside" aria-label="Contact details">
+          <h4>Response time</h4>
+          <p>Initial response within two business days. Scoping proposals typically delivered within one week of discovery call.</p>
+          <h4>Engagement format</h4>
+          <p>Fixed-fee project engagements and monthly retainers. Fully remote with nationwide availability. Initial scoping call at no charge.</p>
+          <h4>Secure communication</h4>
+          <p>Encrypted communication is available for sensitive inquiries. Contact via the form to initiate.</p>
+          <h4>Direct email</h4>
+          <p class="mono-email"><a href="mailto:cgeorge@sanctir.com">cgeorge@sanctir.com</a></p>
+          <h4>Scope of services</h4>
+          <p>Services are advisory in nature and do not constitute legal advice. Where regulatory interpretation or legal determinations are required, coordination with qualified legal counsel is recommended.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" aria-label="Sanctir, home">
+        <svg class="wordmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 146" role="img" aria-label="Sanctir">
+        <title>Sanctir</title>
+        <g fill="#1A3A5C">
+        <path d="M69 0 54 255H93Q107 161 169.5 106.0Q232 51 322 51Q397 51 443.0 85.5Q489 120 489 175Q489 207 474.5 229.0Q460 251 419.5 272.5Q379 294 301 323Q224 353 173.0 389.0Q122 425 97.0 470.0Q72 515 72 568Q72 631 103.5 678.5Q135 726 190.5 753.0Q246 780 319 780Q418 780 504 716L522 766H546L557 550H518Q494 632 443.0 675.5Q392 719 325 719Q264 719 225.0 688.5Q186 658 186 610Q186 582 199.5 561.5Q213 541 250.0 521.5Q287 502 356 476Q449 441 507.0 402.5Q565 364 591.5 319.5Q618 275 618 219Q618 152 580.0 100.0Q542 48 475.0 19.0Q408 -10 320 -10Q261 -10 212.0 6.5Q163 23 113 60L93 0Z" transform="translate(55.25,103.76) scale(0.08800,-0.08800)" />
+        <path d="M-13 0V40Q35 45 60.0 61.5Q85 78 102 121L365 780H439L678 196Q699 145 714.0 115.5Q729 86 745.0 71.0Q761 56 782.5 50.0Q804 44 838 41V0H460V41Q508 43 529.0 51.0Q550 59 550 83Q550 97 543.0 119.5Q536 142 524 173L501 233H218Q194 179 182.5 143.0Q171 107 171 86Q171 56 193.5 48.0Q216 40 261 40V0ZM241 293H479L364 596H360Z" transform="translate(129.43,103.76) scale(0.08800,-0.08800)" />
+        <path d="M670 -10 227 621H223V191Q223 125 230.5 93.5Q238 62 260.5 52.0Q283 42 327 40V0H30V40Q79 42 103.5 52.0Q128 62 136.5 92.0Q145 122 145 184V586Q145 643 137.5 673.0Q130 703 107.5 715.5Q85 728 40 730V770H319L722 192H726V579Q726 645 718.5 676.5Q711 708 689.0 718.5Q667 729 622 730V770H919V730Q870 729 845.5 718.5Q821 708 812.5 678.0Q804 648 804 586V-10Z" transform="translate(216.46,103.76) scale(0.08800,-0.08800)" />
+        <path d="M688 708 707 770H756L736 517H696Q675 609 614.5 662.0Q554 715 468 715Q390 715 334.5 674.5Q279 634 250.0 558.5Q221 483 221 378Q221 224 285.0 140.0Q349 56 472 56Q571 56 637.0 110.5Q703 165 731 271H775V0H728L714 79Q604 -10 447 -10Q326 -10 236.0 37.0Q146 84 96.5 169.5Q47 255 47 372Q47 463 77.0 537.5Q107 612 161.5 666.5Q216 721 292.0 750.5Q368 780 459 780Q520 780 573.5 763.0Q627 746 688 708Z" transform="translate(315.02,103.76) scale(0.08800,-0.08800)" />
+        <path d="M805 770 815 550H772Q768 616 748.5 652.5Q729 689 693.5 703.5Q658 718 604 718Q553 718 527.0 715.5Q501 713 493.0 706.0Q485 699 485 687V163Q485 120 494.0 93.5Q503 67 532.0 54.5Q561 42 620 40V0H201V40Q261 42 290.0 54.5Q319 67 328.5 93.5Q338 120 338 163V687Q338 699 331.0 706.0Q324 713 302.0 715.5Q280 718 235 718Q199 718 166.0 714.0Q133 710 108.0 694.5Q83 679 68.0 645.0Q53 611 51 550H12L22 770Z" transform="translate(403.29,103.76) scale(0.08800,-0.08800)" />
+        <path d="M36 0V40Q81 42 103.5 52.0Q126 62 133.5 92.0Q141 122 141 184V586Q141 643 134.5 673.0Q128 703 107.5 715.5Q87 728 46 730V770H383V730Q342 728 321.5 715.5Q301 703 294.5 673.0Q288 643 288 586V184Q288 122 295.5 92.0Q303 62 325.5 52.0Q348 42 393 40V0Z" transform="translate(491.90,103.76) scale(0.08800,-0.08800)" />
+        <path d="M695 577Q695 494 647.0 438.0Q599 382 494 363L726 97Q750 69 783.0 54.5Q816 40 850 40V0H613L365 304Q349 324 335.0 335.0Q321 346 309.5 350.5Q298 355 287 355V159Q287 110 297.0 84.0Q307 58 338.0 49.0Q369 40 432 40V0H35V40Q79 40 101.5 49.0Q124 58 132.0 82.5Q140 107 140 154V616Q140 663 133.5 686.5Q127 710 107.0 719.0Q87 728 46 730V770H392Q536 770 615.5 719.0Q695 668 695 577ZM287 697V415H352Q446 415 492.5 452.0Q539 489 539 572Q539 636 500.0 675.0Q461 714 392 714H305Q287 714 287 697Z" transform="translate(545.50,103.76) scale(0.08800,-0.08800)" />
+        </g>
+        <line x1="52.00" y1="117.76" x2="628.30" y2="117.76" stroke="#B8860B" stroke-width="1.25" stroke-linecap="butt" />
+</svg>
+      </a>
+      <p>Independent defense compliance practice. Not affiliated with any government agency, academic institution, or defense contractor. Services are advisory in nature and do not constitute legal advice. No guarantee of regulatory outcome is expressed or implied.</p>
+      <p>© 2026 Sanctir. All rights reserved.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Practice</div>
+      <div class="footer-links">
+        <a href="#practice">Practice Areas</a>
+        <a href="#services">Services</a>
+        <a href="#engagements">Engagements</a>
+        <a href="#analysis">Analysis</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Resources</div>
+      <div class="footer-links">
+        <a href="https://github.com/collingeorge/WP-2026" target="_blank" rel="noopener">WP-2026 Repository</a>
+        <a href="/privacy.html">Privacy Notice</a>
+        <a href="/terms.html">Terms &amp; Disclaimer</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

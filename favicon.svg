@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Sanctir">
+  <title>Sanctir</title>
+  <rect x="0" y="0" width="64" height="64" fill="#FFFFFF"/>
+  <rect x="8" y="8" width="48" height="48" fill="#1A3A5C"/>
+  <rect x="8" y="30" width="48" height="4" fill="#B8860B"/>
+</svg>
