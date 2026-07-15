@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /fonts/
-
 Sitemap: https://sanctir.com/sitemap.xml

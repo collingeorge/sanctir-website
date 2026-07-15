@@ -3,137 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Page not found — Sanctir</title>
-<meta name="robots" content="noindex, nofollow">
-
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
-<link rel="shortcut icon" href="/favicon.ico">
-
-<link rel="preload" href="/fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/LibreBaskerville-Bold.woff2" as="font" type="font/woff2" crossorigin>
-
-<style>
-@font-face {
-  font-family: 'Libre Baskerville';
-  src: url('/fonts/LibreBaskerville-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'IBM Plex Sans';
-  src: url('/fonts/IBMPlexSans-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'IBM Plex Sans';
-  src: url('/fonts/IBMPlexSans-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'IBM Plex Mono';
-  src: url('/fonts/IBMPlexMono-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-:root {
-  --navy: #1A3A5C;
-  --gold: #B8860B;
-  --dark: #222222;
-  --gray: #666666;
-  --border: #CCCCCC;
-  --text-3: #8a8f9c;
-  --font-serif: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
-  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-  --font-mono: 'IBM Plex Mono', 'SF Mono', Consolas, 'Menlo', 'Courier New', monospace;
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; }
-body {
-  font-family: var(--font-sans);
-  color: var(--dark);
-  background: #ffffff;
-  min-height: 100vh;
-  display: flex; align-items: center; justify-content: center;
-  padding: 2rem;
-  -webkit-font-smoothing: antialiased;
-}
-.wrap { max-width: 540px; text-align: center; }
-.wordmark-svg { display: block; height: 36px; width: auto; margin: 0 auto 3rem; }
-.code {
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text-3);
-  margin-bottom: 1.1rem;
-}
-h1 {
-  font-family: var(--font-serif);
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 1rem;
-  line-height: 1.2;
-  letter-spacing: -0.005em;
-}
-p {
-  font-size: 0.9375rem;
-  line-height: 1.7;
-  color: var(--gray);
-  margin-bottom: 2rem;
-  max-width: 44ch;
-  margin-left: auto;
-  margin-right: auto;
-}
-.btn {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  padding: 0.6rem 1.4rem;
-  background: var(--navy);
-  color: #ffffff;
-  font-family: var(--font-sans);
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-decoration: none;
-  letter-spacing: 0.01em;
-  transition: background-color 0.15s ease;
-}
-.btn:hover { background: #244A6E; }
-</style>
+<meta name="robots" content="noindex">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css?v=2">
 </head>
 <body>
-<div class="wrap">
-  <a href="/" aria-label="Sanctir, home">
-    <svg class="wordmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 146" role="img" aria-label="Sanctir">
-      <title>Sanctir</title>
-      <g fill="#1A3A5C">
-        <path d="M69 0 54 255H93Q107 161 169.5 106.0Q232 51 322 51Q397 51 443.0 85.5Q489 120 489 175Q489 207 474.5 229.0Q460 251 419.5 272.5Q379 294 301 323Q224 353 173.0 389.0Q122 425 97.0 470.0Q72 515 72 568Q72 631 103.5 678.5Q135 726 190.5 753.0Q246 780 319 780Q418 780 504 716L522 766H546L557 550H518Q494 632 443.0 675.5Q392 719 325 719Q264 719 225.0 688.5Q186 658 186 610Q186 582 199.5 561.5Q213 541 250.0 521.5Q287 502 356 476Q449 441 507.0 402.5Q565 364 591.5 319.5Q618 275 618 219Q618 152 580.0 100.0Q542 48 475.0 19.0Q408 -10 320 -10Q261 -10 212.0 6.5Q163 23 113 60L93 0Z" transform="translate(55.18,103.76) scale(0.08800,-0.08800)" />
-        <path d="M-13 0V40Q35 45 60.0 61.5Q85 78 102 121L365 780H439L678 196Q699 145 714.0 115.5Q729 86 745.0 71.0Q761 56 782.5 50.0Q804 44 838 41V0H460V41Q508 43 529.0 51.0Q550 59 550 83Q550 97 543.0 119.5Q536 142 524 173L501 233H218Q194 179 182.5 143.0Q171 107 171 86Q171 56 193.5 48.0Q216 40 261 40V0ZM241 293H479L364 596H360Z" transform="translate(129.36,103.76) scale(0.08800,-0.08800)" />
-        <path d="M670 -10 227 621H223V191Q223 125 230.5 93.5Q238 62 260.5 52.0Q283 42 327 40V0H30V40Q79 42 103.5 52.0Q128 62 136.5 92.0Q145 122 145 184V586Q145 643 137.5 673.0Q130 703 107.5 715.5Q85 728 40 730V770H319L722 192H726V579Q726 645 718.5 676.5Q711 708 689.0 718.5Q667 729 622 730V770H919V730Q870 729 845.5 718.5Q821 708 812.5 678.0Q804 648 804 586V-10Z" transform="translate(216.39,103.76) scale(0.08800,-0.08800)" />
-        <path d="M688 708 707 770H756L736 517H696Q675 609 614.5 662.0Q554 715 468 715Q390 715 334.5 674.5Q279 634 250.0 558.5Q221 483 221 378Q221 224 285.0 140.0Q349 56 472 56Q571 56 637.0 110.5Q703 165 731 271H775V0H728L714 79Q604 -10 447 -10Q326 -10 236.0 37.0Q146 84 96.5 169.5Q47 255 47 372Q47 463 77.0 537.5Q107 612 161.5 666.5Q216 721 292.0 750.5Q368 780 459 780Q520 780 573.5 763.0Q627 746 688 708Z" transform="translate(314.95,103.76) scale(0.08800,-0.08800)" />
-        <path d="M805 770 815 550H772Q768 616 748.5 652.5Q729 689 693.5 703.5Q658 718 604 718Q553 718 527.0 715.5Q501 713 493.0 706.0Q485 699 485 687V163Q485 120 494.0 93.5Q503 67 532.0 54.5Q561 42 620 40V0H201V40Q261 42 290.0 54.5Q319 67 328.5 93.5Q338 120 338 163V687Q338 699 331.0 706.0Q324 713 302.0 715.5Q280 718 235 718Q199 718 166.0 714.0Q133 710 108.0 694.5Q83 679 68.0 645.0Q53 611 51 550H12L22 770Z" transform="translate(403.22,103.76) scale(0.08800,-0.08800)" />
-        <path d="M36 0V40Q81 42 103.5 52.0Q126 62 133.5 92.0Q141 122 141 184V586Q141 643 134.5 673.0Q128 703 107.5 715.5Q87 728 46 730V770H383V730Q342 728 321.5 715.5Q301 703 294.5 673.0Q288 643 288 586V184Q288 122 295.5 92.0Q303 62 325.5 52.0Q348 42 393 40V0Z" transform="translate(491.83,103.76) scale(0.08800,-0.08800)" />
+<nav class="primary">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/" aria-label="Sanctir home"><svg class="wordmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 146" role="img" aria-label="Sanctir">
+        <title>Sanctir</title>
+        <g fill="#1A3A5C">
+        <path d="M69 0 54 255H93Q107 161 169.5 106.0Q232 51 322 51Q397 51 443.0 85.5Q489 120 489 175Q489 207 474.5 229.0Q460 251 419.5 272.5Q379 294 301 323Q224 353 173.0 389.0Q122 425 97.0 470.0Q72 515 72 568Q72 631 103.5 678.5Q135 726 190.5 753.0Q246 780 319 780Q418 780 504 716L522 766H546L557 550H518Q494 632 443.0 675.5Q392 719 325 719Q264 719 225.0 688.5Q186 658 186 610Q186 582 199.5 561.5Q213 541 250.0 521.5Q287 502 356 476Q449 441 507.0 402.5Q565 364 591.5 319.5Q618 275 618 219Q618 152 580.0 100.0Q542 48 475.0 19.0Q408 -10 320 -10Q261 -10 212.0 6.5Q163 23 113 60L93 0Z" transform="translate(55.25,103.76) scale(0.08800,-0.08800)" />
+        <path d="M-13 0V40Q35 45 60.0 61.5Q85 78 102 121L365 780H439L678 196Q699 145 714.0 115.5Q729 86 745.0 71.0Q761 56 782.5 50.0Q804 44 838 41V0H460V41Q508 43 529.0 51.0Q550 59 550 83Q550 97 543.0 119.5Q536 142 524 173L501 233H218Q194 179 182.5 143.0Q171 107 171 86Q171 56 193.5 48.0Q216 40 261 40V0ZM241 293H479L364 596H360Z" transform="translate(129.43,103.76) scale(0.08800,-0.08800)" />
+        <path d="M670 -10 227 621H223V191Q223 125 230.5 93.5Q238 62 260.5 52.0Q283 42 327 40V0H30V40Q79 42 103.5 52.0Q128 62 136.5 92.0Q145 122 145 184V586Q145 643 137.5 673.0Q130 703 107.5 715.5Q85 728 40 730V770H319L722 192H726V579Q726 645 718.5 676.5Q711 708 689.0 718.5Q667 729 622 730V770H919V730Q870 729 845.5 718.5Q821 708 812.5 678.0Q804 648 804 586V-10Z" transform="translate(216.46,103.76) scale(0.08800,-0.08800)" />
+        <path d="M688 708 707 770H756L736 517H696Q675 609 614.5 662.0Q554 715 468 715Q390 715 334.5 674.5Q279 634 250.0 558.5Q221 483 221 378Q221 224 285.0 140.0Q349 56 472 56Q571 56 637.0 110.5Q703 165 731 271H775V0H728L714 79Q604 -10 447 -10Q326 -10 236.0 37.0Q146 84 96.5 169.5Q47 255 47 372Q47 463 77.0 537.5Q107 612 161.5 666.5Q216 721 292.0 750.5Q368 780 459 780Q520 780 573.5 763.0Q627 746 688 708Z" transform="translate(315.02,103.76) scale(0.08800,-0.08800)" />
+        <path d="M805 770 815 550H772Q768 616 748.5 652.5Q729 689 693.5 703.5Q658 718 604 718Q553 718 527.0 715.5Q501 713 493.0 706.0Q485 699 485 687V163Q485 120 494.0 93.5Q503 67 532.0 54.5Q561 42 620 40V0H201V40Q261 42 290.0 54.5Q319 67 328.5 93.5Q338 120 338 163V687Q338 699 331.0 706.0Q324 713 302.0 715.5Q280 718 235 718Q199 718 166.0 714.0Q133 710 108.0 694.5Q83 679 68.0 645.0Q53 611 51 550H12L22 770Z" transform="translate(403.29,103.76) scale(0.08800,-0.08800)" />
+        <path d="M36 0V40Q81 42 103.5 52.0Q126 62 133.5 92.0Q141 122 141 184V586Q141 643 134.5 673.0Q128 703 107.5 715.5Q87 728 46 730V770H383V730Q342 728 321.5 715.5Q301 703 294.5 673.0Q288 643 288 586V184Q288 122 295.5 92.0Q303 62 325.5 52.0Q348 42 393 40V0Z" transform="translate(491.90,103.76) scale(0.08800,-0.08800)" />
         <path d="M695 577Q695 494 647.0 438.0Q599 382 494 363L726 97Q750 69 783.0 54.5Q816 40 850 40V0H613L365 304Q349 324 335.0 335.0Q321 346 309.5 350.5Q298 355 287 355V159Q287 110 297.0 84.0Q307 58 338.0 49.0Q369 40 432 40V0H35V40Q79 40 101.5 49.0Q124 58 132.0 82.5Q140 107 140 154V616Q140 663 133.5 686.5Q127 710 107.0 719.0Q87 728 46 730V770H392Q536 770 615.5 719.0Q695 668 695 577ZM287 697V415H352Q446 415 492.5 452.0Q539 489 539 572Q539 636 500.0 675.0Q461 714 392 714H305Q287 714 287 697Z" transform="translate(545.50,103.76) scale(0.08800,-0.08800)" />
-      </g>
-      <line x1="52.00" y1="117.76" x2="628.30" y2="117.76" stroke="#B8860B" stroke-width="1.25" stroke-linecap="butt" />
-    </svg>
-  </a>
-  <div class="code">404 · Not Found</div>
-  <h1>This page doesn't exist.</h1>
-  <p>The URL you requested isn't a Sanctir page. It may have been moved, never existed, or was mistyped.</p>
-  <a href="/" class="btn">Return to Sanctir</a>
-</div>
+        </g>
+        <line x1="52.00" y1="117.76" x2="628.30" y2="117.76" stroke="#B8860B" stroke-width="1.25" stroke-linecap="butt" />
+</svg></a>
+    <div class="nav-links">
+      <a class="btn btn-primary" href="/">Home</a>
+    </div>
+  </div>
+</nav>
+<main id="main">
+  <section class="hero" style="min-height:60vh;">
+    <div class="wrap">
+      <div class="hero-label">404 · Not Found</div>
+      <h1 style="max-width:20ch;">This page doesn't exist.</h1>
+      <p class="hero-sub">The URL you requested isn't a Sanctir page. It may have been moved, never existed, or been mistyped.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="/">Return to Sanctir</a>
+        <a class="btn btn-ghost" href="/research/">Research Library</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" aria-label="Sanctir home"><svg class="wordmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 146" role="img" aria-label="Sanctir">
+        <title>Sanctir</title>
+        <g fill="#1A3A5C">
+        <path d="M69 0 54 255H93Q107 161 169.5 106.0Q232 51 322 51Q397 51 443.0 85.5Q489 120 489 175Q489 207 474.5 229.0Q460 251 419.5 272.5Q379 294 301 323Q224 353 173.0 389.0Q122 425 97.0 470.0Q72 515 72 568Q72 631 103.5 678.5Q135 726 190.5 753.0Q246 780 319 780Q418 780 504 716L522 766H546L557 550H518Q494 632 443.0 675.5Q392 719 325 719Q264 719 225.0 688.5Q186 658 186 610Q186 582 199.5 561.5Q213 541 250.0 521.5Q287 502 356 476Q449 441 507.0 402.5Q565 364 591.5 319.5Q618 275 618 219Q618 152 580.0 100.0Q542 48 475.0 19.0Q408 -10 320 -10Q261 -10 212.0 6.5Q163 23 113 60L93 0Z" transform="translate(55.25,103.76) scale(0.08800,-0.08800)" />
+        <path d="M-13 0V40Q35 45 60.0 61.5Q85 78 102 121L365 780H439L678 196Q699 145 714.0 115.5Q729 86 745.0 71.0Q761 56 782.5 50.0Q804 44 838 41V0H460V41Q508 43 529.0 51.0Q550 59 550 83Q550 97 543.0 119.5Q536 142 524 173L501 233H218Q194 179 182.5 143.0Q171 107 171 86Q171 56 193.5 48.0Q216 40 261 40V0ZM241 293H479L364 596H360Z" transform="translate(129.43,103.76) scale(0.08800,-0.08800)" />
+        <path d="M670 -10 227 621H223V191Q223 125 230.5 93.5Q238 62 260.5 52.0Q283 42 327 40V0H30V40Q79 42 103.5 52.0Q128 62 136.5 92.0Q145 122 145 184V586Q145 643 137.5 673.0Q130 703 107.5 715.5Q85 728 40 730V770H319L722 192H726V579Q726 645 718.5 676.5Q711 708 689.0 718.5Q667 729 622 730V770H919V730Q870 729 845.5 718.5Q821 708 812.5 678.0Q804 648 804 586V-10Z" transform="translate(216.46,103.76) scale(0.08800,-0.08800)" />
+        <path d="M688 708 707 770H756L736 517H696Q675 609 614.5 662.0Q554 715 468 715Q390 715 334.5 674.5Q279 634 250.0 558.5Q221 483 221 378Q221 224 285.0 140.0Q349 56 472 56Q571 56 637.0 110.5Q703 165 731 271H775V0H728L714 79Q604 -10 447 -10Q326 -10 236.0 37.0Q146 84 96.5 169.5Q47 255 47 372Q47 463 77.0 537.5Q107 612 161.5 666.5Q216 721 292.0 750.5Q368 780 459 780Q520 780 573.5 763.0Q627 746 688 708Z" transform="translate(315.02,103.76) scale(0.08800,-0.08800)" />
+        <path d="M805 770 815 550H772Q768 616 748.5 652.5Q729 689 693.5 703.5Q658 718 604 718Q553 718 527.0 715.5Q501 713 493.0 706.0Q485 699 485 687V163Q485 120 494.0 93.5Q503 67 532.0 54.5Q561 42 620 40V0H201V40Q261 42 290.0 54.5Q319 67 328.5 93.5Q338 120 338 163V687Q338 699 331.0 706.0Q324 713 302.0 715.5Q280 718 235 718Q199 718 166.0 714.0Q133 710 108.0 694.5Q83 679 68.0 645.0Q53 611 51 550H12L22 770Z" transform="translate(403.29,103.76) scale(0.08800,-0.08800)" />
+        <path d="M36 0V40Q81 42 103.5 52.0Q126 62 133.5 92.0Q141 122 141 184V586Q141 643 134.5 673.0Q128 703 107.5 715.5Q87 728 46 730V770H383V730Q342 728 321.5 715.5Q301 703 294.5 673.0Q288 643 288 586V184Q288 122 295.5 92.0Q303 62 325.5 52.0Q348 42 393 40V0Z" transform="translate(491.90,103.76) scale(0.08800,-0.08800)" />
+        <path d="M695 577Q695 494 647.0 438.0Q599 382 494 363L726 97Q750 69 783.0 54.5Q816 40 850 40V0H613L365 304Q349 324 335.0 335.0Q321 346 309.5 350.5Q298 355 287 355V159Q287 110 297.0 84.0Q307 58 338.0 49.0Q369 40 432 40V0H35V40Q79 40 101.5 49.0Q124 58 132.0 82.5Q140 107 140 154V616Q140 663 133.5 686.5Q127 710 107.0 719.0Q87 728 46 730V770H392Q536 770 615.5 719.0Q695 668 695 577ZM287 697V415H352Q446 415 492.5 452.0Q539 489 539 572Q539 636 500.0 675.0Q461 714 392 714H305Q287 714 287 697Z" transform="translate(545.50,103.76) scale(0.08800,-0.08800)" />
+        </g>
+        <line x1="52.00" y1="117.76" x2="628.30" y2="117.76" stroke="#B8860B" stroke-width="1.25" stroke-linecap="butt" />
+</svg></a>
+      <p>&copy; 2026 Sanctir. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
