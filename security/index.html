@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Security — Sanctir</title>
-<meta name="description" content="Sanctir's website security posture and vulnerability disclosure policy. HTTPS, HSTS, DNSSEC, and content security policy — each independently verifiable.">
+<meta name="description" content="Sanctir's website security posture and vulnerability disclosure policy. HTTPS, DNSSEC, and content security policy — each independently verifiable.">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'">
 <link rel="canonical" href="https://sanctir.com/security/">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -61,13 +61,6 @@
           <h3>HTTPS enforced</h3>
           <p>All traffic is served over TLS. Plain-HTTP requests are redirected to HTTPS. The certificate is issued by Let's Encrypt and renews automatically.</p>
           <div class="decide-regimes"><a href="https://www.ssllabs.com/ssltest/analyze.html?d=sanctir.com" rel="noopener noreferrer" target="_blank">Verify at SSL Labs &rsaquo;</a></div>
-        </div>
-
-        <div class="decide-card" style="cursor:default;">
-          <div class="decide-num">Transport</div>
-          <h3>HSTS</h3>
-          <p>HTTP Strict Transport Security instructs browsers to connect only over HTTPS, protecting against downgrade and cookie-hijacking attacks.</p>
-          <div class="decide-regimes"><a href="https://securityheaders.com/?q=sanctir.com&followRedirects=on" rel="noopener noreferrer" target="_blank">Verify at Security Headers &rsaquo;</a></div>
         </div>
 
         <div class="decide-card" style="cursor:default;">
