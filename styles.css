@@ -1280,3 +1280,51 @@ footer {
   .feature h2 { font-size: 1.5rem; }
   .hero-scope { gap: 0.4rem 1rem; }
 }
+
+/* ============================================================
+   Commitment band — service/patriotism statement
+   ============================================================ */
+.commitment {
+  background: var(--navy);
+  color: var(--white);
+}
+.commitment-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2.6rem;
+  align-items: center;
+}
+.commitment-flag {
+  width: 132px;
+  height: auto;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.15);
+  display: block;
+}
+.commitment-body .sl {
+  color: var(--gold);
+}
+.commitment-body .sl::after { background: rgba(255,255,255,0.25); }
+.commitment-body h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 0.9rem;
+  letter-spacing: -0.005em;
+}
+.commitment-body p {
+  font-size: 1.0rem;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.75;
+  margin: 0;
+  max-width: 68ch;
+}
+@media (max-width: 700px) {
+  .commitment-inner { grid-template-columns: 1fr; gap: 1.6rem; }
+  .commitment-flag { width: 108px; }
+  .commitment-body h2 { font-size: 1.3rem; }
+}

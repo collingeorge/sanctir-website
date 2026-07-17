@@ -3,14 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page not found — Sanctir</title>
-<meta name="robots" content="noindex">
+<title>Security — Sanctir</title>
+<meta name="description" content="Sanctir's website security posture and vulnerability disclosure policy. HTTPS, HSTS, DNSSEC, and content security policy — each independently verifiable.">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'">
+<link rel="canonical" href="https://sanctir.com/security/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon-180.png">
 <link rel="stylesheet" href="/styles.css?v=3">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <nav class="primary">
   <div class="nav-inner">
     <a class="nav-brand" href="/" aria-label="Sanctir home"><svg class="wordmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 146" role="img" aria-label="Sanctir">
@@ -27,22 +30,102 @@
         <line x1="52.00" y1="117.76" x2="628.30" y2="117.76" stroke="#B8860B" stroke-width="1.25" stroke-linecap="butt" />
 </svg></a>
     <div class="nav-links">
-      <a class="btn btn-primary" href="/">Home</a>
+      <a href="/#research">Research</a>
+      <a href="/#decide">Advisory</a>
+      <a href="/#supply-chain">Supply Chain</a>
+      <a href="/#methodology">Methodology</a>
+      <a href="/#about">About</a>
+      <a class="btn btn-primary" href="/#contact">Contact</a>
     </div>
   </div>
 </nav>
 <main id="main">
-  <section class="hero" style="min-height:60vh;">
+  <section class="hero" style="min-height:auto;padding-top:4.5rem;padding-bottom:2rem;">
     <div class="wrap">
-      <div class="hero-label">404 · Not Found</div>
-      <h1 style="max-width:20ch;">This page doesn't exist.</h1>
-      <p class="hero-sub">The URL you requested isn't a Sanctir page. It may have been moved, never existed, or been mistyped.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="/">Return to Sanctir</a>
-        <a class="btn btn-ghost" href="/research/">Research Library</a>
+      <div class="hero-label">Security</div>
+      <h1 style="max-width:26ch;">Security posture and disclosure policy</h1>
+      <p class="hero-sub">A practice that advises on cybersecurity should hold its own site to the same standard. Every control below is stated plainly and can be verified independently — you do not have to take our word for it.</p>
+    </div>
+  </section>
+  <hr class="divider">
+
+  <section>
+    <div class="wrap">
+      <div class="sl">Verifiable Posture</div>
+      <h2>How this site is secured</h2>
+      <p class="sd">Each item below is a control actually in place, paired with a way to confirm it yourself using independent, third-party tools.</p>
+
+      <div class="decide-grid">
+        <div class="decide-card" style="cursor:default;">
+          <div class="decide-num">Transport</div>
+          <h3>HTTPS enforced</h3>
+          <p>All traffic is served over TLS. Plain-HTTP requests are redirected to HTTPS. The certificate is issued by Let's Encrypt and renews automatically.</p>
+          <div class="decide-regimes"><a href="https://www.ssllabs.com/ssltest/analyze.html?d=sanctir.com" rel="noopener noreferrer" target="_blank">Verify at SSL Labs &rsaquo;</a></div>
+        </div>
+
+        <div class="decide-card" style="cursor:default;">
+          <div class="decide-num">Transport</div>
+          <h3>HSTS</h3>
+          <p>HTTP Strict Transport Security instructs browsers to connect only over HTTPS, protecting against downgrade and cookie-hijacking attacks.</p>
+          <div class="decide-regimes"><a href="https://securityheaders.com/?q=sanctir.com&followRedirects=on" rel="noopener noreferrer" target="_blank">Verify at Security Headers &rsaquo;</a></div>
+        </div>
+
+        <div class="decide-card" style="cursor:default;">
+          <div class="decide-num">DNS</div>
+          <h3>DNSSEC enabled</h3>
+          <p>Domain Name System Security Extensions cryptographically sign our DNS records, preventing spoofing and cache-poisoning of sanctir.com resolution.</p>
+          <div class="decide-regimes"><a href="https://dnssec-analyzer.verisignlabs.com/sanctir.com" rel="noopener noreferrer" target="_blank">Verify at Verisign Labs &rsaquo;</a></div>
+        </div>
+
+        <div class="decide-card" style="cursor:default;">
+          <div class="decide-num">Application</div>
+          <h3>Content Security Policy</h3>
+          <p>A restrictive CSP is set on every page, constraining what may load and execute. Framing is denied; object and base-URI sources are locked down.</p>
+          <div class="decide-regimes"><a href="https://securityheaders.com/?q=sanctir.com&followRedirects=on" rel="noopener noreferrer" target="_blank">Verify at Security Headers &rsaquo;</a></div>
+        </div>
+
+        <div class="decide-card" style="cursor:default;">
+          <div class="decide-num">Privacy</div>
+          <h3>No third-party trackers</h3>
+          <p>This site loads no analytics, advertising, or behavioral-tracking scripts. Fonts and stylesheets are self-hosted from the same origin. You can confirm this in your browser's network inspector.</p>
+          <div class="decide-regimes">Open browser dev tools &rsaquo; Network</div>
+        </div>
+
+        <div class="decide-card" style="cursor:default;">
+          <div class="decide-num">Email</div>
+          <h3>SPF, DKIM &amp; DMARC</h3>
+          <p>Mail from sanctir.com is authenticated with SPF, DKIM signing, and a DMARC policy, reducing the risk of spoofed correspondence in our name.</p>
+          <div class="decide-regimes"><a href="https://mxtoolbox.com/domain/sanctir.com/" rel="noopener noreferrer" target="_blank">Verify at MXToolbox &rsaquo;</a></div>
+        </div>
       </div>
     </div>
   </section>
+
+  <hr class="divider">
+
+  <section class="section-tint">
+    <div class="wrap">
+      <div class="sl">Coordinated Disclosure</div>
+      <h2>Reporting a vulnerability</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>If you have identified a security vulnerability affecting sanctir.com, we welcome your report and will treat it seriously. Please send details — including steps to reproduce and any relevant technical context — to the security contact below.</p>
+          <p>We will acknowledge receipt and respond as promptly as circumstances allow. In the course of your research, we ask that you act in good faith: avoid privacy violations, service disruption, and any destruction or exfiltration of data.</p>
+          <p>A machine-readable policy is published at <a href="/.well-known/security.txt">/.well-known/security.txt</a> in accordance with RFC 9116.</p>
+        </div>
+        <div class="about-aside">
+          <h4>Security Contact</h4>
+          <ul><li class="mono-email"><a href="mailto:security@sanctir.com">security@sanctir.com</a></li></ul>
+          <h4>Policy File</h4>
+          <ul><li><a href="/.well-known/security.txt">security.txt (RFC 9116)</a></li></ul>
+          <h4>Scope</h4>
+          <ul><li>sanctir.com and subdomains</li><li>Email authentication for sanctir.com</li></ul>
+        </div>
+      </div>
+      <p style="margin-top:2rem;"><a class="section-link" href="/">Return to Sanctir</a></p>
+    </div>
+  </section>
+
 </main>
 <footer>
   <div class="footer-inner">
@@ -60,7 +143,28 @@
         </g>
         <line x1="52.00" y1="117.76" x2="628.30" y2="117.76" stroke="#B8860B" stroke-width="1.25" stroke-linecap="butt" />
 </svg></a>
+      <p>Independent research and advisory practice. Not affiliated with any government agency, academic institution, or defense contractor. Services are advisory in nature and do not constitute legal advice.</p>
       <p>&copy; 2026 Sanctir. All rights reserved.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Practice</div>
+      <div class="footer-links">
+        <a href="/#research">Research</a>
+        <a href="/#decide">Advisory</a>
+        <a href="/#supply-chain">Supply Chain</a>
+        <a href="/#methodology">Methodology</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Resources</div>
+      <div class="footer-links">
+        <a href="/research/">Research Library</a>
+        <a href="/security/">Security</a>
+        <a href="/privacy.html">Privacy Notice</a>
+        <a href="/terms.html">Terms &amp; Disclaimer</a>
+      </div>
     </div>
   </div>
 </footer>
