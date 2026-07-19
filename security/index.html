@@ -6,6 +6,7 @@
 <title>Security — Sanctir</title>
 <meta name="description" content="Sanctir's website security posture and vulnerability disclosure policy. HTTPS, DNSSEC, and content security policy — each independently verifiable.">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="canonical" href="https://sanctir.com/security/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -98,7 +99,7 @@
           <div class="decide-num">Application</div>
           <h3>Content Security Policy</h3>
           <p>A restrictive Content Security Policy is set on every page, limiting resource loading to same-origin and disallowing object embedding and base-URI manipulation. Note: the policy also declares <code>frame-ancestors</code>, which is not enforced under meta-tag delivery — the method the current host requires. Clickjacking protection would require a response header.</p>
-          <div class="decide-regimes"><a href="https://securityheaders.com/?q=sanctir.com&followRedirects=on" rel="noopener noreferrer" target="_blank">Verify at Security Headers &rsaquo;</a></div>
+          <div class="decide-regimes">Inspect page source &rsaquo; &lt;meta http-equiv&gt;</div>
         </div>
 
         <div class="decide-card" style="cursor:default;">
@@ -113,6 +114,37 @@
           <h3>SPF, DKIM &amp; DMARC</h3>
           <p>Mail from sanctir.com is authenticated with SPF, DKIM signing, and a DMARC policy, reducing the risk of spoofed correspondence in our name.</p>
           <div class="decide-regimes"><a href="https://mxtoolbox.com/domain/sanctir.com/" rel="noopener noreferrer" target="_blank">Verify at MXToolbox &rsaquo;</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section>
+    <div class="wrap">
+      <div class="sl">Current Limitations</div>
+      <h2>What this site does not yet enforce</h2>
+      <p class="sd">Stating a posture accurately means stating its gaps. A public header scan of this site will show missing response headers. The reason is architectural, not an oversight.</p>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>This site is served by a static host that does not permit custom HTTP response headers. Several controls that are normally delivered as headers — HTTP Strict Transport Security, <code>X-Frame-Options</code>, <code>X-Content-Type-Options</code>, and <code>Permissions-Policy</code> — cannot be set under that constraint.</p>
+          <p>Content Security Policy and Referrer Policy are delivered through document metadata instead, which browsers honor for most directives. <code>frame-ancestors</code> is the notable exception: it is declared but is not enforced under meta-tag delivery.</p>
+          <p>Transport security is enforced at the TLS and DNS layers, both independently verifiable above. Header-based controls are pending a change in hosting architecture.</p>
+        </div>
+        <div class="about-aside">
+          <h4>Not Currently Set</h4>
+          <ul>
+            <li>Strict-Transport-Security</li>
+            <li>X-Frame-Options</li>
+            <li>X-Content-Type-Options</li>
+            <li>Permissions-Policy</li>
+          </ul>
+          <h4>Delivered Via Metadata</h4>
+          <ul>
+            <li>Content-Security-Policy</li>
+            <li>Referrer-Policy</li>
+          </ul>
         </div>
       </div>
     </div>
