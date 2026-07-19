@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Security — Sanctir</title>
 <meta name="description" content="Sanctir's website security posture and vulnerability disclosure policy. HTTPS, DNSSEC, and content security policy — each independently verifiable.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="canonical" href="https://sanctir.com/security/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/favicon-180.png">
-<link rel="stylesheet" href="/styles.css?v=5">
+<link rel="stylesheet" href="/styles.css?v=6">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -60,15 +60,19 @@
           <a href="/security/">Security</a>
         </div>
       </div>
-      <a class="btn btn-primary" href="/#contact">Contact</a>
+      <span class="nav-social">
+        <a href="https://x.com/Sanctir" rel="noopener noreferrer" target="_blank" aria-label="Sanctir on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+        <a href="/pgp/" aria-label="Encrypted communication"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5Zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3Zm0 11a2 2 0 0 1 1 3.732V19a1 1 0 0 1-2 0v-1.268A2 2 0 0 1 12 14Z"/></svg></a>
+      </span>
+      <a class="btn btn-primary" href="/contact/">Contact</a>
     </div>
   </div>
 </nav>
 <main id="main">
-  <section class="hero" style="min-height:auto;padding-top:4.5rem;padding-bottom:2rem;">
+  <section class="hero hero-compact">
     <div class="wrap">
       <div class="hero-label">Security</div>
-      <h1 style="max-width:26ch;">Security posture and disclosure policy</h1>
+      <h1 class="mw-26">Security posture and disclosure policy</h1>
       <p class="hero-sub">A practice that advises on cybersecurity should hold its own site to the same standard. Every control below is stated plainly and can be verified independently — you do not have to take our word for it.</p>
     </div>
   </section>
@@ -81,35 +85,35 @@
       <p class="sd">Each item below is a control actually in place, paired with a way to confirm it yourself using independent, third-party tools.</p>
 
       <div class="decide-grid">
-        <div class="decide-card" style="cursor:default;">
+        <div class="decide-card no-link">
           <div class="decide-num">Transport</div>
           <h3>HTTPS enforced</h3>
           <p>All traffic is served over TLS. Plain-HTTP requests are redirected to HTTPS. The certificate is issued by Let's Encrypt and renews automatically.</p>
           <div class="decide-regimes"><a href="https://www.ssllabs.com/ssltest/analyze.html?d=sanctir.com" rel="noopener noreferrer" target="_blank">Verify at SSL Labs &rsaquo;</a></div>
         </div>
 
-        <div class="decide-card" style="cursor:default;">
+        <div class="decide-card no-link">
           <div class="decide-num">DNS</div>
           <h3>DNSSEC enabled</h3>
           <p>Domain Name System Security Extensions cryptographically sign our DNS records, preventing spoofing and cache-poisoning of sanctir.com resolution.</p>
           <div class="decide-regimes"><a href="https://dnssec-analyzer.verisignlabs.com/sanctir.com" rel="noopener noreferrer" target="_blank">Verify at Verisign Labs &rsaquo;</a></div>
         </div>
 
-        <div class="decide-card" style="cursor:default;">
+        <div class="decide-card no-link">
           <div class="decide-num">Application</div>
           <h3>Content Security Policy</h3>
           <p>A restrictive Content Security Policy is set on every page, limiting resource loading to same-origin and disallowing object embedding and base-URI manipulation. Note: the policy also declares <code>frame-ancestors</code>, which is not enforced under meta-tag delivery — the method the current host requires. Clickjacking protection would require a response header.</p>
           <div class="decide-regimes">Inspect page source &rsaquo; &lt;meta http-equiv&gt;</div>
         </div>
 
-        <div class="decide-card" style="cursor:default;">
+        <div class="decide-card no-link">
           <div class="decide-num">Privacy</div>
           <h3>No third-party trackers</h3>
           <p>This site loads no analytics, advertising, or behavioral-tracking scripts. Fonts and stylesheets are self-hosted from the same origin. You can confirm this in your browser's network inspector.</p>
           <div class="decide-regimes">Open browser dev tools &rsaquo; Network</div>
         </div>
 
-        <div class="decide-card" style="cursor:default;">
+        <div class="decide-card no-link">
           <div class="decide-num">Email</div>
           <h3>SPF, DKIM &amp; DMARC</h3>
           <p>Mail from sanctir.com is authenticated with SPF, DKIM signing, and a DMARC policy, reducing the risk of spoofed correspondence in our name.</p>
@@ -171,7 +175,7 @@
           <ul><li>sanctir.com and subdomains</li><li>Email authentication for sanctir.com</li></ul>
         </div>
       </div>
-      <p style="margin-top:2rem;"><a class="section-link" href="/">Return to Sanctir</a></p>
+      <p class="mt-2"><a class="section-link" href="/">Return to Sanctir</a></p>
     </div>
   </section>
 
@@ -194,6 +198,12 @@
 </svg></a>
       <p>Independent research and advisory practice. Not affiliated with any government agency, academic institution, or defense contractor. Services are advisory in nature and do not constitute legal advice.</p>
       <p>&copy; 2026 Sanctir. All rights reserved.</p>
+      <div class="social-row">
+        <a href="https://x.com/Sanctir" rel="noopener noreferrer" target="_blank" aria-label="Sanctir on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+        <a href="/pgp/" aria-label="Encrypted communication — Signal and PGP"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5Zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3Zm0 11a2 2 0 0 1 1 3.732V19a1 1 0 0 1-2 0v-1.268A2 2 0 0 1 12 14Z"/></svg></a>
+        <a href="mailto:contact@sanctir.com" aria-label="Email Sanctir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm9 8.13L4.6 6H19.4ZM4 8.24V18h16V8.24l-7.4 6.16a1 1 0 0 1-1.2 0Z"/></svg></a>
+        <a href="tel:+13026008018" aria-label="Call Sanctir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 2h3.1a1 1 0 0 1 1 .84l.7 4.1a1 1 0 0 1-.55 1.06L8.8 9.06a13.6 13.6 0 0 0 6.14 6.14l1.06-2.05a1 1 0 0 1 1.06-.55l4.1.7a1 1 0 0 1 .84 1V17.4A4.6 4.6 0 0 1 17.4 22 19.4 19.4 0 0 1 2 6.6 4.6 4.6 0 0 1 6.6 2Z"/></svg></a>
+      </div>
     </div>
     <div>
       <div class="footer-heading">Practice</div>
@@ -204,7 +214,7 @@
         <a href="/#methodology">Methodology</a>
         <a href="/principal/">Principal</a>
         <a href="/#about">About</a>
-        <a href="/#contact">Contact</a>
+        <a href="/contact/">Contact</a>
       </div>
     </div>
     <div>

@@ -1403,3 +1403,76 @@ footer {
   margin: 0 0 0.45rem;
 }
 .pub-status p { font-size: 0.89rem; color: var(--text-2); margin: 0; line-height: 1.65; }
+
+/* ============================================================
+   Utility classes — replaces inline styles so CSP can drop
+   'unsafe-inline' from style-src
+   ============================================================ */
+.hero-compact { min-height: auto; padding-top: 4.5rem; padding-bottom: 2rem; }
+.mh-60 { min-height: 60vh; }
+.mw-20 { max-width: 20ch; }
+.mw-22 { max-width: 22ch; }
+.mw-24 { max-width: 24ch; }
+.mw-26 { max-width: 26ch; }
+.mw-70 { max-width: 70ch; }
+.mt-18 { margin-top: 1.8rem; }
+.mt-2  { margin-top: 2rem; }
+.mt-22 { margin-top: 2.2rem; }
+.mt-25 { margin-top: 2.5rem; }
+.no-link { cursor: default; }
+.legal-p {
+  color: var(--text-2); line-height: 1.75;
+  font-size: 0.9375rem; margin-bottom: 0.9rem; max-width: 72ch;
+}
+.legal-h { margin-top: 1.8rem; margin-bottom: 0.5rem; }
+.legal-date {
+  font-family: var(--font-mono); font-size: 0.72rem;
+  color: var(--text-3); letter-spacing: 0.04em; margin-top: 0.5rem;
+}
+.note-p { margin-top: 1.6rem; font-size: 0.9rem; color: var(--text-2); max-width: 72ch; }
+.list-body { color: var(--text-2); line-height: 1.7; }
+.sub-h {
+  font-size: 1.02rem; font-weight: 700;
+  color: var(--navy); margin: 1.8rem 0 0.6rem;
+}
+.sub-h-serif {
+  font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700;
+  color: var(--navy); margin-top: 2rem; margin-bottom: 0.7rem;
+}
+
+/* Social / quick-contact icon row */
+.social-row { display: flex; gap: 0.9rem; align-items: center; margin-top: 1.1rem; }
+.social-row a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px;
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  transition: border-color .15s ease, color .15s ease, background .15s ease;
+}
+.social-row a:hover { border-color: var(--gold); color: var(--navy); background: var(--bg-tint); }
+.social-row svg { width: 15px; height: 15px; fill: currentColor; }
+footer .social-row a { border-color: rgba(255,255,255,0.22); color: rgba(255,255,255,0.72); }
+footer .social-row a:hover { border-color: var(--gold); color: var(--white); background: rgba(255,255,255,0.06); }
+.nav-social {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  padding-right: 0.2rem;
+}
+.nav-social a { display: inline-flex; color: var(--text-3); }
+.nav-social a:hover { color: var(--navy); }
+.nav-social svg { width: 15px; height: 15px; fill: currentColor; }
+@media (max-width: 700px) { .nav-social { display: none; } }
+
+/* OpenPGP armored key block */
+.pgp-key {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  line-height: 1.5;
+  color: var(--text-2);
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 1.1rem 1.2rem;
+  margin-top: 1.6rem;
+  overflow-x: auto;
+  white-space: pre;
+  word-break: break-all;
+}

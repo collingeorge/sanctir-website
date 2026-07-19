@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<title>Encrypted Communication — Sanctir</title>
+<meta name="description" content="Encrypted communication channels for Sanctir: Signal, OpenPGP public key and fingerprint, and guidance on transmitting sensitive material.">
+<link rel="canonical" href="https://sanctir.com/pgp/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Encrypted Communication — Sanctir</title>
-<meta name="description" content="Encrypted communication channels for Sanctir: Signal, PGP public key, and guidance on transmitting sensitive material.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; form-action https://formspree.io; base-uri 'self'; frame-ancestors 'none'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<link rel="canonical" href="https://sanctir.com/pgp/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/favicon-180.png">
-<link rel="stylesheet" href="/styles.css?v=5">
+<link rel="stylesheet" href="/styles.css?v=6">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -60,15 +60,19 @@
           <a href="/security/">Security</a>
         </div>
       </div>
-      <a class="btn btn-primary" href="/#contact">Contact</a>
+      <span class="nav-social">
+        <a href="https://x.com/Sanctir" rel="noopener noreferrer" target="_blank" aria-label="Sanctir on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+        <a href="/pgp/" aria-label="Encrypted communication"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5Zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3Zm0 11a2 2 0 0 1 1 3.732V19a1 1 0 0 1-2 0v-1.268A2 2 0 0 1 12 14Z"/></svg></a>
+      </span>
+      <a class="btn btn-primary" href="/contact/">Contact</a>
     </div>
   </div>
 </nav>
 <main id="main">
-  <section class="hero" style="min-height:auto;padding-top:4.5rem;padding-bottom:2rem;">
+  <section class="hero hero-compact">
     <div class="wrap">
       <div class="hero-label">Encrypted Communication</div>
-      <h1 style="max-width:24ch;">Secure channels</h1>
+      <h1 class="mw-24">Secure channels</h1>
       <p class="hero-sub">The web form is suitable only for high-level scoping. Use one of the channels below for anything sensitive — and note that no channel here is authorized for classified, CUI, or export-controlled material.</p>
     </div>
   </section>
@@ -79,22 +83,22 @@
       <div class="sl">Channels</div>
       <h2>How to reach Sanctir securely</h2>
       <div class="decide-grid">
-        <div class="decide-card" style="cursor:default;">
+        <div class="decide-card no-link">
           <div class="decide-num">Preferred</div>
           <h3>Signal</h3>
           <p>End-to-end encrypted messaging and voice. Username <strong>Sanctir.15</strong>. A Signal username does not disclose a phone number in either direction.</p>
-          <div class="decide-regimes">Signal · Sanctir.15</div>
+          <div class="decide-regimes">Signal &middot; Sanctir.15</div>
         </div>
-        <div class="decide-card" style="cursor:default;">
+        <div class="decide-card no-link">
           <div class="decide-num">Written</div>
-          <h3>PGP / OpenPGP</h3>
-          <p>For encrypted written material and attachments. Key details below. Signatures on outbound correspondence can be verified against the same key.</p>
-          <div class="decide-regimes">See key block below</div>
+          <h3>OpenPGP</h3>
+          <p>For encrypted written material and attachments. Outbound correspondence may be signed with the same key for verification.</p>
+          <div class="decide-regimes">Key and fingerprint below</div>
         </div>
-        <div class="decide-card" style="cursor:default;">
+        <div class="decide-card no-link">
           <div class="decide-num">Standard</div>
           <h3>Email &amp; voice</h3>
-          <p>Unencrypted channels for routine scoping and administration. <a href="mailto:contact@sanctir.com">contact@sanctir.com</a> · <a href="tel:+13026008018">(302) 600-8018</a></p>
+          <p>Unencrypted channels for routine scoping and administration. <a href="mailto:contact@sanctir.com">contact@sanctir.com</a> &middot; <a href="tel:+13026008018">(302) 600-8018</a></p>
           <div class="decide-regimes">Not for sensitive material</div>
         </div>
       </div>
@@ -107,11 +111,80 @@
     <div class="wrap">
       <div class="sl">Public Key</div>
       <h2>OpenPGP key</h2>
-      <div class="pub-status">
-        <h4>Key publication pending</h4>
-        <p>A hardware-backed OpenPGP key is being provisioned. Until it is published here, use Signal (<strong>Sanctir.15</strong>) for encrypted communication. Do not transmit sensitive material by unencrypted email.</p>
+      <!-- ===== PGP KEY BLOCK — replace this pub-status div once the key is generated ===== -->
+      <div class="about-grid">
+        <div class="about-text">
+          <p>The OpenPGP key below may be used for encrypted correspondence and to verify signatures on outbound material. Verify the fingerprint through a second channel before relying on it — a key presented on a website is only as trustworthy as the site serving it.</p>
+          <h3 class="sub-h">Fingerprint</h3>
+          <p class="mono-email">483C 3F41 2257 F665 2E2D 6967 A511 7219 51B3 3AF4</p>
+          <h3 class="sub-h">Key details</h3>
+          <p>RSA 4096 &middot; created 19 July 2026 &middot; expires 18 July 2028<br>
+          Primary key: certify and sign &middot; Subkey: encrypt<br>
+          <a href="/pgp/sanctir-public-key.asc">Download sanctir-public-key.asc</a></p>
+        </div>
+        <div class="about-aside">
+          <h4>Import</h4>
+          <ul><li>gpg --import sanctir-public-key.asc</li></ul>
+          <h4>Verify Fingerprint</h4>
+          <ul><li>gpg --fingerprint contact@sanctir.com</li></ul>
+          <h4>Encrypt To</h4>
+          <ul><li>contact@sanctir.com</li></ul>
+        </div>
       </div>
-      <p style="margin-top:1.6rem;font-size:0.9rem;color:var(--text-2);max-width:72ch;">When published, the key fingerprint will appear on this page and the key will be referenced from <a href="/.well-known/security.txt">/.well-known/security.txt</a>. Verify the fingerprint through a second channel before relying on it.</p>
+      <pre class="pgp-key">-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+tF5PSAJh5nxnfueE+g4Fo2JMRhe/+g==
+=BQxc
+-----END PGP PUBLIC KEY BLOCK-----</pre>
+      <!-- ===== END PGP KEY BLOCK ===== -->
+      <p class="note-p">Verify the fingerprint through a second channel before relying on it. The key is also referenced from <a href="/.well-known/security.txt">/.well-known/security.txt</a>.</p>
     </div>
   </section>
 
@@ -137,7 +210,7 @@
           <ul><li><a href="/security/">Disclosure policy</a></li></ul>
         </div>
       </div>
-      <p style="margin-top:2rem;"><a class="section-link" href="/#contact">Back to contact</a></p>
+      <p class="mt-2"><a class="section-link" href="/contact/">Back to contact</a></p>
     </div>
   </section>
 </main>
@@ -159,6 +232,12 @@
 </svg></a>
       <p>Independent research and advisory practice. Not affiliated with any government agency, academic institution, or defense contractor. Services are advisory in nature and do not constitute legal advice.</p>
       <p>&copy; 2026 Sanctir. All rights reserved.</p>
+      <div class="social-row">
+        <a href="https://x.com/Sanctir" rel="noopener noreferrer" target="_blank" aria-label="Sanctir on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+        <a href="/pgp/" aria-label="Encrypted communication — Signal and PGP"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5Zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3Zm0 11a2 2 0 0 1 1 3.732V19a1 1 0 0 1-2 0v-1.268A2 2 0 0 1 12 14Z"/></svg></a>
+        <a href="mailto:contact@sanctir.com" aria-label="Email Sanctir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm9 8.13L4.6 6H19.4ZM4 8.24V18h16V8.24l-7.4 6.16a1 1 0 0 1-1.2 0Z"/></svg></a>
+        <a href="tel:+13026008018" aria-label="Call Sanctir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 2h3.1a1 1 0 0 1 1 .84l.7 4.1a1 1 0 0 1-.55 1.06L8.8 9.06a13.6 13.6 0 0 0 6.14 6.14l1.06-2.05a1 1 0 0 1 1.06-.55l4.1.7a1 1 0 0 1 .84 1V17.4A4.6 4.6 0 0 1 17.4 22 19.4 19.4 0 0 1 2 6.6 4.6 4.6 0 0 1 6.6 2Z"/></svg></a>
+      </div>
     </div>
     <div>
       <div class="footer-heading">Practice</div>
@@ -169,7 +248,7 @@
         <a href="/#methodology">Methodology</a>
         <a href="/principal/">Principal</a>
         <a href="/#about">About</a>
-        <a href="/#contact">Contact</a>
+        <a href="/contact/">Contact</a>
       </div>
     </div>
     <div>
