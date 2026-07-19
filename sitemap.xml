@@ -9,6 +9,7 @@
   <url><loc>https://sanctir.com/services/export-controls/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sanctir.com/services/controlled-information/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sanctir.com/services/national-security-policy/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sanctir.com/principal/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://sanctir.com/sitemap/</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
   <url><loc>https://sanctir.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://sanctir.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
