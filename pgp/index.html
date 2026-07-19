@@ -121,9 +121,15 @@
           <p>RSA 4096 &middot; created 19 July 2026 &middot; expires 18 July 2028<br>
           Primary key: certify and sign &middot; Subkey: encrypt<br>
           <a href="/pgp/sanctir-public-key.asc">Download sanctir-public-key.asc</a></p>
+          <h3 class="sub-h">Automatic discovery</h3>
+          <p>This key is published via Web Key Directory on sanctir.com, so any current OpenPGP client can retrieve it directly:</p>
+          <p class="mono-email">gpg --locate-keys contact@sanctir.com</p>
+          <p>The key is served from this domain over TLS with DNSSEC-validated resolution. It is not published to third-party keyservers.</p>
         </div>
         <div class="about-aside">
-          <h4>Import</h4>
+          <h4>Automatic Discovery</h4>
+          <ul><li>gpg --locate-keys contact@sanctir.com</li></ul>
+          <h4>Import Manually</h4>
           <ul><li>gpg --import sanctir-public-key.asc</li></ul>
           <h4>Verify Fingerprint</h4>
           <ul><li>gpg --fingerprint contact@sanctir.com</li></ul>
