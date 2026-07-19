@@ -2,6 +2,7 @@
 # https://sanctir.com/.well-known/security.txt
 
 Contact: mailto:security@sanctir.com
+Encryption: https://sanctir.com/pgp/
 Expires: 2027-07-15T00:00:00.000Z
 Preferred-Languages: en
 Canonical: https://sanctir.com/.well-known/security.txt

@@ -9,6 +9,7 @@
   <url><loc>https://sanctir.com/research/statecraft-policy/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sanctir.com/supply-chain/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://sanctir.com/methodology/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sanctir.com/pgp/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://sanctir.com/security/</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://sanctir.com/services/financial-sanctions-risk/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sanctir.com/services/export-controls/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

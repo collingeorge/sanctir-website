@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Notice — Sanctir</title>
-<meta name="description" content="Privacy Notice for Sanctir, an independent national security research and advisory practice.">
+<title>Encrypted Communication — Sanctir</title>
+<meta name="description" content="Encrypted communication channels for Sanctir: Signal, PGP public key, and guidance on transmitting sensitive material.">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'">
-<link rel="canonical" href="https://sanctir.com/privacy.html">
+<link rel="canonical" href="https://sanctir.com/pgp/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/favicon-180.png">
@@ -66,27 +66,77 @@
 <main id="main">
   <section class="hero" style="min-height:auto;padding-top:4.5rem;padding-bottom:2rem;">
     <div class="wrap">
-      <div class="hero-label">Privacy</div>
-      <h1 style="max-width:24ch;">Privacy Notice</h1>
-      <p style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-3);letter-spacing:0.04em;margin-top:0.5rem;">Last updated: 19 July 2026</p>
+      <div class="hero-label">Encrypted Communication</div>
+      <h1 style="max-width:24ch;">Secure channels</h1>
+      <p class="hero-sub">The web form is suitable only for high-level scoping. Use one of the channels below for anything sensitive — and note that no channel here is authorized for classified, CUI, or export-controlled material.</p>
     </div>
   </section>
   <hr class="divider">
+
   <section>
     <div class="wrap">
-        <h3 style="margin-top:1.8rem;margin-bottom:0.5rem;">Information collected</h3>
-        <p style="color:var(--text-2);line-height:1.75;font-size:0.9375rem;margin-bottom:0.9rem;max-width:72ch;">Sanctir LLC collects information you voluntarily submit through the contact form: name, organization, email address, engagement type, and description of inquiry. Sanctir deploys no cookies, tracking pixels, analytics scripts, or third-party advertising tools on this site.</p>
-        <h3 style="margin-top:1.8rem;margin-bottom:0.5rem;">Use of information</h3>
-        <p style="color:var(--text-2);line-height:1.75;font-size:0.9375rem;margin-bottom:0.9rem;max-width:72ch;">Information submitted through the contact form is used solely to respond to your inquiry and, if mutually agreed, to scope a potential engagement. Information is not sold, shared with third parties for marketing purposes, or used for any purpose other than responding to your inquiry.</p>
-        <h3 style="margin-top:1.8rem;margin-bottom:0.5rem;">Data handling and retention</h3>
-        <p style="color:var(--text-2);line-height:1.75;font-size:0.9375rem;margin-bottom:0.9rem;max-width:72ch;">Form submissions are processed by Formspree, a third-party form handler (<a href="https://formspree.io/legal/privacy-policy/" rel="noopener noreferrer" target="_blank">Formspree privacy policy</a>). Submissions relating to inquiries that do not proceed are retained no longer than 90 days. Records relating to accepted engagements, and records retained for legal, tax, conflict-of-interest, or security purposes, are retained as required. Suppression records may be retained to honor deletion or no-contact requests. You may request deletion of your submitted information at any time by contacting contact@sanctir.com.</p>
-        <h3 style="margin-top:1.8rem;margin-bottom:0.5rem;">External dependencies</h3>
-        <p style="color:var(--text-2);line-height:1.75;font-size:0.9375rem;margin-bottom:0.9rem;max-width:72ch;">This site loads no third-party analytics or tracking scripts. Web fonts and stylesheets are self-hosted from the same origin as the site. The only external request initiated by this site is the contact-form submission handler.</p>
-        <p style="color:var(--text-2);line-height:1.75;font-size:0.9375rem;margin-bottom:0.9rem;max-width:72ch;">Sanctir does not deploy its own analytics or tracking technologies. Hosting and form-processing providers may process routine network and security metadata — such as IP address, browser type, request timestamp, and requested URL — as necessary to deliver and protect the service. Sanctir does not use this metadata for analytics, profiling, or marketing.</p>
-        <h3 style="margin-top:1.8rem;margin-bottom:0.5rem;">Contact</h3>
-        <p style="color:var(--text-2);line-height:1.75;font-size:0.9375rem;margin-bottom:0.9rem;max-width:72ch;">For privacy-related questions: contact@sanctir.com.</p>
+      <div class="sl">Channels</div>
+      <h2>How to reach Sanctir securely</h2>
+      <div class="decide-grid">
+        <div class="decide-card" style="cursor:default;">
+          <div class="decide-num">Preferred</div>
+          <h3>Signal</h3>
+          <p>End-to-end encrypted messaging and voice. Username <strong>Sanctir.15</strong>. A Signal username does not disclose a phone number in either direction.</p>
+          <div class="decide-regimes">Signal · Sanctir.15</div>
+        </div>
+        <div class="decide-card" style="cursor:default;">
+          <div class="decide-num">Written</div>
+          <h3>PGP / OpenPGP</h3>
+          <p>For encrypted written material and attachments. Key details below. Signatures on outbound correspondence can be verified against the same key.</p>
+          <div class="decide-regimes">See key block below</div>
+        </div>
+        <div class="decide-card" style="cursor:default;">
+          <div class="decide-num">Standard</div>
+          <h3>Email &amp; voice</h3>
+          <p>Unencrypted channels for routine scoping and administration. <a href="mailto:contact@sanctir.com">contact@sanctir.com</a> · <a href="tel:+13026008018">(302) 600-8018</a></p>
+          <div class="decide-regimes">Not for sensitive material</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <p style="margin-top:2rem;"><a class="section-link" href="/">Return to Sanctir</a></p>
+  <hr class="divider">
+
+  <section class="section-tint">
+    <div class="wrap">
+      <div class="sl">Public Key</div>
+      <h2>OpenPGP key</h2>
+      <div class="pub-status">
+        <h4>Key publication pending</h4>
+        <p>A hardware-backed OpenPGP key is being provisioned. Until it is published here, use Signal (<strong>Sanctir.15</strong>) for encrypted communication. Do not transmit sensitive material by unencrypted email.</p>
+      </div>
+      <p style="margin-top:1.6rem;font-size:0.9rem;color:var(--text-2);max-width:72ch;">When published, the key fingerprint will appear on this page and the key will be referenced from <a href="/.well-known/security.txt">/.well-known/security.txt</a>. Verify the fingerprint through a second channel before relying on it.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sl">Handling</div>
+      <h2>What not to send</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>No channel listed on this page is an authorized system for classified national security information, controlled unclassified information subject to a contractual handling requirement, or export-controlled technical data. Encryption is not authorization.</p>
+          <p>If an engagement requires handling of controlled material, the handling method and authorized environment are established in the engagement agreement before any transfer occurs. Where counsel is involved, privileged material should move through counsel.</p>
+        </div>
+        <div class="about-aside">
+          <h4>Do Not Transmit</h4>
+          <ul>
+            <li>Classified information</li>
+            <li>CUI under contractual handling requirements</li>
+            <li>ITAR / EAR-controlled technical data</li>
+            <li>Privileged material outside counsel</li>
+            <li>Personal health information</li>
+          </ul>
+          <h4>Vulnerability Reports</h4>
+          <ul><li><a href="/security/">Disclosure policy</a></li></ul>
+        </div>
+      </div>
+      <p style="margin-top:2rem;"><a class="section-link" href="/#contact">Back to contact</a></p>
     </div>
   </section>
 </main>
