@@ -10,7 +10,7 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/favicon-180.png">
-<link rel="stylesheet" href="/styles.css?v=3">
+<link rel="stylesheet" href="/styles.css?v=4">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -73,7 +73,7 @@
         <div class="decide-card" style="cursor:default;">
           <div class="decide-num">Application</div>
           <h3>Content Security Policy</h3>
-          <p>A restrictive CSP is set on every page, constraining what may load and execute. Framing is denied; object and base-URI sources are locked down.</p>
+          <p>A restrictive Content Security Policy is set on every page, limiting resource loading to same-origin and disallowing object embedding and base-URI manipulation. Note: the policy also declares <code>frame-ancestors</code>, which is not enforced under meta-tag delivery — the method the current host requires. Clickjacking protection would require a response header.</p>
           <div class="decide-regimes"><a href="https://securityheaders.com/?q=sanctir.com&followRedirects=on" rel="noopener noreferrer" target="_blank">Verify at Security Headers &rsaquo;</a></div>
         </div>
 
