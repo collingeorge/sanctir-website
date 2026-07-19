@@ -1328,3 +1328,78 @@ footer {
   .commitment-flag { width: 108px; }
   .commitment-body h2 { font-size: 1.3rem; }
 }
+
+/* ============================================================
+   Research dropdown — pure CSS, keyboard accessible
+   ============================================================ */
+.nav-dd { position: relative; display: inline-flex; align-items: center; }
+.nav-dd > a::after {
+  content: "";
+  display: inline-block;
+  width: 0; height: 0;
+  margin-left: 0.34rem;
+  border-left: 3.5px solid transparent;
+  border-right: 3.5px solid transparent;
+  border-top: 4px solid currentColor;
+  vertical-align: middle;
+  opacity: 0.55;
+}
+.nav-dd-menu {
+  position: absolute;
+  top: 100%; left: -0.9rem;
+  min-width: 264px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--gold);
+  box-shadow: 0 6px 22px rgba(26,58,92,0.10);
+  padding: 0.45rem 0;
+  opacity: 0; visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity .13s ease, transform .13s ease, visibility .13s;
+  z-index: 60;
+}
+.nav-dd:hover .nav-dd-menu,
+.nav-dd:focus-within .nav-dd-menu {
+  opacity: 1; visibility: visible; transform: translateY(0);
+}
+.nav-dd-menu a {
+  display: block;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.83rem;
+  font-weight: 400;
+  color: var(--text-2);
+  text-decoration: none;
+  line-height: 1.4;
+  border-left: 2px solid transparent;
+}
+.nav-dd-menu a:hover,
+.nav-dd-menu a:focus {
+  background: var(--bg-tint);
+  color: var(--navy);
+  border-left-color: var(--gold);
+}
+.nav-dd-menu .dd-head {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  padding: 0.5rem 1.1rem 0.35rem;
+}
+.nav-dd-menu .dd-sep { height: 1px; background: var(--border-soft); margin: 0.4rem 0; }
+@media (max-width: 700px) { .nav-dd { display: none; } }
+
+/* Domain page: publication status block */
+.pub-status {
+  border: 1px dashed var(--border);
+  background: var(--bg-tint);
+  padding: 1.4rem 1.6rem;
+  margin-top: 1.2rem;
+}
+.pub-status h4 {
+  font-family: var(--font-serif);
+  font-size: 1.02rem; font-weight: 700; color: var(--navy);
+  margin: 0 0 0.45rem;
+}
+.pub-status p { font-size: 0.89rem; color: var(--text-2); margin: 0; line-height: 1.65; }
