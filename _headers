@@ -27,3 +27,7 @@
 
 /.well-known/openpgpkey/policy
   Content-Type: text/plain; charset=utf-8
+
+/research/cybersecurity-attestation/cmmc-phase-2-suspension/*.pdf
+  Link: <https://sanctir.com/research/cybersecurity-attestation/cmmc-phase-2-suspension/>; rel="canonical"
+  X-Robots-Tag: noindex
