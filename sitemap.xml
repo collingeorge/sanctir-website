@@ -20,4 +20,10 @@
   <url><loc>https://sanctir.com/sitemap/</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
   <url><loc>https://sanctir.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://sanctir.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url>
+    <loc>https://sanctir.com/research/cybersecurity-attestation/cmmc-phase-2-suspension/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
