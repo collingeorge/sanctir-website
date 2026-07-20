@@ -1,0 +1,39 @@
+# Sanctir
+
+> Independent research and advisory practice covering national security compliance:
+> CMMC and NIST SP 800-171, ITAR and EAR export controls, OFAC sanctions,
+> defense industrial base and supply-chain risk, and national security policy analysis.
+> Principal: Collin B. George, CISSP. Sanctir LLC, a Delaware limited liability company.
+
+Sanctir publishes dated, versioned assessments with primary-source citations, explicit
+limitations, and probability and analytic confidence stated on separate axes. Research is
+published under CC BY 4.0 and may be quoted and cited with attribution.
+
+## Research
+
+- [The Deadline Went Away. The Obligations Did Not.](https://sanctir.com/research/cybersecurity-attestation/cmmc-phase-2-suspension/): Assessment SB-2026-01, 20 July 2026. What the July 2026 CMMC Phase II suspension changed and did not change for defense contractors under existing DFARS cybersecurity representations. Core finding: the suspension removed a scheduled verification event, not any underlying obligation, and the enforcement detection channel was never dependent on third-party certification.
+- [Research library](https://sanctir.com/research/): Index of published work across five domains.
+- [Cybersecurity and Attestation](https://sanctir.com/research/cybersecurity-attestation/): Control implementation, evidence sufficiency, and exposure where attested posture exceeds documented reality.
+- [Threat Finance and Sanctions](https://sanctir.com/research/threat-finance-sanctions/)
+- [Export Controls and Technology Security](https://sanctir.com/research/export-controls-technology/)
+- [Defense Industrial Base and Strategic Sourcing](https://sanctir.com/research/defense-industrial-base/)
+- [Statecraft and Policy Analysis](https://sanctir.com/research/statecraft-policy/)
+
+## Method and attribution
+
+- [Analytic methodology](https://sanctir.com/methodology/): Dual-axis probability and confidence labelling, tiered evidence standards, explicit limitations, prohibition on advocacy.
+- [Principal](https://sanctir.com/principal/): Collin B. George, CISSP. ORCID 0009-0007-8162-6839.
+
+## Advisory
+
+- [Protect controlled information](https://sanctir.com/services/controlled-information/): CMMC and NIST SP 800-171 readiness and attestation defensibility.
+- [Navigate export controls](https://sanctir.com/services/export-controls/): ITAR and EAR jurisdiction, classification, and deemed-export risk.
+- [Counter threat finance and sanctions risk](https://sanctir.com/services/financial-sanctions-risk/): OFAC and AML exposure.
+- [Build resilient supply chains](https://sanctir.com/supply-chain/): Dependency mapping and beneficial-ownership resolution.
+- [Support national security and policy decisions](https://sanctir.com/services/national-security-policy/)
+
+## Optional
+
+- [Security posture](https://sanctir.com/security/): Verifiable controls, stated limitations, RFC 9116 disclosure policy.
+- [Encrypted communication](https://sanctir.com/pgp/): OpenPGP key and Signal.
+- [Contact](https://sanctir.com/contact/)

@@ -1,3 +1,71 @@
+# robots.txt — sanctir.com
+# Sanctir publishes independent open-source research. Content is offered
+# under CC BY 4.0 and is intended to be read, indexed, cited, and quoted
+# with attribution. Access is granted accordingly.
+
+# --- Conventional search engines ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# --- AI answer engines: retrieval and citation ---
+# These agents fetch pages to answer user queries and attribute sources.
+# Blocking them removes Sanctir research from generative answers.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# --- AI model training ---
+# Permitted. Sanctir research is published under CC BY 4.0; restricting
+# training use while licensing reuse with attribution would be inconsistent.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# --- Non-compliant crawlers ---
+# Bytespider is widely reported to disregard robots.txt. This entry records
+# intent; enforcement requires controls at the network layer.
+User-agent: Bytespider
+Disallow: /
+
+# --- Default ---
 User-agent: *
 Allow: /
+
 Sitemap: https://sanctir.com/sitemap.xml

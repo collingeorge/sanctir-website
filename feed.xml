@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sanctir Research</title>
+  <subtitle>Independent research on national security compliance, export controls, sanctions, and defense industrial base risk.</subtitle>
+  <link href="https://sanctir.com/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://sanctir.com/" rel="alternate" type="text/html"/>
+  <id>https://sanctir.com/</id>
+  <updated>2026-07-20T00:00:00Z</updated>
+  <rights>CC BY 4.0</rights>
+  <author>
+    <name>Collin B. George</name>
+    <uri>https://sanctir.com/principal/</uri>
+  </author>
+  <entry>
+    <title>The Deadline Went Away. The Obligations Did Not.</title>
+    <link href="https://sanctir.com/research/cybersecurity-attestation/cmmc-phase-2-suspension/" rel="alternate" type="text/html"/>
+    <id>https://sanctir.com/research/cybersecurity-attestation/cmmc-phase-2-suspension/</id>
+    <published>2026-07-20T00:00:00Z</published>
+    <updated>2026-07-20T00:00:00Z</updated>
+    <category term="Cybersecurity and Attestation"/>
+    <summary type="text">Assessment SB-2026-01. What the July 2026 CMMC Phase II suspension changed, what it did not change, and what defense contractors still owe under their DFARS cybersecurity representations.</summary>
+  </entry>
+</feed>
