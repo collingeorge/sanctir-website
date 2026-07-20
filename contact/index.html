@@ -20,12 +20,12 @@
 <link rel="canonical" href="https://sanctir.com/contact/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; form-action https://formspree.io; base-uri 'self'; frame-ancestors 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/favicon-180.png">
-<link rel="stylesheet" href="/styles.css?v=13">
+<link rel="stylesheet" href="/styles.css?v=15">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -79,6 +79,32 @@
         <a href="/pgp/" aria-label="Encrypted communication"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5Zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3Zm0 11a2 2 0 0 1 1 3.732V19a1 1 0 0 1-2 0v-1.268A2 2 0 0 1 12 14Z"/></svg></a>
       </span>
       <a class="btn btn-primary" href="/contact/">Contact</a>
+      <details class="nav-mobile">
+        <summary aria-label="Open navigation menu"><span class="burger"><span></span><span></span><span></span></span></summary>
+        <div class="nav-mobile-panel">
+          <div class="nmp-head">Research</div>
+          <a href="/research/">All publications</a>
+          <a href="/research/threat-finance-sanctions/">Threat Finance &amp; Sanctions</a>
+          <a href="/research/export-controls-technology/">Export Controls &amp; Technology Security</a>
+          <a href="/research/defense-industrial-base/">Defense Base &amp; Strategic Sourcing</a>
+          <a href="/research/cybersecurity-attestation/">Cybersecurity &amp; Attestation</a>
+          <a href="/research/statecraft-policy/">Statecraft &amp; Policy Analysis</a>
+          <div class="nmp-sep"></div>
+          <div class="nmp-head">Practice</div>
+          <a href="/#decide">Advisory</a>
+          <a href="/#supply-chain">Supply Chain</a>
+          <a href="/methodology/">Methodology</a>
+          <div class="nmp-sep"></div>
+          <div class="nmp-head">About</div>
+          <a href="/#about">About Sanctir</a>
+          <a href="/principal/">Principal</a>
+          <a href="/security/">Security</a>
+          <a href="/pgp/">Encrypted Communication</a>
+          <div class="nmp-sep"></div>
+          <a href="/contact/">Contact</a>
+          <a href="https://x.com/Sanctir" rel="noopener noreferrer" target="_blank">x.com/Sanctir</a>
+        </div>
+      </details>
     </div>
   </div>
 </nav>
@@ -96,7 +122,7 @@
     <div class="wrap">
       <div class="sl">Channels</div>
       <h2>How to reach Sanctir</h2>
-      <p class="sd">Use the channel appropriate to the sensitivity of the material. The web form is for high-level scoping only.</p>
+      <p class="sd">Use the channel appropriate to the sensitivity of the material. Describe the situation in general terms first; encrypted channels are available for anything specific.</p>
       <div class="decide-grid">
         <div class="decide-card no-link">
           <div class="decide-num">Email</div>
@@ -143,45 +169,18 @@
   <section class="section-tint">
     <div class="wrap">
       <div class="sl">Enquiry</div>
-      <h2>Send a scoping enquiry</h2>
+      <h2>What to include when you write</h2>
       <div class="about-grid">
         <div class="about-text">
-          <form class="cform" action="https://formspree.io/f/mojpwljz" method="POST">
-            <div>
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-              <label for="org">Organization</label>
-              <input type="text" id="org" name="organization">
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-              <label for="etype">Engagement type</label>
-              <select id="etype" name="engagement_type">
-                <option value="">Select engagement type</option>
-                <option>Threat finance &amp; sanctions</option>
-                <option>Export controls (ITAR / EAR)</option>
-                <option>Supply-chain intelligence</option>
-                <option>Controlled information / cybersecurity</option>
-                <option>National security / policy analysis</option>
-                <option>Expert or litigation support</option>
-                <option>Other or unsure</option>
-              </select>
-            </div>
-            <div>
-              <label for="msg">Brief description</label>
-              <textarea id="msg" name="message" placeholder="Timeline, scope, or questions"></textarea>
-            </div>
-            <input type="text" class="hp" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <div class="form-submit">
-              <button type="submit" class="btn btn-primary">Request a conversation</button>
-              <span class="form-submit-note">Response within 2 business days</span>
-            </div>
-          </form>
+          <p>There is no intake form. Email, call, or message directly &mdash; nothing routes through a third-party service, and nothing is stored anywhere outside Sanctir.</p>
+          <p>A first message is most useful when it covers four things at a high level: the regulatory area involved, roughly what the organization does and its size, what decision is in front of you, and any date that constrains it. That is normally enough to establish whether an engagement makes sense and what shape it would take.</p>
+          <p>Keep the first message general. Do not send classified, export-controlled, privileged, or otherwise restricted material by unencrypted email. If the specifics matter, open on Signal or send encrypted written material under the published PGP key.</p>
+          <p>Contact does not create an engagement, a confidentiality obligation, or an attorney-client relationship absent a signed agreement.</p>
+          <div class="pub-actions">
+            <a class="btn btn-primary" href="mailto:contact@sanctir.com">Email contact@sanctir.com</a>
+            <a class="btn btn-ghost" href="tel:+13026008018">Call (302) 600-8018</a>
+            <a class="btn btn-ghost" href="/pgp/">Encrypted channels</a>
+          </div>
         </div>
         <div class="about-aside">
           <h4>Response time</h4>

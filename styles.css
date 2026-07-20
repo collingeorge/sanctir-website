@@ -1892,3 +1892,131 @@ sup.ref a:hover { text-decoration: underline; }
   .author-meta { font-size: 6.75pt !important; }
   .author-box a::after { content: none !important; }
 }
+
+/* --- Direct contact cards (replaces the contact form) --------- */
+.contact-direct {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.1rem;
+  margin-top: 2rem;
+}
+.cd-card {
+  border: 1px solid var(--border-soft);
+  border-top: 3px solid var(--navy);
+  background: var(--white);
+  padding: 1.3rem 1.4rem;
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+a.cd-card:hover { border-top-color: var(--gold); background: var(--bg-tint); }
+a.cd-card:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+.cd-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 0.55rem;
+}
+.cd-value {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  word-break: break-word;
+}
+.cd-card p { font-size: 0.85rem; line-height: 1.6; color: var(--text-2); margin: 0; }
+.cd-static { cursor: default; }
+
+.contact-notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.6rem 2.2rem;
+  margin-top: 2.4rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--border);
+}
+.contact-notes h4 { margin-bottom: 0.45rem; }
+.contact-notes p { font-size: 0.875rem; line-height: 1.65; color: var(--text-2); margin: 0; }
+
+@media print { .contact-direct, .contact-notes { page-break-inside: avoid; } }
+
+/* --- Mobile navigation (native <details>, no JavaScript) ------ */
+.nav-mobile { display: none; position: relative; }
+.nav-mobile > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 0.15rem;
+  border: 1px solid var(--border);
+  background: var(--white);
+}
+.nav-mobile > summary::-webkit-details-marker { display: none; }
+.nav-mobile > summary::marker { content: ""; }
+.nav-mobile > summary:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+
+.burger { display: block; width: 18px; height: 14px; position: relative; }
+.burger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--navy);
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+.burger span:nth-child(1) { top: 0; }
+.burger span:nth-child(2) { top: 6px; }
+.burger span:nth-child(3) { top: 12px; }
+.nav-mobile[open] .burger span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-mobile[open] .burger span:nth-child(2) { opacity: 0; }
+.nav-mobile[open] .burger span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+@media (prefers-reduced-motion: reduce) { .burger span { transition: none; } }
+
+.nav-mobile-panel {
+  position: absolute;
+  top: calc(100% + 0.65rem);
+  right: -1.25rem;
+  width: calc(100vw - 1.5rem);
+  max-width: 22rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--navy);
+  padding: 1rem 0 0.85rem;
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+  z-index: 150;
+}
+.nav-mobile-panel a {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--navy);
+  text-decoration: none;
+}
+.nav-mobile-panel a:hover { background: var(--bg-tint); }
+.nmp-head {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  padding: 0.25rem 1.25rem 0.45rem;
+}
+.nmp-sep { height: 1px; background: var(--border-soft); margin: 0.55rem 0; }
+
+@media (max-width: 700px) {
+  .nav-mobile { display: block; }
+  .nav-links > a:not(.btn) { display: none; }
+  .nav-links { gap: 0.6rem; }
+}
+@media print { .nav-mobile { display: none !important; } }
