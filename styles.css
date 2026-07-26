@@ -2042,3 +2042,29 @@ a.cd-card:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
   margin-bottom: 0.4rem;
 }
 .ri .h-sub { font-size: 1rem; }
+
+/* --- Government-contractor trust strip -------------------------- */
+.trust-strip {
+  background: var(--navy);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.trust-strip-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem;
+}
+.trust-strip .ts-sep { color: var(--gold); margin: 0 0.5rem; }
+
+/* --- Four-outcome grid (reuses .pillar) ------------------------- */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
