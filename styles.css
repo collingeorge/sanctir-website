@@ -2060,6 +2060,11 @@ a.cd-card:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
   padding: 0.5rem 1.5rem;
 }
 .trust-strip .ts-sep { color: var(--gold); margin: 0 0.5rem; }
+@media (max-width: 600px) {
+  .trust-strip { font-size: 0.6rem; letter-spacing: 0.06em; }
+  .trust-strip .ts-sep { margin: 0 0.3rem; }
+  .trust-strip-inner { padding: 0.45rem 1rem; line-height: 1.6; }
+}
 
 /* --- Four-outcome grid (reuses .pillar) ------------------------- */
 .grid-4 {
