@@ -844,8 +844,6 @@ footer {
   main section { padding: 3.2rem 1.5rem; }
   .hero { padding: 5rem 1.5rem 3rem; min-height: auto; }
   .hero h1 { font-size: 1.75rem; }
-  .nav-links a:not(.btn) { display: none; }
-  .nav-links { gap: 0.75rem; }
   .nav-inner { padding: 0 1.25rem; }
   .ri { grid-template-columns: 1fr; gap: 0.3rem; }
   .eng-steps { grid-template-columns: 1fr; }
@@ -1389,7 +1387,7 @@ footer {
   padding: 0.5rem 1.1rem 0.35rem;
 }
 .nav-dd-menu .dd-sep { height: 1px; background: var(--border-soft); margin: 0.4rem 0; }
-@media (max-width: 700px) { .nav-dd { display: none; } }
+@media (max-width: 820px) { .nav-dd { display: none; } }
 
 /* Domain page: publication status block */
 .pub-status {
@@ -1461,7 +1459,7 @@ footer .social-row a:hover { border-color: var(--gold); color: var(--white); bac
 .nav-social a { display: inline-flex; color: var(--text-3); }
 .nav-social a:hover { color: var(--navy); }
 .nav-social svg { width: 15px; height: 15px; fill: currentColor; }
-@media (max-width: 700px) { .nav-social { display: none; } }
+@media (max-width: 820px) { .nav-social { display: none; } }
 
 /* OpenPGP armored key block */
 .pgp-key {
@@ -2015,9 +2013,11 @@ a.cd-card:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
 }
 .nmp-sep { height: 1px; background: var(--border-soft); margin: 0.55rem 0; }
 
-@media (max-width: 700px) {
+@media (max-width: 820px) {
   .nav-mobile { display: block; }
   .nav-links > a:not(.btn) { display: none; }
+  .nav-links > .nav-dd { display: none; }
+  .nav-social { display: none; }
   .nav-links { gap: 0.6rem; }
 }
 @media print { .nav-mobile { display: none !important; } }
