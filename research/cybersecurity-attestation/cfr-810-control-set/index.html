@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Export Rule Controls Your Data. It Never Tells You How to Protect It. &mdash; Sanctir Research</title>
+<meta name="description" content="Where a cybersecurity obligation actually comes from when an export-control regulation controls your information but prescribes no control set. 10 CFR Part 810, the CUI framework, and why applicability is a contract question.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sanctir">
+<meta property="og:url" content="https://sanctir.com/research/cybersecurity-attestation/cfr-810-control-set/">
+<meta property="og:title" content="The Export Rule Controls Your Data. It Never Tells You How to Protect It. &mdash; Sanctir Research">
+<meta property="og:description" content="Where a cybersecurity obligation actually comes from when an export-control regulation controls your information but prescribes no control set.">
+<meta property="og:image" content="https://sanctir.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-07-30">
+<meta property="article:modified_time" content="2026-07-30">
+<meta property="article:author" content="Collin B. George">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Sanctir">
+<meta name="twitter:title" content="The Export Rule Controls Your Data. It Never Tells You How to Protect It. &mdash; Sanctir Research">
+<meta name="twitter:description" content="Where a cybersecurity obligation actually comes from when an export-control regulation controls your information but prescribes no control set.">
+<meta name="twitter:image" content="https://sanctir.com/og-image.png">
+<link rel="alternate" type="application/atom+xml" title="Sanctir Research" href="/feed.xml">
+<link rel="canonical" href="https://sanctir.com/research/cybersecurity-attestation/cfr-810-control-set/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="stylesheet" href="/styles.css?v=24">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":["Report","Article"],"image":["https://sanctir.com/og-image.png"],"headline":"The Export Rule Controls Your Data. It Never Tells You How to Protect It.","description":"How a cybersecurity obligation attaches to export-controlled information when the export regulation itself prescribes no control set.","datePublished":"2026-07-30","dateModified":"2026-07-30","keywords":"10 CFR Part 810, NIST SP 800-171, CUI, export control, ITAR, EAR, DFARS 252.204-7012, CUI//SP-EXPT","about":[{"@type":"Thing","name":"10 CFR Part 810"},{"@type":"Thing","name":"Controlled Unclassified Information"},{"@type":"Thing","name":"NIST SP 800-171"},{"@type":"Thing","name":"Export control"}],"isAccessibleForFree":true,"creativeWorkStatus":"Published","version":"1.0","inLanguage":"en","url":"https://sanctir.com/research/cybersecurity-attestation/cfr-810-control-set/","license":"https://creativecommons.org/licenses/by/4.0/","author":{"@type":"Person","name":"Collin B. George","url":"https://sanctir.com/principal/","identifier":"https://orcid.org/0009-0007-8162-6839","sameAs":["https://orcid.org/0009-0007-8162-6839"]},"publisher":{"@type":"Organization","name":"Sanctir LLC","url":"https://sanctir.com"},"isPartOf":{"@type":"CreativeWorkSeries","name":"Sanctir Executive Briefings"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Research","item":"https://sanctir.com/research/"},{"@type":"ListItem","position":2,"name":"Cybersecurity & Attestation","item":"https://sanctir.com/research/cybersecurity-attestation/"},{"@type":"ListItem","position":3,"name":"The Export Rule Controls Your Data. It Never Tells You How to Protect It.","item":"https://sanctir.com/research/cybersecurity-attestation/cfr-810-control-set/"}]}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="primary">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/" aria-label="Sanctir home"><svg class="wordmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 146" role="img" aria-label="Sanctir">
+        <title>Sanctir</title>
+        <g fill="#1A3A5C">
+        <path d="M69 0 54 255H93Q107 161 169.5 106.0Q232 51 322 51Q397 51 443.0 85.5Q489 120 489 175Q489 207 474.5 229.0Q460 251 419.5 272.5Q379 294 301 323Q224 353 173.0 389.0Q122 425 97.0 470.0Q72 515 72 568Q72 631 103.5 678.5Q135 726 190.5 753.0Q246 780 319 780Q418 780 504 716L522 766H546L557 550H518Q494 632 443.0 675.5Q392 719 325 719Q264 719 225.0 688.5Q186 658 186 610Q186 582 199.5 561.5Q213 541 250.0 521.5Q287 502 356 476Q449 441 507.0 402.5Q565 364 591.5 319.5Q618 275 618 219Q618 152 580.0 100.0Q542 48 475.0 19.0Q408 -10 320 -10Q261 -10 212.0 6.5Q163 23 113 60L93 0Z" transform="translate(55.25,103.76) scale(0.08800,-0.08800)" />
+        <path d="M-13 0V40Q35 45 60.0 61.5Q85 78 102 121L365 780H439L678 196Q699 145 714.0 115.5Q729 86 745.0 71.0Q761 56 782.5 50.0Q804 44 838 41V0H460V41Q508 43 529.0 51.0Q550 59 550 83Q550 97 543.0 119.5Q536 142 524 173L501 233H218Q194 179 182.5 143.0Q171 107 171 86Q171 56 193.5 48.0Q216 40 261 40V0ZM241 293H479L364 596H360Z" transform="translate(129.43,103.76) scale(0.08800,-0.08800)" />
+        <path d="M670 -10 227 621H223V191Q223 125 230.5 93.5Q238 62 260.5 52.0Q283 42 327 40V0H30V40Q79 42 103.5 52.0Q128 62 136.5 92.0Q145 122 145 184V586Q145 643 137.5 673.0Q130 703 107.5 715.5Q85 728 40 730V770H319L722 192H726V579Q726 645 718.5 676.5Q711 708 689.0 718.5Q667 729 622 730V770H919V730Q870 729 845.5 718.5Q821 708 812.5 678.0Q804 648 804 586V-10Z" transform="translate(216.46,103.76) scale(0.08800,-0.08800)" />
+        <path d="M688 708 707 770H756L736 517H696Q675 609 614.5 662.0Q554 715 468 715Q390 715 334.5 674.5Q279 634 250.0 558.5Q221 483 221 378Q221 224 285.0 140.0Q349 56 472 56Q571 56 637.0 110.5Q703 165 731 271H775V0H728L714 79Q604 -10 447 -10Q326 -10 236.0 37.0Q146 84 96.5 169.5Q47 255 47 372Q47 463 77.0 537.5Q107 612 161.5 666.5Q216 721 292.0 750.5Q368 780 459 780Q520 780 573.5 763.0Q627 746 688 708Z" transform="translate(315.02,103.76) scale(0.08800,-0.08800)" />
+        <path d="M805 770 815 550H772Q768 616 748.5 652.5Q729 689 693.5 703.5Q658 718 604 718Q553 718 527.0 715.5Q501 713 493.0 706.0Q485 699 485 687V163Q485 120 494.0 93.5Q503 67 532.0 54.5Q561 42 620 40V0H201V40Q261 42 290.0 54.5Q319 67 328.5 93.5Q338 120 338 163V687Q338 699 331.0 706.0Q324 713 302.0 715.5Q280 718 235 718Q199 718 166.0 714.0Q133 710 108.0 694.5Q83 679 68.0 645.0Q53 611 51 550H12L22 770Z" transform="translate(403.29,103.76) scale(0.08800,-0.08800)" />
+        <path d="M36 0V40Q81 42 103.5 52.0Q126 62 133.5 92.0Q141 122 141 184V586Q141 643 134.5 673.0Q128 703 107.5 715.5Q87 728 46 730V770H383V730Q342 728 321.5 715.5Q301 703 294.5 673.0Q288 643 288 586V184Q288 122 295.5 92.0Q303 62 325.5 52.0Q348 42 393 40V0Z" transform="translate(491.90,103.76) scale(0.08800,-0.08800)" />
+        <path d="M695 577Q695 494 647.0 438.0Q599 382 494 363L726 97Q750 69 783.0 54.5Q816 40 850 40V0H613L365 304Q349 324 335.0 335.0Q321 346 309.5 350.5Q298 355 287 355V159Q287 110 297.0 84.0Q307 58 338.0 49.0Q369 40 432 40V0H35V40Q79 40 101.5 49.0Q124 58 132.0 82.5Q140 107 140 154V616Q140 663 133.5 686.5Q127 710 107.0 719.0Q87 728 46 730V770H392Q536 770 615.5 719.0Q695 668 695 577ZM287 697V415H352Q446 415 492.5 452.0Q539 489 539 572Q539 636 500.0 675.0Q461 714 392 714H305Q287 714 287 697Z" transform="translate(545.50,103.76) scale(0.08800,-0.08800)" />
+        </g>
+        <line x1="52.00" y1="117.76" x2="628.30" y2="117.76" stroke="#B8860B" stroke-width="1.25" stroke-linecap="butt" />
+</svg></a>
+    <div class="nav-links">
+      <div class="nav-dd">
+        <a href="/research/" aria-haspopup="true">Research</a>
+        <div class="nav-dd-menu">
+          <div class="dd-head">Research Library</div>
+          <a href="/research/">All publications</a>
+          <div class="dd-sep"></div>
+          <div class="dd-head">By Domain</div>
+          <a href="/research/threat-finance-sanctions/">Threat Finance &amp; Sanctions</a>
+          <a href="/research/export-controls-technology/">Export Controls &amp; Technology Security</a>
+          <a href="/research/defense-industrial-base/">Defense Base &amp; Strategic Sourcing</a>
+          <a href="/research/cybersecurity-attestation/">Cybersecurity &amp; Attestation</a>
+          <a href="/research/statecraft-policy/">Statecraft &amp; Policy Analysis</a>
+          <div class="dd-sep"></div>
+          <a href="/methodology/">Analytic Methodology</a>
+        </div>
+      </div>
+      <a href="/#decide">Advisory</a>
+      <a href="/#supply-chain">Supply Chain</a>
+      <a href="/#methodology">Methodology</a>
+      <div class="nav-dd">
+        <a href="/#about" aria-haspopup="true">About</a>
+        <div class="nav-dd-menu">
+          <a href="/#about">About Sanctir</a>
+          <a href="/principal/">Principal</a>
+          <div class="dd-sep"></div>
+          <a href="/methodology/">Methodology</a>
+          <a href="/security/">Security</a>
+        </div>
+      </div>
+      <span class="nav-social">
+        <a href="https://x.com/Sanctir" rel="noopener noreferrer" target="_blank" aria-label="Sanctir on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+        <a href="/pgp/" aria-label="Encrypted communication"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5Zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3Zm0 11a2 2 0 0 1 1 3.732V19a1 1 0 0 1-2 0v-1.268A2 2 0 0 1 12 14Z"/></svg></a>
+      </span>
+      <a class="btn btn-primary" href="/contact/">Contact</a>
+      <details class="nav-mobile">
+        <summary aria-label="Open navigation menu"><span class="burger"><span></span><span></span><span></span></span></summary>
+        <div class="nav-mobile-panel">
+          <div class="nmp-head">Research</div>
+          <a href="/research/">All publications</a>
+          <a href="/research/threat-finance-sanctions/">Threat Finance &amp; Sanctions</a>
+          <a href="/research/export-controls-technology/">Export Controls &amp; Technology Security</a>
+          <a href="/research/defense-industrial-base/">Defense Base &amp; Strategic Sourcing</a>
+          <a href="/research/cybersecurity-attestation/">Cybersecurity &amp; Attestation</a>
+          <a href="/research/statecraft-policy/">Statecraft &amp; Policy Analysis</a>
+          <div class="nmp-sep"></div>
+          <div class="nmp-head">Practice</div>
+          <a href="/#decide">Advisory</a>
+          <a href="/#supply-chain">Supply Chain</a>
+          <a href="/methodology/">Methodology</a>
+          <div class="nmp-sep"></div>
+          <div class="nmp-head">About</div>
+          <a href="/#about">About Sanctir</a>
+          <a href="/principal/">Principal</a>
+          <a href="/security/">Security</a>
+          <a href="/pgp/">Encrypted Communication</a>
+          <div class="nmp-sep"></div>
+          <a href="/contact/">Contact</a>
+          <a href="https://x.com/Sanctir" rel="noopener noreferrer" target="_blank">x.com/Sanctir</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</nav><main id="main">
+  <section class="pub-head">
+    <div class="wrap">
+      <nav class="pub-crumb" aria-label="Breadcrumb">
+        <a href="/research/">Research</a>
+        <span aria-hidden="true">/</span>
+        <a href="/research/cybersecurity-attestation/">Cybersecurity &amp; Attestation</a>
+        <span aria-hidden="true">/</span>
+        <span>SB-2026-02</span>
+      </nav>
+      <hr class="pub-rule-top">
+      <div class="pub-series">Assessment &middot; SB-2026-02</div>
+      <h1>The Export Rule Controls Your Data. It Never Tells You How to Protect It.</h1>
+      <p class="pub-deck">Where a cybersecurity obligation actually comes from when the regulation that controls your information does not contain one.</p>
+      <div class="pub-meta">
+        <div class="pub-meta-item">Published <strong><time datetime="2026-07-30">30 July 2026</time></strong></div>
+        <div class="pub-meta-item">Status <strong>Published</strong></div>
+        <div class="pub-meta-item">Revised <strong><time datetime="2026-07-30">30 July 2026</time></strong></div>
+        <div class="pub-meta-item">Version <strong>1.0</strong></div>
+        <div class="pub-meta-item">Author <strong>Collin B. George, CISSP</strong></div>
+        <div class="pub-meta-item">License <strong>CC BY 4.0</strong></div>
+      </div>
+      <div class="pub-actions no-print">
+        <a class="btn btn-primary" href="/research/cybersecurity-attestation/cfr-810-control-set/sanctir-cfr810-control-set-2026-07.pdf">Download PDF</a>
+        <a class="btn btn-ghost" href="#citation">Cite</a>
+        <a class="btn btn-ghost" href="#sources">Sources</a>
+        <a class="btn btn-ghost" href="/research/cybersecurity-attestation/">Research domain</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="pub-class">Unclassified // Open Source</div></div>
+
+  <section>
+    <div class="wrap">
+      <div class="doc-record">
+        <div class="cite-label">Analytic record</div>
+        <dl class="rec-dl">
+          <dt>Type</dt><dd>Analysis &mdash; a structural account of how a cybersecurity obligation attaches to export-controlled information. Stable except where the underlying instruments change.</dd>
+          <dt>Governing judgment</dt><dd>An export-control regulation can establish that information is controlled without prescribing any cybersecurity control set. The control set arrives through the Controlled Unclassified Information framework and becomes binding through a contract. Applicability is a contract question, not a question about the nature of the data.</dd>
+          <dt>Probability</dt><dd>That 10 CFR Part 810 prescribes no cybersecurity control set is assessed as certain; it rests on the text of the regulation. That CUI safeguarding obligations reach a non-federal entity only through a federal agreement is assessed as almost certain.</dd>
+          <dt>Analytic confidence</dt><dd>High for the regulatory analysis, which rests on published text in the Code of Federal Regulations and the CUI Registry. Moderate for the finding that Part 810 contains no encryption provision, which is an argument from the absence of a provision and is stated as such. These are separate axes and are not combined.</dd>
+          <dt>Supersession</dt><dd>Reassess on finalization of the FAR CUI rule (FAR Case 2017-016), on the CMMC Reform Task Force report expected mid-September 2026, or on any DOE guidance addressing information security under Part 810.</dd>
+          <dt>Revision history</dt><dd>1.0, 30 July 2026 &mdash; first publication.</dd>
+        </dl>
+      </div>
+      <div class="exec-summary mt-25">
+        <div class="cite-label">Executive summary</div>
+        <ul>
+          <li>10 CFR Part 810 controls unclassified nuclear technology. Read it end to end and you will not find a cybersecurity requirement &mdash; no encryption, no access logging, no control set of any kind.</li>
+          <li>That is not an oversight. Export rules say what is controlled and who may receive it. They do not say what to build.</li>
+          <li>The control set comes from a different place &mdash; the Controlled Unclassified Information framework, which points to NIST SP 800-171. It becomes binding through a contract clause, not through the export rule, and not because of what the data is.</li>
+          <li>The same engineering file can carry a cybersecurity obligation at one company and none at another. ITAR and the EAR each give you an encryption safe harbor; Part 810 gives you nothing of the kind.</li>
+        </ul>
+      </div>
+
+      <div class="pub-finding mt-25">
+        <div class="cite-label">If you read nothing else</div>
+        <p><strong>Pull the contract and read the clause list.</strong> If DFARS 252.204-7012 or an agency equivalent appears anywhere in your chain, NIST SP 800-171 Revision 2 is mandatory and your standard is settled. If no such clause appears, no federal cybersecurity standard is legally imposed on that information &mdash; whatever its export status. Build more than you owe and you pay for an environment nothing required, every month, indefinitely. Build less than you owe and you face award ineligibility, contract action, and False Claims Act exposure at treble damages, with personal exposure for whoever signed the affirmation.</p>
+      </div>
+
+      <div class="article mt-25">
+<p class="lede">A question comes up early in almost every conversation about export-controlled engineering work: we are subject to export controls, so which cybersecurity framework do we have to follow? It is the right question. The difficulty is that the answer is not in the export regulation, and people go looking for it there.</p>
+
+<p>10 CFR Part 810 is the clearest illustration available. It is the Department of Energy rule governing assistance to foreign atomic energy activities &mdash; the transfer of unclassified nuclear technology, whether abroad or to a foreign national standing in a room in the United States. It carries civil and criminal penalties. It is unambiguously a regulation about controlling sensitive information. And it contains no cybersecurity requirements at all.</p>
+
+<h2 id="what-part-810-says">What Part 810 Actually Says</h2>
+<p>Part 810 implements section 57 b.(2) of the Atomic Energy Act, codified at 42 U.S.C. 2077.<sup class="ref"><a href="#s1" id="r1">1</a></sup> Its structure is straightforward. Section 810.2(b) lists the activities within scope. Section 810.6 makes certain activities generally authorized where the destination appears in Appendix A. Section 810.7 requires case-by-case authorization from the Secretary in three situations: activities with a country or entity not on the Appendix A list; the transfer of sensitive nuclear technology to any foreign country or entity at all; and a list of specified activities including uranium and plutonium isotope separation, heavy water production, production reactors, and reprocessing of irradiated fuel.<sup class="ref"><a href="#s2" id="r2">2</a></sup></p>
+
+<p>The definitions matter more than they usually do. Section 810.3 defines a foreign national as someone who is not a citizen or national of the United States, but excludes lawful permanent residents and protected individuals under 8 U.S.C. 1324b(a)(3). That is narrower than the phrase most companies use in practice, and an access rule written around &ldquo;U.S. persons&rdquo; will not match the regulation it is meant to enforce. The same section defines technical data to include information recorded on disks, tapes, read-only memories, and computer codes &mdash; so there is no argument that the regulation was written for paper and never contemplated systems.<sup class="ref"><a href="#s3" id="r3">3</a></sup></p>
+
+<p>Section 810.12 requires reports. Section 810.15 provides for penalties: criminal exposure under section 222 of the Atomic Energy Act, and, since a 2023 rulemaking, civil monetary penalties now set at $127,973 per violation, applied per day where a violation is a continuing one, and adjusted annually for inflation.<sup class="ref"><a href="#s4" id="r4">4</a></sup></p>
+
+<p>Now the part that does not exist. Read the regulation in full, and read the 2015 final rule that produced its current form. The words cybersecurity, information security, and encryption do not appear. Not once, in either.<sup class="ref"><a href="#s5" id="r5">5</a></sup></p>
+
+<p>What Part 810 says about protecting the technology it controls amounts to two things. Section 810.6(b) generally authorizes certain transfers to a foreign national where that person &ldquo;executes a confidentiality agreement with the U.S. employer to safeguard the technology from unauthorized use or disclosure.&rdquo; And section 810.11(b) requires an applicant for specific authorization to describe &ldquo;the applicant&rsquo;s technology control program&rdquo; &mdash; a term the regulation uses and never defines. There is no list of elements. No requirement for access control, audit logging, encryption, network segmentation, or any other technical measure. DOE and NNSA guidance materials on Part 810 describe authorization mechanics and confidentiality agreements; they do not prescribe an information-security standard either.</p>
+
+<div class="pub-finding"><p>A regulation can tell you that your information is controlled, that transferring it without permission is a crime, and that violations cost $127,973 apiece &mdash; and never once tell you what to build.</p></div>
+
+<h2 id="two-other-rules">Two Other Export Rules Address Encryption. This One Does Not.</h2>
+<p>This is worth dwelling on, because most firms handling controlled technical data have absorbed a rule of thumb from elsewhere in the export-control world, and it does not transfer.</p>
+
+<p>The International Traffic in Arms Regulations contain section 120.54, which lists activities that are not exports. Among them: sending, taking, or storing technical data that is unclassified, secured end-to-end, and secured using cryptographic modules compliant with FIPS 140-2 or by other means providing security strength at least comparable to 128-bit AES &mdash; provided the data is not intentionally sent to or stored in a country listed in section 126.1, or in Russia. The provision goes further and says that the ability to access technical data in encrypted form that meets those criteria does not constitute a release or export of that data.<sup class="ref"><a href="#s6" id="r6">6</a></sup></p>
+
+<p>The Export Administration Regulations contain the same architecture at section 734.18, which was the earlier of the two and served as the model.<sup class="ref"><a href="#s7" id="r7">7</a></sup></p>
+
+<p>Part 810 has no equivalent. There is no provision stating that encrypting controlled nuclear technology means a transfer has not occurred. There is no DOE guidance saying so either. The practical consequence is direct: a company can encrypt nuclear technology to a FIPS-validated standard, which is prudent and which will help it satisfy obligations that come from elsewhere, and it will not have earned the regulatory safe harbor that the same encryption would earn under the ITAR or the EAR. This finding rests on the absence of a provision rather than the presence of one, and it is stated on that basis.</p>
+
+<h2 id="where-the-control-set-comes-from">So Where Does the Control Set Come From?</h2>
+<p>Through the Controlled Unclassified Information framework, in five steps. Each step has an authority behind it.</p>
+
+<p><strong>One.</strong> Executive Order 13556 created a government-wide program for unclassified information that laws, regulations, and government-wide policies require to be protected.<sup class="ref"><a href="#s8" id="r8">8</a></sup></p>
+<p><strong>Two.</strong> The National Archives issued the implementing rule at 32 CFR Part 2002. It distinguishes CUI Basic, where the underlying authority sets no particular controls, from CUI Specified, where the authority prescribes its own. And it states that NIST SP 800-171 defines the requirements for protecting CUI Basic on non-federal information systems.<sup class="ref"><a href="#s9" id="r9">9</a></sup></p>
+<p><strong>Three.</strong> The CUI Registry contains a category called Export Controlled. Its description covers information whose export could reasonably be expected to affect national security and nonproliferation objectives &mdash; and it names, expressly, sensitive nuclear technology information. Among the authorities listed for that category is 42 U.S.C. 2077(a): the same statute Part 810 implements, designated as a Specified authority and carrying the marking CUI//SP-EXPT.<sup class="ref"><a href="#s10" id="r10">10</a></sup></p>
+<p><strong>Four.</strong> CUI Specified means you follow the safeguarding requirements the underlying law prescribes. Part 810 prescribes none.</p>
+<p><strong>Five.</strong> Where a Specified authority is silent on safeguarding, the CUI Basic controls apply. Those controls are NIST SP 800-171 &mdash; 110 requirements across 14 families in Revision 2, which remains the revision the Department of Defense enforces.<sup class="ref"><a href="#s11" id="r11">11</a></sup></p>
+
+<p>So the chain runs from a nuclear export regulation that says nothing about cybersecurity, through a records-management executive order, to a NIST publication. Nothing in that chain is obscure. It is simply spread across four documents that nobody reads together.</p>
+
+<h2 id="the-part-most-people-get-wrong">The Part Most People Get Wrong</h2>
+<p>Here is where the common account fails. It is usually stated as: the data is export-controlled, therefore it is CUI, therefore 800-171 applies. Each arrow in that sentence is doing work the regulation does not support.</p>
+
+<p>The CUI rule binds executive branch agencies. It reaches a company through an agreement &mdash; a contract, grant, license, or similar instrument. And the definition is explicit about the boundary. CUI does not include information that a non-executive-branch entity &ldquo;possesses and maintains in its own systems that did not come from, or was not created or possessed by or for, an executive branch agency or an entity acting for an agency.&rdquo;<sup class="ref"><a href="#s9" id="r9b">9</a></sup></p>
+
+<p>Read that against a real situation. A company designs equipment on its own money, for a commercial customer, using its own engineers. The design information is squarely export-controlled &mdash; Part 810 applies to it, and transferring it to a foreign national without authorization is unlawful. But it did not come from a federal agency and was not created for one. It is not CUI, and no federal cybersecurity standard is legally imposed on it.</p>
+
+<p>Change one fact. The same company performs the same work under a subcontract to a national laboratory operator, and the prime flows down DFARS 252.204-7012 or an equivalent DOE clause. Now the information sits inside a federal agreement, the CUI framework reaches it, and NIST SP 800-171 is contractually mandatory.</p>
+
+<p>Same engineering. Same file. Same server. Different obligation &mdash; because the contract changed, not because the data did.</p>
+
+<div class="pub-finding"><p>Your export-control obligation follows the technology. Your cybersecurity obligation follows the contract. They are different questions with different answers, and conflating them produces error in both directions.</p></div>
+
+<p>Both directions is the point. Firms over-scope, building to a certification standard nothing in their contract requires, and paying for it. Firms under-scope, reasoning that they hold no direct federal contract and therefore owe nothing, and missing a flow-down sitting in a subcontract nobody read. The first mistake costs money. The second costs eligibility, and can cost considerably more than that.</p>
+
+<p>One further distinction is worth keeping straight, because the terms sound interchangeable and are not. The CUI Registry also carries nuclear-specific categories &mdash; Unclassified Controlled Nuclear Information under 42 U.S.C. 2168, and Naval Nuclear Propulsion Information &mdash; which rest on different statutes and protect different information, principally facility and material security data rather than design and manufacturing technology.<sup class="ref"><a href="#s12" id="r12">12</a></sup> Sensitive nuclear technology under Part 810 travels through the Export Controlled category. Both are CUI. They arrive by different routes and can carry different handling requirements.</p>
+
+<h2 id="across-the-regimes">What This Looks Like Across the Regimes You Might Touch</h2>
+<div class="table-wrap">
+<table class="reg-table">
+<thead><tr><th>Regime</th><th>What it controls</th><th>Prescribes a control set?</th><th>Where the control set comes from</th></tr></thead>
+<tbody>
+<tr><td><strong>10 CFR Part 810</strong><br>DOE / NNSA</td><td>Transfer of unclassified nuclear technology and assistance, including to foreign nationals inside the U.S.</td><td>No</td><td>CUI framework plus a federal contract</td></tr>
+<tr><td><strong>ITAR</strong><br>State / DDTC</td><td>Defense articles and technical data on the U.S. Munitions List</td><td>No control set, but &sect; 120.54 defines an encryption safe harbor</td><td>CUI framework plus a contract; encryption standard self-contained for the carve-out</td></tr>
+<tr><td><strong>EAR</strong><br>Commerce / BIS</td><td>Dual-use items and technology; nuclear end-use restrictions at &sect; 744.2; 0-series ECCNs</td><td>No control set, but &sect; 734.18 defines an encryption safe harbor</td><td>CUI framework plus a contract</td></tr>
+<tr><td><strong>10 CFR Part 110</strong><br>NRC</td><td>Export and import of nuclear equipment and material &mdash; hardware, not technology</td><td>No</td><td>Not an information-security regime</td></tr>
+<tr><td><strong>DFARS 252.204-7012</strong></td><td>Safeguarding covered defense information; 72-hour incident reporting</td><td>Yes, by reference</td><td>NIST SP 800-171, imposed by contract clause</td></tr>
+<tr><td><strong>FAR 52.204-21</strong><br>now 52.240-93</td><td>Basic safeguarding of federal contract information</td><td>Yes</td><td>Fifteen requirements, self-contained</td></tr>
+<tr><td><strong>CMMC</strong><br>32 CFR Part 170</td><td>Verification that a contractor meets 800-171</td><td>Adopts 800-171; adds assessment</td><td>NIST SP 800-171 &mdash; a verification layer, not the source of the duty</td></tr>
+<tr><td><strong>DOE contractor requirements</strong></td><td>Protection of CUI and UCNI on contractor systems</td><td>Yes, by contract and directive</td><td>DEAR clauses and DOE orders</td></tr>
+</tbody>
+</table>
+</div>
+<p>Read down the third column. Only the contract clauses prescribe anything. Every export regulation in the table controls information without specifying how to secure it.</p>
+
+<h2 id="the-july-suspension">The July Suspension Proved the Point</h2>
+<p>On 13 July 2026 the Department of War suspended CMMC Phase II, the third-party certification layer that was to begin appearing in contracts on 10 November 2026.<sup class="ref"><a href="#s13" id="r13">13</a></sup> The suspension was announced alongside a sixty-day review, and it changed nothing about what contractors owe. DFARS 252.204-7012 continued. NIST SP 800-171 Revision 2 continued. Self-assessment and SPRS scoring continued. The annual affirmation at 32 CFR 170.22 continued.<sup class="ref"><a href="#s14" id="r14">14</a></sup> That was the subject of the companion assessment in this series.<sup class="ref"><a href="#s15" id="r15">15</a></sup></p>
+
+<p>Set against the structure described above, the reason is plain rather than surprising. CMMC was never the source of the obligation. It was a mechanism for checking whether the obligation had been met. The duty itself sits in the contract clause, and behind the clause in the CUI framework, and behind that in a NIST publication. Removing the verification layer left the obligation layer untouched because they were never the same layer.</p>
+
+<p>The same logic runs one step further. A regulation that never prescribed a control set cannot lose one when a certification program pauses. Whatever the Task Force recommends in September will change what contracts require going forward. It will not change what Part 810 says, because Part 810 never said anything on the subject.</p>
+
+<h2 id="nobody-fined">Nobody Has Ever Been Fined Under Part 810</h2>
+<p>There is an asymmetry here that is worth stating plainly, because it runs against intuition.</p>
+
+<p>Part 810 carries real penalties. DOE finalized the civil penalty procedures in a rule effective February 2023, and the maximum now stands at $127,973 per violation.<sup class="ref"><a href="#s4" id="r4b">4</a></sup> Yet no assessed civil penalty under Part 810 appears anywhere in the public record &mdash; not in DOE or NNSA announcements, not in the Federal Register, not in the trackers that law firms maintain for exactly this purpose. The leading criminal matter under section 57 predates the civil penalty rule: Szuhsiung Ho pleaded guilty in 2017 and received twenty-four months.<sup class="ref"><a href="#s16" id="r16">16</a></sup> Part 810 enforcement records are not always public, so absence of a published penalty is strong evidence rather than proof.</p>
+
+<p>Now look at the other side. In fiscal year 2025 the Department of Justice reported more than $52 million recovered across nine cybersecurity settlements under the False Claims Act, and has settled fifteen such matters since the Civil Cyber-Fraud Initiative began in 2021.<sup class="ref"><a href="#s17" id="r17">17</a></sup> Georgia Tech Research Corporation paid $875,000 in September 2025 over an allegedly fictitious assessment environment and a campus-wide score DOJ called false.<sup class="ref"><a href="#s18" id="r18">18</a></sup> In June 2026 a Huntsville contractor paid $507,144 after self-reporting a perfect score of 110 and later being assessed by the government at negative 170.<sup class="ref"><a href="#s19" id="r19">19</a></sup></p>
+
+<p>So the export regulation that controls nuclear technology and carries six-figure penalties has, so far as the public record shows, never assessed one. The contract clause that says nothing about nuclear technology at all is where the enforcement actually happens. If you are budgeting attention by where the risk has historically landed, it lands on the representation you made in a federal contract &mdash; not on the export rule that made your data sensitive in the first place.</p>
+
+<h2 id="three-questions">Three Questions That Settle It for Your Company</h2>
+<p>None of these requires counsel to answer, though the answers may send you to counsel.</p>
+<p><strong>One. Where did this information come from?</strong> Did it originate with a federal agency, or was it created for one under a contract, grant, or other agreement? If neither &mdash; if your engineers made it on company money for a commercial customer &mdash; it may be export-controlled without being CUI, and no federal cybersecurity standard is legally imposed on it.</p>
+<p><strong>Two. If there is a federal agreement, what clause is in it?</strong> Not what your customer said on a call. The clause list in the contract. Look for DFARS 252.204-7012, for FAR 52.204-21 or its renumbered form at 52.240-93, and for DOE equivalents. The clause is what creates the obligation, and it is a document you already hold.<sup class="ref"><a href="#s20" id="r20">20</a></sup></p>
+<p><strong>Three. If a customer is asking you to become compliant, what exactly are they citing?</strong> Get it in writing. A customer requirement that names NIST SP 800-171 Revision 2 sets a different target than one demanding a government-cloud environment or third-party certification. Building to the wrong assumption is expensive, and the language costs nothing to obtain.</p>
+<p>If those three answers are clear and consistent, the framework question resolves itself. If they conflict &mdash; a prime demanding certification under a contract carrying no such clause, say &mdash; that conflict is the finding, and it is better identified before an environment is built around it.</p>
+
+<h2 id="when-this-stops">When This Stops Being a Technical Question</h2>
+<p>Whether particular technology falls within Part 810&rsquo;s scope, whether a transfer requires specific authorization, and who a company designates as its empowered official are legal determinations. So is any conclusion that a representation already made to the government may have been inaccurate. Those belong with export-control counsel, and the second belongs there immediately.</p>
+<p>What is engineering, and what this assessment addresses, is the question of which control set a system should be built to and why. That question has an answer, and the answer is not in the export regulation.</p>
+<p>This assessment is not legal advice and is not a substitute for counsel.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="section-tint">
+    <div class="wrap">
+      <div class="sl">Limitations</div>
+      <h2>What this assessment does not establish</h2>
+      <div class="article"><p>This assessment addresses how a cybersecurity obligation attaches to export-controlled information. It does not determine whether any particular technology is within Part 810&rsquo;s scope, whether any particular firm holds CUI, or which framework binds any particular contract. Those are determinations that depend on facts and instruments not in the public record.</p>
+<p>The finding that Part 810 contains no cybersecurity provision rests on full-text review of the regulation and its 2015 final rule. It is an argument from the absence of a provision. DOE could address information security through guidance without codifying it, and the review conducted here found no such guidance; that is not the same as proving none exists.</p>
+<p>The absence of any assessed civil penalty under Part 810 rests on published records. The civil penalty rule permits but does not require publication of notices of violation, so non-public enforcement cannot be excluded.</p>
+<p>Two matters material to the analysis are unresolved. The FAR CUI rule proposed in January 2025 has not been finalized, and its final form would affect how CUI obligations reach civilian-agency contractors. The CMMC Reform Task Force has not reported. Neither is treated here as settled.</p>
+<p>An assessment that cannot state what would change it should not be published. This one would change if DOE issued guidance prescribing information-security requirements under Part 810; if the National Archives or a court held that CUI status attaches to information by subject matter alone, without a federal agreement; or if an enforcement action imposed 800-171-type obligations on a firm directly under an export regulation rather than through a contract.</p></div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section>
+    <div class="wrap sources" id="sources">
+      <div class="sl">Sources</div>
+      <h2>Primary sources</h2>
+      <p class="note-p">Every factual assertion traces to a primary regulatory, statutory, or Department of Justice record. Where the public record does not settle a question, the text says so rather than resolving it by inference.</p>
+      <ol class="mt-2">
+<li id="s1">10 CFR Part 810, <em>Assistance to Foreign Atomic Energy Activities</em>, eCFR, Title 10, retrieved 30 July 2026. Authority: Atomic Energy Act &sect; 57 b.(2), 42 U.S.C. 2077. <a href="https://www.ecfr.gov/current/title-10/chapter-III/part-810" rel="noopener noreferrer" target="_blank">https://www.ecfr.gov/current/title-10/chapter-III/part-810</a> <a href="#r1" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s2">10 CFR 810.6 (generally authorized activities and Appendix A destinations); 10 CFR 810.7(a), (b), (c) (activities requiring specific authorization, including the transfer of sensitive nuclear technology to any foreign country or entity). <a href="#r2" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s3">10 CFR 810.3 (definitions of foreign national, sensitive nuclear technology, and technical data). <a href="#r3" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s4">10 CFR 810.15; civil penalty procedures final rule, 88 FR 1979 (12 January 2023), implementing the amendment to Atomic Energy Act &sect; 234A by section 3116(b) of the FY2019 National Defense Authorization Act; penalty amount as adjusted, 89 FR 105406 (27 December 2024). <a href="#r4" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s5">Department of Energy, <em>Assistance to Foreign Atomic Energy Activities</em>, final rule, 80 FR 9359 (23 February 2015). Full-text review of the rule and preamble, including the discussion of public comments, identifies no reference to cybersecurity, information security, or encryption. <a href="#r5" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s6">22 CFR 120.54 (ITAR, activities that are not exports, reexports, retransfers, or temporary imports), added at 84 FR 70887 (26 December 2019). <a href="#r6" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s7">15 CFR 734.18 (EAR, activities that are not exports, reexports, or transfers), added at 81 FR 35604 (3 June 2016). <a href="#r7" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s8">Executive Order 13556, <em>Controlled Unclassified Information</em> (4 November 2010). <a href="#r8" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s9">32 CFR Part 2002, particularly &sect; 2002.4 (definitions of CUI, CUI Basic, and CUI Specified, and the exclusion of information a non-executive branch entity possesses in its own systems absent a federal origin), &sect; 2002.14 (safeguarding; designation of NIST SP 800-171 for non-federal systems), and &sect; 2002.16 (agreements and arrangements). Final rule at 81 FR 63324 (14 September 2016). <a href="#r9" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s10">National Archives and Records Administration, CUI Registry, category Export Controlled (marking EXPT; banner CUI//SP-EXPT where a specified authority applies), listing 42 U.S.C. 2077(a) among its authorities and naming sensitive nuclear technology information in the category description. <a href="https://www.archives.gov/cui/registry/category-detail/export-control" rel="noopener noreferrer" target="_blank">https://www.archives.gov/cui/registry/category-detail/export-control</a> <a href="#r10" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s11">NIST Special Publication 800-171, Revision 2, <em>Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations</em> &mdash; 110 requirements in 14 families. <a href="#r11" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s12">NARA CUI Registry, categories Unclassified Controlled Nuclear Information &mdash; Energy (42 U.S.C. 2168) and Naval Nuclear Propulsion Information. <a href="#r12" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s13">Department of War, <em>Forging the Arsenal of Freedom: Department of War Suspends CMMC Phase II Requirements</em> (13 July 2026); suspension memorandum signed 10 July 2026 by DoW Chief Information Officer Kirsten A. Davies, with a separate memorandum from the Under Secretary of Defense for Acquisition and Sustainment directing removal of third-party certification requirements from active solicitations. <a href="#r13" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s14">DFARS 252.204-7012; 32 CFR 170.22 (annual affirmation); 48 CFR 204.7501. The 32 CFR program rule took effect 16 December 2024; the 48 CFR acquisition rule took effect 10 November 2025. <a href="#r14" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s15">George, Collin B., <em>The Deadline Went Away. The Obligations Did Not.</em> Assessment SB-2026-01, Sanctir LLC, 20 July 2026. <a href="/research/cybersecurity-attestation/cmmc-phase-2-suspension/">/research/cybersecurity-attestation/cmmc-phase-2-suspension/</a> <a href="#r15" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s16"><em>United States v. Szuhsiung Ho</em>, E.D. Tenn., guilty plea January 2017; twenty-four month sentence for conspiracy to unlawfully engage in the production of special nuclear material outside the United States without Department of Energy authorization. <a href="#r16" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s17">U.S. Department of Justice, <em>Fact Sheet: False Claims Act Settlements and Judgments, Fiscal Year 2025</em> (16 January 2026). <a href="https://www.justice.gov/opa/media/1424126/dl" rel="noopener noreferrer" target="_blank">https://www.justice.gov/opa/media/1424126/dl</a> <a href="#r17" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s18">U.S. Department of Justice, settlement with Georgia Tech Research Corporation (30 September 2025). <a href="#r18" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s19">Settlement agreement, <em>United States v. LOGZONE, Inc.</em> (June 2026); Department of Justice release of 18 June 2026. <a href="https://www.justice.gov/opa/media/1446716/dl" rel="noopener noreferrer" target="_blank">https://www.justice.gov/opa/media/1446716/dl</a> <a href="#r19" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s20">Class Deviation 2026-O0025, <em>Revolutionary FAR Overhaul &mdash; FAR Part 40, DFARS Part 240</em>, Defense Acquisition Regulations System, effective 1 February 2026; Revision 2 issued 16 July 2026, effect not yet established in the public record. FAR CUI proposed rule, FAR Case 2017-016, 90 FR 4278 (15 January 2025), not finalized as at the date of this assessment. <a href="#r20" class="no-print" aria-label="Return to text">&#8617;</a></li>
+      </ol>
+      <div class="cite-block mt-25" id="citation">
+        <div class="cite-label">Suggested citation</div>
+        <p>George, Collin B. <em>The Export Rule Controls Your Data. It Never Tells You How to Protect It.</em> Assessment SB-2026-02, version 1.0. Sanctir LLC, 30 July 2026.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section>
+    <div class="wrap">
+      <div class="sl">Method</div>
+      <h2>Method note</h2>
+      <div class="article"><p>This assessment is independent open-source analysis. Its findings trace to primary sources: the text of 10 CFR Part 810 and its 2015 final rule; the ITAR and EAR provisions cited; Executive Order 13556 and 32 CFR Part 2002; the NARA CUI Registry; NIST SP 800-171; the DFARS and FAR clauses cited; and Department of Justice settlement announcements. Where the public record does not settle a question &mdash; including whether non-public Part 810 enforcement exists, and the final form of the FAR CUI rule &mdash; that is stated rather than resolved by inference.</p>
+<p>The central negative finding, that Part 810 contains no cybersecurity control set, was tested by full-text review of the regulation and the preamble to the rule that produced its current form, and by review of DOE and NNSA program guidance. Sanctir is a solo practice; this work was subjected to adversarial self-review, not external peer review.</p></div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="section-tint">
+    <div class="wrap">
+      <div class="sl">Author</div>
+      <h2>About the author</h2>
+      <div class="author-box">
+        <p>Collin B. George, CISSP, is the principal of Sanctir LLC, an independent research and advisory practice working on CMMC and NIST SP 800-171, export controls, sanctions, and defense industrial base risk.</p>
+        <p>Sanctir is a solo practice. This assessment was subjected to adversarial self-review rather than external peer review, and is not affiliated with any government agency, academic institution, or defense contractor.</p>
+        <p class="author-meta">ORCID <a href="https://orcid.org/0009-0007-8162-6839" rel="noopener noreferrer" target="_blank">0009-0007-8162-6839</a> &middot; <a href="/principal/">Full background</a> &middot; <a href="/contact/">Contact</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" aria-label="Sanctir home"><svg class="wordmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 146" role="img" aria-label="Sanctir">
+        <title>Sanctir</title>
+        <g fill="#1A3A5C">
+        <path d="M69 0 54 255H93Q107 161 169.5 106.0Q232 51 322 51Q397 51 443.0 85.5Q489 120 489 175Q489 207 474.5 229.0Q460 251 419.5 272.5Q379 294 301 323Q224 353 173.0 389.0Q122 425 97.0 470.0Q72 515 72 568Q72 631 103.5 678.5Q135 726 190.5 753.0Q246 780 319 780Q418 780 504 716L522 766H546L557 550H518Q494 632 443.0 675.5Q392 719 325 719Q264 719 225.0 688.5Q186 658 186 610Q186 582 199.5 561.5Q213 541 250.0 521.5Q287 502 356 476Q449 441 507.0 402.5Q565 364 591.5 319.5Q618 275 618 219Q618 152 580.0 100.0Q542 48 475.0 19.0Q408 -10 320 -10Q261 -10 212.0 6.5Q163 23 113 60L93 0Z" transform="translate(55.25,103.76) scale(0.08800,-0.08800)" />
+        <path d="M-13 0V40Q35 45 60.0 61.5Q85 78 102 121L365 780H439L678 196Q699 145 714.0 115.5Q729 86 745.0 71.0Q761 56 782.5 50.0Q804 44 838 41V0H460V41Q508 43 529.0 51.0Q550 59 550 83Q550 97 543.0 119.5Q536 142 524 173L501 233H218Q194 179 182.5 143.0Q171 107 171 86Q171 56 193.5 48.0Q216 40 261 40V0ZM241 293H479L364 596H360Z" transform="translate(129.43,103.76) scale(0.08800,-0.08800)" />
+        <path d="M670 -10 227 621H223V191Q223 125 230.5 93.5Q238 62 260.5 52.0Q283 42 327 40V0H30V40Q79 42 103.5 52.0Q128 62 136.5 92.0Q145 122 145 184V586Q145 643 137.5 673.0Q130 703 107.5 715.5Q85 728 40 730V770H319L722 192H726V579Q726 645 718.5 676.5Q711 708 689.0 718.5Q667 729 622 730V770H919V730Q870 729 845.5 718.5Q821 708 812.5 678.0Q804 648 804 586V-10Z" transform="translate(216.46,103.76) scale(0.08800,-0.08800)" />
+        <path d="M688 708 707 770H756L736 517H696Q675 609 614.5 662.0Q554 715 468 715Q390 715 334.5 674.5Q279 634 250.0 558.5Q221 483 221 378Q221 224 285.0 140.0Q349 56 472 56Q571 56 637.0 110.5Q703 165 731 271H775V0H728L714 79Q604 -10 447 -10Q326 -10 236.0 37.0Q146 84 96.5 169.5Q47 255 47 372Q47 463 77.0 537.5Q107 612 161.5 666.5Q216 721 292.0 750.5Q368 780 459 780Q520 780 573.5 763.0Q627 746 688 708Z" transform="translate(315.02,103.76) scale(0.08800,-0.08800)" />
+        <path d="M805 770 815 550H772Q768 616 748.5 652.5Q729 689 693.5 703.5Q658 718 604 718Q553 718 527.0 715.5Q501 713 493.0 706.0Q485 699 485 687V163Q485 120 494.0 93.5Q503 67 532.0 54.5Q561 42 620 40V0H201V40Q261 42 290.0 54.5Q319 67 328.5 93.5Q338 120 338 163V687Q338 699 331.0 706.0Q324 713 302.0 715.5Q280 718 235 718Q199 718 166.0 714.0Q133 710 108.0 694.5Q83 679 68.0 645.0Q53 611 51 550H12L22 770Z" transform="translate(403.29,103.76) scale(0.08800,-0.08800)" />
+        <path d="M36 0V40Q81 42 103.5 52.0Q126 62 133.5 92.0Q141 122 141 184V586Q141 643 134.5 673.0Q128 703 107.5 715.5Q87 728 46 730V770H383V730Q342 728 321.5 715.5Q301 703 294.5 673.0Q288 643 288 586V184Q288 122 295.5 92.0Q303 62 325.5 52.0Q348 42 393 40V0Z" transform="translate(491.90,103.76) scale(0.08800,-0.08800)" />
+        <path d="M695 577Q695 494 647.0 438.0Q599 382 494 363L726 97Q750 69 783.0 54.5Q816 40 850 40V0H613L365 304Q349 324 335.0 335.0Q321 346 309.5 350.5Q298 355 287 355V159Q287 110 297.0 84.0Q307 58 338.0 49.0Q369 40 432 40V0H35V40Q79 40 101.5 49.0Q124 58 132.0 82.5Q140 107 140 154V616Q140 663 133.5 686.5Q127 710 107.0 719.0Q87 728 46 730V770H392Q536 770 615.5 719.0Q695 668 695 577ZM287 697V415H352Q446 415 492.5 452.0Q539 489 539 572Q539 636 500.0 675.0Q461 714 392 714H305Q287 714 287 697Z" transform="translate(545.50,103.76) scale(0.08800,-0.08800)" />
+        </g>
+        <line x1="52.00" y1="117.76" x2="628.30" y2="117.76" stroke="#B8860B" stroke-width="1.25" stroke-linecap="butt" />
+</svg></a>
+      <p>Independent research and advisory practice. Not affiliated with any government agency, academic institution, or defense contractor. Services are advisory in nature and do not constitute legal advice.</p>
+      <p>&copy; 2026 Sanctir. All rights reserved.</p>
+      <div class="social-row">
+        <a href="https://x.com/Sanctir" rel="noopener noreferrer" target="_blank" aria-label="Sanctir on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+        <a href="/pgp/" aria-label="Encrypted communication — Signal and PGP"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5Zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3Zm0 11a2 2 0 0 1 1 3.732V19a1 1 0 0 1-2 0v-1.268A2 2 0 0 1 12 14Z"/></svg></a>
+        <a href="mailto:contact@sanctir.com" aria-label="Email Sanctir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm9 8.13L4.6 6H19.4ZM4 8.24V18h16V8.24l-7.4 6.16a1 1 0 0 1-1.2 0Z"/></svg></a>
+        <a href="tel:+13026008018" aria-label="Call Sanctir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 2h3.1a1 1 0 0 1 1 .84l.7 4.1a1 1 0 0 1-.55 1.06L8.8 9.06a13.6 13.6 0 0 0 6.14 6.14l1.06-2.05a1 1 0 0 1 1.06-.55l4.1.7a1 1 0 0 1 .84 1V17.4A4.6 4.6 0 0 1 17.4 22 19.4 19.4 0 0 1 2 6.6 4.6 4.6 0 0 1 6.6 2Z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Practice</div>
+      <div class="footer-links">
+        <a href="/research/">Research</a>
+        <a href="/#decide">Advisory</a>
+        <a href="/#supply-chain">Supply Chain</a>
+        <a href="/#methodology">Methodology</a>
+        <a href="/principal/">Principal</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Resources</div>
+      <div class="footer-links">
+        <a href="/research/">Research Library</a>
+        <a href="/security/">Security</a>
+        <a href="/pgp/">Encrypted Communication</a>
+        <a href="/sitemap/">Sitemap</a>
+        <a href="/privacy.html">Privacy Notice</a>
+        <a href="/terms.html">Terms &amp; Disclaimer</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

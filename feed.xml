@@ -5,12 +5,22 @@
   <link href="https://sanctir.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://sanctir.com/" rel="alternate" type="text/html"/>
   <id>https://sanctir.com/</id>
-  <updated>2026-07-20T00:00:00Z</updated>
+  <updated>2026-07-30T00:00:00Z</updated>
   <rights>CC BY 4.0</rights>
   <author>
     <name>Collin B. George</name>
     <uri>https://sanctir.com/principal/</uri>
   </author>
+  <entry>
+    <title>The Export Rule Controls Your Data. It Never Tells You How to Protect It.</title>
+    <link href="https://sanctir.com/research/cybersecurity-attestation/cfr-810-control-set/" rel="alternate" type="text/html"/>
+    <id>https://sanctir.com/research/cybersecurity-attestation/cfr-810-control-set/</id>
+    <published>2026-07-30T00:00:00Z</published>
+    <updated>2026-07-30T00:00:00Z</updated>
+    <category term="Cybersecurity and Attestation"/>
+    <category term="Export Controls and Technology Security"/>
+    <summary type="text">Assessment SB-2026-02. Where a cybersecurity obligation actually comes from when an export-control regulation controls your information but prescribes no control set. 10 CFR Part 810, the CUI framework, and why applicability is a contract question.</summary>
+  </entry>
   <entry>
     <title>The Deadline Went Away. The Obligations Did Not.</title>
     <link href="https://sanctir.com/research/cybersecurity-attestation/cmmc-phase-2-suspension/" rel="alternate" type="text/html"/>

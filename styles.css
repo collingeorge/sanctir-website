@@ -2073,3 +2073,64 @@ a.cd-card:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
   gap: 1rem;
   margin-top: 2rem;
 }
+
+/* ── Regime comparison table (SB-2026-02) ─────────────────────────── */
+.table-wrap {
+  margin: 1.75rem 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border-soft);
+  border-radius: 2px;
+}
+.reg-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  min-width: 640px;
+}
+.reg-table thead th {
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  vertical-align: bottom;
+}
+.reg-table tbody td {
+  padding: 0.75rem 0.9rem;
+  border-top: 1px solid var(--border-soft);
+  color: var(--text-2);
+  vertical-align: top;
+}
+.reg-table tbody td:first-child {
+  color: var(--text-1);
+  white-space: nowrap;
+}
+.reg-table tbody tr:nth-child(even) { background: var(--bg-tint); }
+.reg-table tbody td strong { color: var(--navy); font-weight: 600; }
+.reg-table tbody tr:hover { background: #F1F4F8; }
+@media (max-width: 640px) {
+  .reg-table { font-size: 0.8rem; }
+  .reg-table thead th, .reg-table tbody td { padding: 0.55rem 0.65rem; }
+  .table-wrap::after {
+    content: "→ scroll";
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--text-3);
+    text-align: right;
+    padding: 0.3rem 0.6rem 0.4rem;
+    letter-spacing: 0.03em;
+  }
+}
+@media print {
+  .table-wrap { overflow: visible; border: 1px solid #999; }
+  .reg-table { min-width: 0; font-size: 9pt; }
+  .reg-table thead th { background: #1A3A5C !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .table-wrap::after { display: none; }
+}
