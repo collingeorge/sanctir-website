@@ -5,12 +5,33 @@
   <link href="https://sanctir.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://sanctir.com/" rel="alternate" type="text/html"/>
   <id>https://sanctir.com/</id>
-  <updated>2026-07-30T00:00:00Z</updated>
+  <updated>2026-08-09T00:00:00Z</updated>
   <rights>CC BY 4.0</rights>
   <author>
     <name>Collin B. George</name>
     <uri>https://sanctir.com/principal/</uri>
   </author>
+  <entry>
+    <title>Your Subcontractor&#x2019;s Engineer Does Not Exist</title>
+    <link href="https://sanctir.com/research/cybersecurity-attestation/your-subcontractors-engineer-does-not-exist/" rel="alternate" type="text/html"/>
+    <id>https://sanctir.com/research/cybersecurity-attestation/your-subcontractors-engineer-does-not-exist/</id>
+    <published>2026-08-09T00:00:00Z</published>
+    <updated>2026-08-09T00:00:00Z</updated>
+    <category term="Cybersecurity and Attestation"/>
+    <category term="Export Controls and Technology Security"/>
+    <category term="Threat Finance and Sanctions"/>
+    <summary type="text">Assessment SB-2026-04. What a North Korean placement inside a defense contractor costs a company that did nothing wrong, and what converts it from a victim into a respondent.</summary>
+  </entry>
+  <entry>
+    <title>Cleared Does Not Mean Examined</title>
+    <link href="https://sanctir.com/research/threat-finance-sanctions/cleared-does-not-mean-examined/" rel="alternate" type="text/html"/>
+    <id>https://sanctir.com/research/threat-finance-sanctions/cleared-does-not-mean-examined/</id>
+    <published>2026-08-09T00:00:00Z</published>
+    <updated>2026-08-09T00:00:00Z</updated>
+    <category term="Threat Finance and Sanctions"/>
+    <category term="Cybersecurity and Attestation"/>
+    <summary type="text">Assessment SB-2026-03. Why a compliance screening program can pass every audit and still not detect the thing it exists to catch.</summary>
+  </entry>
   <entry>
     <title>The Export Rule Controls Your Data. It Never Tells You How to Protect It.</title>
     <link href="https://sanctir.com/research/cybersecurity-attestation/cfr-810-control-set/" rel="alternate" type="text/html"/>

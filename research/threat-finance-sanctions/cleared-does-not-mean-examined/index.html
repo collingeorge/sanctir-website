@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cleared Does Not Mean Examined &mdash; Sanctir Research</title>
+<meta name="description" content="Why a compliance screening program can pass every audit and still not detect the thing it exists to catch. A random-sample audit of cleared counterparties, and why this is now a False Claims Act question.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sanctir">
+<meta property="og:url" content="https://sanctir.com/research/threat-finance-sanctions/cleared-does-not-mean-examined/">
+<meta property="og:title" content="Cleared Does Not Mean Examined &mdash; Sanctir Research">
+<meta property="og:description" content="Why a compliance screening program can pass every audit and still not detect the thing it exists to catch.">
+<meta property="og:image" content="https://sanctir.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-08-09">
+<meta property="article:modified_time" content="2026-08-09">
+<meta property="article:author" content="Collin B. George">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Sanctir">
+<meta name="twitter:title" content="Cleared Does Not Mean Examined &mdash; Sanctir Research">
+<meta name="twitter:description" content="Why a compliance screening program can pass every audit and still not detect the thing it exists to catch.">
+<meta name="twitter:image" content="https://sanctir.com/og-image.png">
+<link rel="alternate" type="application/atom+xml" title="Sanctir Research" href="/feed.xml">
+<link rel="canonical" href="https://sanctir.com/research/threat-finance-sanctions/cleared-does-not-mean-examined/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="stylesheet" href="/styles.css?v=25">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":["Report","Article"],"image":["https://sanctir.com/og-image.png"],"headline":"Cleared Does Not Mean Examined","description":"Why a compliance screening program can pass every audit and still not detect the thing it exists to catch.","datePublished":"2026-08-09","dateModified":"2026-08-09","keywords":"counterparty screening, sanctions, OFAC 50 percent rule, entity resolution, False Claims Act, Civil Cyber-Fraud Initiative, NIST SP 800-171, SPRS","isAccessibleForFree":true,"creativeWorkStatus":"Published","version":"1.0","inLanguage":"en","url":"https://sanctir.com/research/threat-finance-sanctions/cleared-does-not-mean-examined/","license":"https://creativecommons.org/licenses/by/4.0/","author":{"@type":"Person","name":"Collin B. George","url":"https://sanctir.com/principal/","identifier":"https://orcid.org/0009-0007-8162-6839","sameAs":["https://orcid.org/0009-0007-8162-6839"]},"publisher":{"@type":"Organization","name":"Sanctir LLC","url":"https://sanctir.com"},"isPartOf":{"@type":"CreativeWorkSeries","name":"Sanctir Executive Briefings"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Research","item":"https://sanctir.com/research/"},{"@type":"ListItem","position":2,"name":"Threat Finance & Sanctions","item":"https://sanctir.com/research/threat-finance-sanctions/"},{"@type":"ListItem","position":3,"name":"Cleared Does Not Mean Examined","item":"https://sanctir.com/research/threat-finance-sanctions/cleared-does-not-mean-examined/"}]}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="primary">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/" aria-label="Sanctir home"><svg class="wordmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 146" role="img" aria-label="Sanctir">
+        <title>Sanctir</title>
+        <g fill="#1A3A5C">
+        <path d="M69 0 54 255H93Q107 161 169.5 106.0Q232 51 322 51Q397 51 443.0 85.5Q489 120 489 175Q489 207 474.5 229.0Q460 251 419.5 272.5Q379 294 301 323Q224 353 173.0 389.0Q122 425 97.0 470.0Q72 515 72 568Q72 631 103.5 678.5Q135 726 190.5 753.0Q246 780 319 780Q418 780 504 716L522 766H546L557 550H518Q494 632 443.0 675.5Q392 719 325 719Q264 719 225.0 688.5Q186 658 186 610Q186 582 199.5 561.5Q213 541 250.0 521.5Q287 502 356 476Q449 441 507.0 402.5Q565 364 591.5 319.5Q618 275 618 219Q618 152 580.0 100.0Q542 48 475.0 19.0Q408 -10 320 -10Q261 -10 212.0 6.5Q163 23 113 60L93 0Z" transform="translate(55.25,103.76) scale(0.08800,-0.08800)" />
+        <path d="M-13 0V40Q35 45 60.0 61.5Q85 78 102 121L365 780H439L678 196Q699 145 714.0 115.5Q729 86 745.0 71.0Q761 56 782.5 50.0Q804 44 838 41V0H460V41Q508 43 529.0 51.0Q550 59 550 83Q550 97 543.0 119.5Q536 142 524 173L501 233H218Q194 179 182.5 143.0Q171 107 171 86Q171 56 193.5 48.0Q216 40 261 40V0ZM241 293H479L364 596H360Z" transform="translate(129.43,103.76) scale(0.08800,-0.08800)" />
+        <path d="M670 -10 227 621H223V191Q223 125 230.5 93.5Q238 62 260.5 52.0Q283 42 327 40V0H30V40Q79 42 103.5 52.0Q128 62 136.5 92.0Q145 122 145 184V586Q145 643 137.5 673.0Q130 703 107.5 715.5Q85 728 40 730V770H319L722 192H726V579Q726 645 718.5 676.5Q711 708 689.0 718.5Q667 729 622 730V770H919V730Q870 729 845.5 718.5Q821 708 812.5 678.0Q804 648 804 586V-10Z" transform="translate(216.46,103.76) scale(0.08800,-0.08800)" />
+        <path d="M688 708 707 770H756L736 517H696Q675 609 614.5 662.0Q554 715 468 715Q390 715 334.5 674.5Q279 634 250.0 558.5Q221 483 221 378Q221 224 285.0 140.0Q349 56 472 56Q571 56 637.0 110.5Q703 165 731 271H775V0H728L714 79Q604 -10 447 -10Q326 -10 236.0 37.0Q146 84 96.5 169.5Q47 255 47 372Q47 463 77.0 537.5Q107 612 161.5 666.5Q216 721 292.0 750.5Q368 780 459 780Q520 780 573.5 763.0Q627 746 688 708Z" transform="translate(315.02,103.76) scale(0.08800,-0.08800)" />
+        <path d="M805 770 815 550H772Q768 616 748.5 652.5Q729 689 693.5 703.5Q658 718 604 718Q553 718 527.0 715.5Q501 713 493.0 706.0Q485 699 485 687V163Q485 120 494.0 93.5Q503 67 532.0 54.5Q561 42 620 40V0H201V40Q261 42 290.0 54.5Q319 67 328.5 93.5Q338 120 338 163V687Q338 699 331.0 706.0Q324 713 302.0 715.5Q280 718 235 718Q199 718 166.0 714.0Q133 710 108.0 694.5Q83 679 68.0 645.0Q53 611 51 550H12L22 770Z" transform="translate(403.29,103.76) scale(0.08800,-0.08800)" />
+        <path d="M36 0V40Q81 42 103.5 52.0Q126 62 133.5 92.0Q141 122 141 184V586Q141 643 134.5 673.0Q128 703 107.5 715.5Q87 728 46 730V770H383V730Q342 728 321.5 715.5Q301 703 294.5 673.0Q288 643 288 586V184Q288 122 295.5 92.0Q303 62 325.5 52.0Q348 42 393 40V0Z" transform="translate(491.90,103.76) scale(0.08800,-0.08800)" />
+        <path d="M695 577Q695 494 647.0 438.0Q599 382 494 363L726 97Q750 69 783.0 54.5Q816 40 850 40V0H613L365 304Q349 324 335.0 335.0Q321 346 309.5 350.5Q298 355 287 355V159Q287 110 297.0 84.0Q307 58 338.0 49.0Q369 40 432 40V0H35V40Q79 40 101.5 49.0Q124 58 132.0 82.5Q140 107 140 154V616Q140 663 133.5 686.5Q127 710 107.0 719.0Q87 728 46 730V770H392Q536 770 615.5 719.0Q695 668 695 577ZM287 697V415H352Q446 415 492.5 452.0Q539 489 539 572Q539 636 500.0 675.0Q461 714 392 714H305Q287 714 287 697Z" transform="translate(545.50,103.76) scale(0.08800,-0.08800)" />
+        </g>
+        <line x1="52.00" y1="117.76" x2="628.30" y2="117.76" stroke="#B8860B" stroke-width="1.25" stroke-linecap="butt" />
+</svg></a>
+    <div class="nav-links">
+      <div class="nav-dd">
+        <a href="/research/" aria-haspopup="true">Research</a>
+        <div class="nav-dd-menu">
+          <div class="dd-head">Research Library</div>
+          <a href="/research/">All publications</a>
+          <div class="dd-sep"></div>
+          <div class="dd-head">By Domain</div>
+          <a href="/research/threat-finance-sanctions/">Threat Finance &amp; Sanctions</a>
+          <a href="/research/export-controls-technology/">Export Controls &amp; Technology Security</a>
+          <a href="/research/defense-industrial-base/">Defense Base &amp; Strategic Sourcing</a>
+          <a href="/research/cybersecurity-attestation/">Cybersecurity &amp; Attestation</a>
+          <a href="/research/statecraft-policy/">Statecraft &amp; Policy Analysis</a>
+          <div class="dd-sep"></div>
+          <a href="/methodology/">Analytic Methodology</a>
+        </div>
+      </div>
+      <a href="/#decide">Advisory</a>
+      <a href="/#supply-chain">Supply Chain</a>
+      <a href="/#methodology">Methodology</a>
+      <div class="nav-dd">
+        <a href="/#about" aria-haspopup="true">About</a>
+        <div class="nav-dd-menu">
+          <a href="/#about">About Sanctir</a>
+          <a href="/principal/">Principal</a>
+          <div class="dd-sep"></div>
+          <a href="/methodology/">Methodology</a>
+          <a href="/security/">Security</a>
+        </div>
+      </div>
+      <span class="nav-social">
+        <a href="https://x.com/Sanctir" rel="noopener noreferrer" target="_blank" aria-label="Sanctir on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+        <a href="/pgp/" aria-label="Encrypted communication"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5Zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3Zm0 11a2 2 0 0 1 1 3.732V19a1 1 0 0 1-2 0v-1.268A2 2 0 0 1 12 14Z"/></svg></a>
+      </span>
+      <a class="btn btn-primary" href="/contact/">Contact</a>
+      <details class="nav-mobile">
+        <summary aria-label="Open navigation menu"><span class="burger"><span></span><span></span><span></span></span></summary>
+        <div class="nav-mobile-panel">
+          <div class="nmp-head">Research</div>
+          <a href="/research/">All publications</a>
+          <a href="/research/threat-finance-sanctions/">Threat Finance &amp; Sanctions</a>
+          <a href="/research/export-controls-technology/">Export Controls &amp; Technology Security</a>
+          <a href="/research/defense-industrial-base/">Defense Base &amp; Strategic Sourcing</a>
+          <a href="/research/cybersecurity-attestation/">Cybersecurity &amp; Attestation</a>
+          <a href="/research/statecraft-policy/">Statecraft &amp; Policy Analysis</a>
+          <div class="nmp-sep"></div>
+          <div class="nmp-head">Practice</div>
+          <a href="/#decide">Advisory</a>
+          <a href="/#supply-chain">Supply Chain</a>
+          <a href="/methodology/">Methodology</a>
+          <div class="nmp-sep"></div>
+          <div class="nmp-head">About</div>
+          <a href="/#about">About Sanctir</a>
+          <a href="/principal/">Principal</a>
+          <a href="/security/">Security</a>
+          <a href="/pgp/">Encrypted Communication</a>
+          <div class="nmp-sep"></div>
+          <a href="/contact/">Contact</a>
+          <a href="https://x.com/Sanctir" rel="noopener noreferrer" target="_blank">x.com/Sanctir</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</nav><main id="main">
+  <section class="pub-head">
+    <div class="wrap">
+      <nav class="pub-crumb" aria-label="Breadcrumb">
+        <a href="/research/">Research</a>
+        <span aria-hidden="true">/</span>
+        <a href="/research/threat-finance-sanctions/">Threat Finance &amp; Sanctions</a>
+        <span aria-hidden="true">/</span>
+        <span>SB-2026-03</span>
+      </nav>
+      <hr class="pub-rule-top">
+      <div class="pub-series">Assessment &middot; SB-2026-03</div>
+      <h1>Cleared Does Not Mean Examined</h1>
+      <p class="pub-deck">Why a compliance screening program can pass every audit and still not detect the thing it exists to catch.</p>
+      <div class="pub-meta">
+        <div class="pub-meta-item">Published <strong><time datetime="2026-08-09">9 August 2026</time></strong></div>
+        <div class="pub-meta-item">Status <strong>Published</strong></div>
+        <div class="pub-meta-item">Revised <strong><time datetime="2026-08-09">9 August 2026</time></strong></div>
+        <div class="pub-meta-item">Version <strong>1.0</strong></div>
+        <div class="pub-meta-item">Author <strong>Collin B. George, CISSP</strong></div>
+        <div class="pub-meta-item">License <strong>CC BY 4.0</strong></div>
+      </div>
+      <div class="pub-actions no-print">
+        <a class="btn btn-primary" href="/research/threat-finance-sanctions/cleared-does-not-mean-examined/sanctir-SB-2026-03-cleared-does-not-mean-examined.pdf">Download PDF</a>
+        <a class="btn btn-ghost" href="#citation">Cite</a>
+        <a class="btn btn-ghost" href="#sources">Sources</a>
+        <a class="btn btn-ghost" href="/research/threat-finance-sanctions/">Research domain</a>
+      </div>
+    </div>
+  </section>
+  <div class="wrap"><div class="pub-class">Unclassified // Open Source</div></div>
+  <section>
+    <div class="wrap">
+      <div class="doc-record">
+        <div class="cite-label">Analytic record</div>
+        <dl class="rec-dl">
+          <dt>Type</dt><dd>Analysis — a structural account of why counterparty screening programs measure their own activity rather than their effectiveness, and the design change that corrects it. Stable except where the underlying legal authorities change.</dd>
+          <dt>Governing judgment</dt><dd>A screening program learns only from the counterparties it flags; the ones it clears are cleared without inquiry and teach it nothing. Its performance numbers are therefore conditional on its own past decisions, and a clean record on a class of counterparty is evidence the class was never examined — not evidence it is clean. The correction is a random-sample audit of cleared counterparties, which is inexpensive and is a design change rather than a purchase.</dd>
+          <dt>Probability</dt><dd>That screening validated only by process metrics cannot estimate its own failure rate is assessed as certain; it follows from the structure of the data. That attributes cheap for a counterparty to change carry most screening weight in typical programs is assessed as almost certain, from the enforcement record and standard program design.</dd>
+          <dt>Analytic confidence</dt><dd>High for the legal analysis, which rests on Supreme Court and Circuit authority and on Department of Justice settlement records. High for the structural argument, which restates an established result from program evaluation applied to a domain that has not absorbed it. These are separate axes and are not combined.</dd>
+          <dt>Supersession</dt><dd>Reassess on any Supreme Court decision altering False Claims Act materiality or scienter, on finalization of the CMMC assessment regime, or on new Civil Cyber-Fraud Initiative resolutions that change the enforcement pattern described here.</dd>
+          <dt>Revision history</dt><dd>1.0, 9 August 2026 — first publication. Companion academic paper published concurrently on SSRN.</dd>
+        </dl>
+      </div>
+      <div class="exec-summary mt-25">
+        <div class="cite-label">Executive summary</div>
+        <ul>
+          <li>Almost every screening program measures activity: transactions screened, watchlist currency, alerts cleared, clearance speed. None of those numbers answers the only question an enforcement authority asks — did the program catch the conduct it exists to catch.</li>
+          <li>The gap is structural, not a reporting oversight. A screening program learns only from the counterparties it flags. The ones it clears are cleared without inquiry, so a clean record on a class of counterparty means the program never looked, not that the class is clean.</li>
+          <li>The screening that happens leans on the wrong attributes: the ones a sophisticated counterparty can change for nothing — a corporate name, a registered address, a declared end-use, a self-attested compliance score. The attributes that are expensive to fake mostly go unscreened.</li>
+          <li>The fix is one inexpensive design change: sample your own cleared counterparties at random and examine them, the way the IRS estimates the tax gap. That single stratum yields the one number no process metric can — an unbiased estimate of what your screening missed.</li>
+          <li>This is now a False Claims Act question. A self-attested compliance score is a certification, and a false certification is a claim. Enforcement has already turned a self-reported score of 110, against a government assessment of negative 170, into a paid settlement — with no breach, no attack, and no data loss.</li>
+        </ul>
+      </div>
+      <div class="pub-finding mt-25">
+        <div class="cite-label">If you read nothing else</div>
+        <p><strong>Ask your screening program one question it probably cannot answer: among the counterparties we cleared, what fraction carried disqualifying conduct we missed?</strong> If the honest answer is that there is no way to know, the program is measuring its own activity and not its effectiveness — and it cannot substantiate a representation of reasonable care if one is ever tested. The correction is a random-sample audit of cleared counterparties. It is a design change, not a software purchase, and it is described below.</p>
+      </div>
+      <div class="article mt-25">
+<p class="lede">A question sits underneath almost every compliance program that screens counterparties — vendors, customers, distributors, end-users, suppliers: how do we know the screening works? The instinct is to point at the program’s output. We screen every transaction. Our lists are current. Our alerts are cleared within a day. Those are real numbers and they are worth having. But none of them answers the question that was asked, and the reason is structural.</p>
+
+  <h2>What a Screening Program Actually Learns From</h2>
+
+  <p>A screening program is trained, formally through a model or informally through analyst experience and rule changes, on its own history. The counterparties that generated alerts were investigated. Those investigations produced outcomes, and the outcomes refined the rules. The counterparties that cleared were cleared without inquiry and produced no outcome at all.</p>
+
+  <p>That asymmetry is the whole problem. The program has evidence only about the population it already suspected. About the population it cleared — which is nearly all of it — it has nothing, because it never asked. Every performance number the program reports is therefore conditional on its own past decisions: the hit rate, the false-positive rate, the clearance accuracy all describe the slice of the world the program chose to look at.</p>
+
+  <p>The practical consequence is that a clean record on a class of counterparty is not evidence the class is clean. It is evidence the program never examined it. A profile that has never triggered an alert looks safe for exactly the same reason an unopened box looks empty. This is why compliance programs are repeatedly surprised by enforcement actions involving counterparties they had screened and cleared many times over.</p>
+
+  <blockquote class="pull-quote">The clearance was never a finding. It was the absence of a question.</blockquote>
+
+  <div class="pub-finding">
+    <div class="cite-label">Why this matters</div>
+    <p>A program cannot state its own failure rate if it has only ever examined the counterparties it flagged. That number — the rate of disqualifying conduct among the counterparties you cleared — is the one an examiner, an opposing expert, or a whistleblower will eventually put to you, and process metrics cannot produce it.</p>
+  </div>
+
+  <h2>The Capability Nobody Measures</h2>
+
+  <p>There is a second structural limit, and it sits upstream of everything the screening rules do. A screen is only as good as its ability to recognize that two nominally distinct counterparties are the same operation.</p>
+
+  <p>Evasion networks, sanctions front companies, and diversion schemes change corporate identity far faster than they change the substrate underneath it — the people, the physical premises, the freight forwarders, the banking relationships, the registered agents. A program that treats each new corporate name as a new and unknown entity discards the single most stable signal available to it, and re-clears an operation it has already seen under a different name.</p>
+
+  <p>Every screening program performs this entity resolution, whether it knows it or not. Almost none measure how well. The resolution quality is invisible to program management and to auditors alike, which means the binding constraint on the program’s accuracy is a number nobody reports. A program that cannot say what fraction of its screened counterparties it has resolved to a persistent identity does not know how it performs against the counterparties most likely to be hiding.</p>
+
+  <div class="pub-finding">
+    <div class="cite-label">Why this matters</div>
+    <p>Ownership-based rules — the OFAC 50 percent rule, foreign-ownership-and-control determinations, research-security affiliation checks — are graph problems. A program running them without resolving entities is performing the analysis it is able to perform, not the analysis the rule requires.</p>
+  </div>
+
+  <h2>The Attributes You Trust Most Are the Ones an Adversary Can Change for Free</h2>
+
+  <p>Screening weight tends to concentrate on the attributes that are cheapest for a sophisticated counterparty to alter.</p>
+
+  <p>A corporate name changes in days for a nominal fee. A registered address changes as fast. A declared end-use or end-user statement costs nothing to write. A self-classification, a declared value, a self-attested compliance score — all are supplied by the counterparty and cost nothing to misstate. Against those sit the attributes that are genuinely expensive to fake: an operating history, a verified physical footprint, relationship tenure with banks and brokers and forwarders, a transaction pattern consistent with the stated business. Those mostly go unscreened.</p>
+
+  <blockquote class="pull-quote">An attribute’s value to a screen is not its predictive power. It is its predictive power discounted by the cost to the counterparty of falsifying it.</blockquote>
+
+  <p>A feature that predicts well and is free to change is a liability, not an asset: it produces accuracy against unsophisticated actors, who never bother to change it, and close to none against the counterparties who will — while generating documentation that the program appeared to be working. Denied-party list screening is the pure case. It is highly accurate against entities that have not changed their names, and structurally uninformative against those that have.</p>
+
+  <div class="pub-finding">
+    <div class="cite-label">Why this matters</div>
+    <p>A program optimized on historical accuracy alone will load its weight onto the cheap attributes, because the enforcement record it learned from is dominated by the unsophisticated actors who left them unchanged. It ends up optimized against the population least likely to cause a serious loss.</p>
+  </div>
+
+  <h2>The Fix Is One Inexpensive Design Change</h2>
+
+  <p>The correction to all three defects is a single addition, and it is cheap.</p>
+
+  <p>Sample your own clearances. Take a small fraction of the counterparties your screening cleared — one to three percent is enough at commercial volume — selected at random, independent of any score or alert or analyst judgment, and examine them properly. Stratify the sample by jurisdiction, by commodity or service class, by counterparty tenure, so each part of your book is represented.</p>
+
+  <p>This is not a novel technique. It is exactly what the Internal Revenue Service does to estimate the tax gap: a randomly selected audit stratum, chosen independently of the enforcement-selection rules, precisely so it reveals what routine enforcement misses. The design has been in use for decades in a domain with far higher stakes than most compliance programs face.</p>
+
+  <p>That single stratum produces the one figure no process metric can: an unbiased estimate of your clearance failure rate, with a confidence interval. It lets you state, in an audit or a courtroom, that among the counterparties your program cleared, the estimated rate of undetected disqualifying conduct is some measured value. Without it you can say nothing at all about the counterparties you cleared — which is nearly all of them. The objection to the sample is never its cost, which is trivial. The objection is that it generates a documented estimate of the program’s own failure rate. That is the argument for it, not against it, and the reason is legal, addressed below.</p>
+
+  <p>Around that core, four supporting moves follow directly from the three defects:</p>
+
+  <ul class="body-list">
+    <li><strong>Weight attributes by how hard they are to fake</strong>, and cap the weight assigned to cheap-to-change attributes even where they predict well. Accept slightly lower measured accuracy in exchange for accuracy against the counterparties who matter.</li>
+    <li><strong>Resolve counterparties into a persistent entity graph</strong>, so a re-registered shell is recognized rather than cleared as new, and report the resolution rate as a program metric.</li>
+    <li><strong>Let trusted status decay.</strong> Any status that lowers scrutiny — approved end-user, certified supplier, an accepted remediation plan, a prior favorable review — should carry an expiry and be suspended by behavioral triggers, not left standing until a formal revocation. The status a program trusts most is the most valuable thing for a bad counterparty to acquire.</li>
+    <li><strong>Report effectiveness, not activity</strong>: clearance failure rate from the sample; lift over random, meaning how much better the alerts do than chance; and the fraction of your transaction space that has received zero non-random review, which is the leading indicator that illicit activity has moved into a segment your rules do not reach.</li>
+  </ul>
+
+  <div class="pub-finding">
+    <div class="cite-label">Why this matters</div>
+    <p>Every item on this list is measurable with data the program already holds. What is missing is not capability. It is the decision to measure the outcome instead of the activity.</p>
+  </div>
+
+  <h2>Why This Is Now a False Claims Act Question</h2>
+
+  <p>Where a contractor certifies compliance with an export-control, supply-chain, or cybersecurity requirement as a condition of payment, that certification is discoverable, and the screening behind it becomes evidence. This is not a hypothetical exposure. It is where the enforcement has gone.</p>
+
+  <p>The Department of Justice’s Civil Cyber-Fraud Initiative, running since 2021, uses the False Claims Act against contractors that misrepresent their cybersecurity posture. The object being certified is a program, not an outcome, which is the point: no breach, no exfiltration, and no attack is required. The false statement is the attestation itself. In fiscal year 2025 the Department reported more than fifty-two million dollars recovered across nine cybersecurity settlements, part of a record year for whistleblower filings.<sup class="ref"><a href="#s1" id="r1">1</a></sup></p>
+
+  <p>The worked cases show the pattern precisely.</p>
+
+  <p>A logistics contractor self-reported a perfect cybersecurity score of 110. A later government assessment, run by the Defense Contract Management Agency’s assessment center, scored the same company at negative 170 — a 280-point gap on a single self-attested number, against a possible range that bottoms out at negative 203. The company resolved the allegations for $507,144. No breach was alleged; the covered conduct was billing while knowing the required control set was not implemented.<sup class="ref"><a href="#s2" id="r2">2</a></sup></p>
+
+  <p>Another contractor self-reported 104, near the top of the range. An outside assessment told it the real figure was negative 142, reflecting roughly a fifth of the required controls in place. The company did not correct the reported score until months later, after a federal subpoena. It resolved the matter for $4.6 million.<sup class="ref"><a href="#s3" id="r3">3</a></sup></p>
+
+  <p>A research university’s reported score was premised on an assessment environment that did not correspond to any actual system handling the government’s information. It settled for $875,000. A second university settled for $1.25 million over controls it had represented it would remediate on a schedule it did not keep.<sup class="ref"><a href="#s4" id="r4">4</a></sup></p>
+
+  <p>These are settlements, and the allegations were resolved without any admission or adjudication of liability. But the pattern is unambiguous. A self-attested score, unaccompanied by any measurement of whether the attested controls actually work, is the cheapest-to-fake attribute in the whole system — and it is now the precise object around which enforcement is built.</p>
+
+  <div class="pub-finding">
+    <div class="cite-label">Why this matters</div>
+    <p>When the government pays for a compliance program rather than a compliance outcome, the question of whether a misrepresentation was material turns on whether the program the contractor ran was the program the government paid for. A score with nothing behind it documents a program without evidencing one. The distinction is exactly what the random-sample audit is built to establish.</p>
+  </div>
+
+  <h2>Measurement Is the Defensible Posture. Non-Measurement Is Not.</h2>
+
+  <p>There is a tempting misreading of everything above, and it needs to be met directly, because it is the reading a hostile party would prefer you adopt. The misreading runs: if measuring my own failure rate creates a record of what I knew, it is safer not to measure. Under the False Claims Act’s scienter standard — which reaches actual knowledge, deliberate ignorance, and reckless disregard<sup class="ref"><a href="#s5" id="r5">5</a></sup> — that reasoning is not just wrong, it is dangerous.</p>
+
+  <p>Three reasons it is wrong.</p>
+
+  <p>First, the exposure that has actually cost companies money is the false certification, not the discovery of a residual risk. A program that measures its failure rate and acts on it — tightening screening where the sample shows leakage — converts the measurement into evidence of diligence. The adverse posture attaches to measuring and then doing nothing, which is a governance failure independent of any statute.</p>
+
+  <p>Second, materiality is a partly separate question, and disclosure builds a defense on it. Where the government continued to pay with knowledge of a disclosed weakness, that continued payment is evidence the requirement was not material — a defense at least one contractor has already argued in live litigation, on the theory that the agency never treated the certification as the essence of the bargain and kept paying after learning of the alleged noncompliance. That defense is available only to a contractor who measured and disclosed. Silence forfeits it.</p>
+
+  <p>Third, the alternative to measurement is not safety. It is a certification with no evidentiary basis, which collapses the moment the underlying conduct surfaces, with nothing to fall back on. Choosing not to look does not make the exposure smaller. It makes it undocumented, and a documented decision not to examine a known blind spot is closer to the deliberate-ignorance the statute reaches than to a safe harbor.</p>
+
+  <div class="pub-finding">
+    <div class="cite-label">Why this matters</div>
+    <p>The instinct to avoid measurement in order to avoid knowledge produces the worst available position: the exposure remains, the diligence defense is gone, and the materiality defense is gone with it. Measurement is the posture that can be defended. Non-measurement is the one that cannot.</p>
+  </div>
+
+  <h2>Three Questions That Settle It for Your Program</h2>
+
+  <p>None of these requires counsel to answer, though the answers may send you to counsel.</p>
+
+  <p><strong>One. Can we state our clearance failure rate?</strong> Not our alert volume or our clearance speed — the estimated rate of disqualifying conduct among the counterparties we cleared. If the honest answer is that there is no way to know, the program measures activity, not effectiveness, and it cannot substantiate a reasonable-care representation on the merits.</p>
+
+  <p><strong>Two. Would our screening survive a counterparty that changed its name last quarter?</strong> If a re-registered entity clears as new, the program is not resolving entities to a persistent identity, and its record against the counterparties most likely to be concealing something is unknown to us.</p>
+
+  <p><strong>Three. What sits behind our own — or our supplier’s — attested compliance score?</strong> If the answer is the score itself and nothing that measures whether the controls actually work, then the most enforcement-exposed attribute in the whole program is also its least substantiated.</p>
+
+  <p>If those three answers are clear and consistent, the program can defend itself, and that is a real outcome — more common than the enforcement record suggests, because settlements are the only cases anyone publishes. If any one of them conflicts — a certification with nothing behind it, a screen that clears renamed shells, a program that cannot state what it missed — that conflict is the finding. It is far better identified before an examiner, an opposing expert, or a whistleblower identifies it.</p>
+
+  <h2>When This Stops Being a Design Question</h2>
+
+  <p>Whether a particular certification was accurate when it was made, whether a posted score can be substantiated, and what to do about a representation already submitted that may have been wrong are legal determinations, and the last of them belongs with counsel immediately. What is a design question, and what this assessment addresses, is whether a screening program is built to detect the conduct it exists to catch, and how to know. That question has an answer, and the answer is to measure the outcome rather than the activity.</p>
+
+  <p class="disclaimer">This assessment is not legal advice and is not a substitute for counsel.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="section-tint">
+    <div class="wrap">
+      <div class="sl">Limitations</div>
+      <h2>What this assessment does not establish</h2>
+      <div class="article"><p>This assessment describes a structural pattern in how screening programs are validated and a design change that corrects it. It does not determine whether any particular program is deficient, whether any particular certification was false, or how any specific matter would be decided. Those depend on facts and instruments not in the public record.</p>
+<p>The random-sample audit estimates the failure rate against conduct that enhanced review can detect. It does not bound exposure to conduct that no available review method would catch, and it should not be represented as doing so.</p>
+<p>The False Claims Act analysis describes a strategic structure under current authority. It is not a prediction of outcome in any matter, and the materiality defense described is probative but not dispositive: a government may continue to pay for reasons that do not render a misrepresentation immaterial, and courts have declined to resolve the weight of continued payment at the pleading stage.</p>
+<p>The named enforcement matters are settlements. They are cited only for what their public settlement records establish, and the allegations were resolved without adjudication of liability. Settlements over-represent the resolutions the government chose to publicize and under-represent declinations and matters resolved under seal.</p>
+<p>An assessment that cannot state what would change it should not be published. This one would change if a court held that process-metric validation satisfies a reasonable-care standard, if a Supreme Court decision altered the scienter or materiality tests the analysis relies on, or if the Civil Cyber-Fraud Initiative enforcement pattern reversed.</p>
+<p>The full framework, with its statistical treatment, its entity-resolution detail, and its complete citations, is published as a companion academic paper on SSRN: <em>Adversarial-Cost Screening: A Validation Framework for Export Control, Sanctions, and Supply-Chain Counterparty Programs</em>. (Companion academic paper forthcoming on SSRN.)</p></div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section>
+    <div class="wrap sources" id="sources">
+      <div class="sl">Sources</div>
+      <h2>Primary sources</h2>
+      <p class="note-p">Every factual and legal assertion traces to a primary statutory, judicial, or Department of Justice record. Where the public record does not settle a question, the text says so rather than resolving it by inference. Full citations, including the supporting scholarship, appear in the companion SSRN paper.</p>
+      <ol class="mt-2">
+<li id="s1">U.S. Department of Justice, <em>Fact Sheet: False Claims Act Settlements and Judgments, Fiscal Year 2025</em> (16 January 2026) (over $52 million recovered across nine cybersecurity fraud settlements; civil cyber settlements more than tripled in each of the past two years). <a href="https://www.justice.gov/opa/media/1424126/dl" rel="noopener noreferrer" target="_blank">https://www.justice.gov/opa/media/1424126/dl</a> <a href="#r1" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s2">Settlement agreement, <em>United States v. LOGZONE, Inc.</em> (N.D. Ala., June 2026), recording the October 2021 self-assessed score of 110 and the February 2024 DIBCAC assessment of negative 170; U.S. Department of Justice release of 18 June 2026. <a href="https://www.justice.gov/opa/media/1446716/dl" rel="noopener noreferrer" target="_blank">https://www.justice.gov/opa/media/1446716/dl</a> <a href="#r2" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s3">Settlement agreement, <em>United States ex rel. Berich v. MORSECORP, Inc.</em>, No. 23-cv-10130 (D. Mass.); U.S. Department of Justice release of 26 March 2025 (self-reported score of 104; third-party assessment of negative 142; correction delayed until after a federal subpoena; $4.6 million). <a href="#r3" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s4">U.S. Department of Justice, settlement with Georgia Tech Research Corporation (30 September 2025, $875,000); settlement with the Pennsylvania State University (22 October 2024, $1.25 million). <a href="#r4" class="no-print" aria-label="Return to text">&#8617;</a></li>
+<li id="s5"><em>Universal Health Services, Inc. v. United States ex rel. Escobar</em>, 579 U.S. 176 (2016) (materiality is a demanding standard; continued government payment despite knowledge of noncompliance is strong evidence of immateriality); <em>United States ex rel. Schutte v. SuperValu Inc.</em>, 598 U.S. 739 (2023) (scienter turns on the defendant’s subjective knowledge, and reaches actual knowledge, deliberate ignorance, and reckless disregard); <em>United States ex rel. Cimino v. IBM Corp.</em>, 3 F.4th 412 (D.C. Cir. 2021) (continued payment probative of immateriality but not dispositive at the pleading stage). False Claims Act, 31 U.S.C. §§ 3729–3733; scienter defined at § 3729(b)(1). <a href="#r5" class="no-print" aria-label="Return to text">&#8617;</a></li>
+      </ol>
+      <div class="cite-block mt-25" id="citation">
+        <div class="cite-label">Suggested citation</div>
+        <p>George, Collin B. <em>Cleared Does Not Mean Examined: Why a Compliance Screening Program Can Pass Every Audit and Still Not Detect the Thing It Exists to Catch.</em> Assessment SB-2026-03, version 1.0. Sanctir LLC, 9 August 2026.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section>
+    <div class="wrap">
+      <div class="sl">Method</div>
+      <h2>Method note</h2>
+      <div class="article"><p>This assessment is independent open-source analysis. It applies two established results &mdash; selection on the dependent variable, from program evaluation, and strategic classification, from the machine-learning literature &mdash; to the validation of compliance screening programs, a domain in which neither is routinely applied. Its legal findings trace to primary sources: the False Claims Act at 31 U.S.C. 3729&ndash;3733; the Supreme Court and Circuit authority cited; and Department of Justice settlement records and fiscal-year statistics. Where the public record does not settle a question, that is stated rather than resolved by inference.</p>
+<p>The full methodological treatment, including the statistical and entity-resolution detail omitted here for brevity, is a companion academic paper forthcoming on SSRN. Sanctir is a solo practice; this work was subjected to adversarial self-review, not external peer review.</p></div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="section-tint">
+    <div class="wrap">
+      <div class="sl">Author</div>
+      <h2>About the author</h2>
+      <div class="author-box">
+        <p>Collin B. George, CISSP, is the principal of Sanctir LLC, an independent research and advisory practice working on CMMC and NIST SP 800-171, export controls, sanctions, and defense industrial base risk.</p>
+        <p>Sanctir is a solo practice. This assessment was subjected to adversarial self-review rather than external peer review, and is not affiliated with any government agency, academic institution, or defense contractor.</p>
+        <p class="author-meta">ORCID <a href="https://orcid.org/0009-0007-8162-6839" rel="noopener noreferrer" target="_blank">0009-0007-8162-6839</a> &middot; <a href="/principal/">Full background</a> &middot; <a href="/contact/">Contact</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" aria-label="Sanctir home"><svg class="wordmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 146" role="img" aria-label="Sanctir">
+        <title>Sanctir</title>
+        <g fill="#1A3A5C">
+        <path d="M69 0 54 255H93Q107 161 169.5 106.0Q232 51 322 51Q397 51 443.0 85.5Q489 120 489 175Q489 207 474.5 229.0Q460 251 419.5 272.5Q379 294 301 323Q224 353 173.0 389.0Q122 425 97.0 470.0Q72 515 72 568Q72 631 103.5 678.5Q135 726 190.5 753.0Q246 780 319 780Q418 780 504 716L522 766H546L557 550H518Q494 632 443.0 675.5Q392 719 325 719Q264 719 225.0 688.5Q186 658 186 610Q186 582 199.5 561.5Q213 541 250.0 521.5Q287 502 356 476Q449 441 507.0 402.5Q565 364 591.5 319.5Q618 275 618 219Q618 152 580.0 100.0Q542 48 475.0 19.0Q408 -10 320 -10Q261 -10 212.0 6.5Q163 23 113 60L93 0Z" transform="translate(55.25,103.76) scale(0.08800,-0.08800)" />
+        <path d="M-13 0V40Q35 45 60.0 61.5Q85 78 102 121L365 780H439L678 196Q699 145 714.0 115.5Q729 86 745.0 71.0Q761 56 782.5 50.0Q804 44 838 41V0H460V41Q508 43 529.0 51.0Q550 59 550 83Q550 97 543.0 119.5Q536 142 524 173L501 233H218Q194 179 182.5 143.0Q171 107 171 86Q171 56 193.5 48.0Q216 40 261 40V0ZM241 293H479L364 596H360Z" transform="translate(129.43,103.76) scale(0.08800,-0.08800)" />
+        <path d="M670 -10 227 621H223V191Q223 125 230.5 93.5Q238 62 260.5 52.0Q283 42 327 40V0H30V40Q79 42 103.5 52.0Q128 62 136.5 92.0Q145 122 145 184V586Q145 643 137.5 673.0Q130 703 107.5 715.5Q85 728 40 730V770H319L722 192H726V579Q726 645 718.5 676.5Q711 708 689.0 718.5Q667 729 622 730V770H919V730Q870 729 845.5 718.5Q821 708 812.5 678.0Q804 648 804 586V-10Z" transform="translate(216.46,103.76) scale(0.08800,-0.08800)" />
+        <path d="M688 708 707 770H756L736 517H696Q675 609 614.5 662.0Q554 715 468 715Q390 715 334.5 674.5Q279 634 250.0 558.5Q221 483 221 378Q221 224 285.0 140.0Q349 56 472 56Q571 56 637.0 110.5Q703 165 731 271H775V0H728L714 79Q604 -10 447 -10Q326 -10 236.0 37.0Q146 84 96.5 169.5Q47 255 47 372Q47 463 77.0 537.5Q107 612 161.5 666.5Q216 721 292.0 750.5Q368 780 459 780Q520 780 573.5 763.0Q627 746 688 708Z" transform="translate(315.02,103.76) scale(0.08800,-0.08800)" />
+        <path d="M805 770 815 550H772Q768 616 748.5 652.5Q729 689 693.5 703.5Q658 718 604 718Q553 718 527.0 715.5Q501 713 493.0 706.0Q485 699 485 687V163Q485 120 494.0 93.5Q503 67 532.0 54.5Q561 42 620 40V0H201V40Q261 42 290.0 54.5Q319 67 328.5 93.5Q338 120 338 163V687Q338 699 331.0 706.0Q324 713 302.0 715.5Q280 718 235 718Q199 718 166.0 714.0Q133 710 108.0 694.5Q83 679 68.0 645.0Q53 611 51 550H12L22 770Z" transform="translate(403.29,103.76) scale(0.08800,-0.08800)" />
+        <path d="M36 0V40Q81 42 103.5 52.0Q126 62 133.5 92.0Q141 122 141 184V586Q141 643 134.5 673.0Q128 703 107.5 715.5Q87 728 46 730V770H383V730Q342 728 321.5 715.5Q301 703 294.5 673.0Q288 643 288 586V184Q288 122 295.5 92.0Q303 62 325.5 52.0Q348 42 393 40V0Z" transform="translate(491.90,103.76) scale(0.08800,-0.08800)" />
+        <path d="M695 577Q695 494 647.0 438.0Q599 382 494 363L726 97Q750 69 783.0 54.5Q816 40 850 40V0H613L365 304Q349 324 335.0 335.0Q321 346 309.5 350.5Q298 355 287 355V159Q287 110 297.0 84.0Q307 58 338.0 49.0Q369 40 432 40V0H35V40Q79 40 101.5 49.0Q124 58 132.0 82.5Q140 107 140 154V616Q140 663 133.5 686.5Q127 710 107.0 719.0Q87 728 46 730V770H392Q536 770 615.5 719.0Q695 668 695 577ZM287 697V415H352Q446 415 492.5 452.0Q539 489 539 572Q539 636 500.0 675.0Q461 714 392 714H305Q287 714 287 697Z" transform="translate(545.50,103.76) scale(0.08800,-0.08800)" />
+        </g>
+        <line x1="52.00" y1="117.76" x2="628.30" y2="117.76" stroke="#B8860B" stroke-width="1.25" stroke-linecap="butt" />
+</svg></a>
+      <p>Independent research and advisory practice. Not affiliated with any government agency, academic institution, or defense contractor. Services are advisory in nature and do not constitute legal advice.</p>
+      <p>&copy; 2026 Sanctir. All rights reserved.</p>
+      <div class="social-row">
+        <a href="https://x.com/Sanctir" rel="noopener noreferrer" target="_blank" aria-label="Sanctir on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+        <a href="/pgp/" aria-label="Encrypted communication — Signal and PGP"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5Zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3Zm0 11a2 2 0 0 1 1 3.732V19a1 1 0 0 1-2 0v-1.268A2 2 0 0 1 12 14Z"/></svg></a>
+        <a href="mailto:contact@sanctir.com" aria-label="Email Sanctir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm9 8.13L4.6 6H19.4ZM4 8.24V18h16V8.24l-7.4 6.16a1 1 0 0 1-1.2 0Z"/></svg></a>
+        <a href="tel:+13026008018" aria-label="Call Sanctir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 2h3.1a1 1 0 0 1 1 .84l.7 4.1a1 1 0 0 1-.55 1.06L8.8 9.06a13.6 13.6 0 0 0 6.14 6.14l1.06-2.05a1 1 0 0 1 1.06-.55l4.1.7a1 1 0 0 1 .84 1V17.4A4.6 4.6 0 0 1 17.4 22 19.4 19.4 0 0 1 2 6.6 4.6 4.6 0 0 1 6.6 2Z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Practice</div>
+      <div class="footer-links">
+        <a href="/research/">Research</a>
+        <a href="/#decide">Advisory</a>
+        <a href="/#supply-chain">Supply Chain</a>
+        <a href="/#methodology">Methodology</a>
+        <a href="/principal/">Principal</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Resources</div>
+      <div class="footer-links">
+        <a href="/research/">Research Library</a>
+        <a href="/security/">Security</a>
+        <a href="/pgp/">Encrypted Communication</a>
+        <a href="/sitemap/">Sitemap</a>
+        <a href="/privacy.html">Privacy Notice</a>
+        <a href="/terms.html">Terms &amp; Disclaimer</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
